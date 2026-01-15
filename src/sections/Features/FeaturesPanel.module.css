@@ -1,0 +1,20 @@
+.img {
+  border: 4px solid #ffffff28;
+  border-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*max-width: -webkit-fill-available;*/
+  /*width: 100%;*/
+  width: auto;
+  height: 400px;
+  object-fit: cover;
+  aspect-ratio: 1180 / 820;
+  object-position: left center;
+  /*max-width: 100%;*/
+  /*max-height: -webkit-fill-available;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*object-fit: cover;*/
+  /*aspect-ratio: 1180 / 1200;*/
+  /*object-position: left center;*/
+}
