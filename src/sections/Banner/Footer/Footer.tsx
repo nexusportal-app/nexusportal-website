@@ -1,7 +1,7 @@
-import {appConf} from '@/app/conf'
+import {appConf} from '@/core/conf'
 import OpenInNew from '@mui/icons-material/OpenInNew'
 import {Box} from '@mui/material'
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 
 export const Footer = () => {
   return (

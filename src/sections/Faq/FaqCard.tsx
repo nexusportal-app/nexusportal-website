@@ -8,7 +8,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
   return (
     <Box
       sx={{
-        transition: t => t.transitions.create('all'),
+        // transition: t => t.transitions.create('all'),
         backgroundColor: 'background.paper',
         borderRadius: 1 / 4,
         p: {xs: .5, sm: 1},
@@ -40,7 +40,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
           onClick={() => setOpen(_ => !_)}
           sx={{
             ml: -.5,
-            transition: t => t.transitions.create('all'),
+            // transition: t => t.transitions.create('all'),
             ...(open ? {transform: 'rotate(90deg)'} : {}),
           }}
         >

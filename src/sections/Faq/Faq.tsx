@@ -1,4 +1,4 @@
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import {FaqCard} from '@/sections/Faq/FaqCard'
 import {SectionTitle} from '@/shared/SectionTitle'
 import {Box} from '@mui/material'

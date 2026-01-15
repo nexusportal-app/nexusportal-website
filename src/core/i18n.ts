@@ -237,7 +237,7 @@ export const m = {
         `,
       },
       {
-        question: `What's the added value of ${appName} compared to existing solutions?`,
+        question: `What is the added value of ${appName} compared to existing solutions?`,
         answer: `
           <p>
             Most information management workflows today are fragmented across multiple tools that were never designed to work together. 
@@ -338,7 +338,7 @@ export const m = {
             This allows organizations to use NexusPortal as a standalone data platform, or alongside KoboToolbox, depending on their needs and existing workflows.
           </p>
         `,
-      }
+      },
     ],
   },
   // created: ``,

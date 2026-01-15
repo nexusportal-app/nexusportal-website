@@ -1,5 +1,5 @@
 import {SectionTitle} from '@/shared/SectionTitle'
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
 import {PhoneLayout} from '@/shared/PhoneLayout'
 import {Section} from '@/shared/Section'

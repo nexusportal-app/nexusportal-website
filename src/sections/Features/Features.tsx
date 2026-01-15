@@ -1,6 +1,6 @@
 import {Section} from '@/shared/Section'
 import {SectionTitle} from '@/shared/SectionTitle'
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import {Box} from '@mui/material'
 import {FeaturesPanel} from '@/sections/Features/FeaturesPanel'
 import {Obj} from '@axanc/ts-utils'

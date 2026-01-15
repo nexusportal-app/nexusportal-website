@@ -1,4 +1,4 @@
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import {Box, Button} from '@mui/material'
 import {Pulse} from '@/shared/Pulse'
 import {BannerKey, revealKeyframes} from '@/sections/Banner/BannerKey'
@@ -117,7 +117,7 @@ const Chip = () => {
 
       <Box sx={{display: {xs: 'none', sm: 'block'}}}>
         <BannerArrow sx={{animationDelay: '0s'}} />
-        <BannerArrow sx={{ml: -1.8, animationDelay: '.3s'}} />
+        <BannerArrow sx={{ml: -1.4, animationDelay: '.3s'}} />
       </Box>
 
       <BannerKey icon={Settings}>
@@ -126,7 +126,7 @@ const Chip = () => {
 
       <Box sx={{display: {xs: 'none', sm: 'block'}}}>
         <BannerArrow sx={{animationDelay: '.6s'}} />
-        <BannerArrow sx={{ml: -1.8, animationDelay: '0.9s'}} />
+        <BannerArrow sx={{ml: -1.4, animationDelay: '0.9s'}} />
       </Box>
 
       <BannerKey icon={BarChart}>

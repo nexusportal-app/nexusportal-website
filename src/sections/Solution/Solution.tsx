@@ -1,5 +1,5 @@
 import {SectionTitle} from '@/shared/SectionTitle'
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
 import {Section} from '@/shared/Section'
 import {Box, Grid} from '@mui/material'

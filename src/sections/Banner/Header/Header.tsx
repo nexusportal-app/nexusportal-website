@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {Box, Button} from '@mui/material'
-import {m} from '@/i18n'
+import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
 
@@ -77,10 +77,10 @@ export const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Box component={Link} href="/" sx={{display: 'inline-flex', alignItems: 'center'}}>
+        <Link href="/" style={{display: 'inline-flex', alignItems: 'center'}}>
           <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
           <Box sx={{ml: .5, fontSize: '1.3em'}}>{m.title}</Box>
-        </Box>
+        </Link>
         <Box component="nav" sx={{
           gap: 1,
           width: '100%',
