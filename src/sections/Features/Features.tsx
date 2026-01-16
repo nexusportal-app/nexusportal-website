@@ -43,13 +43,13 @@ export const Features = () => {
           gap: {xs: 1, sm: 2},
           pt: 4,
           pr: 2,
-          pb: 2,
+          pb: 4,
         }}>
           {Obj.entries(m.features.list).map(([key, _], i) => (
             <FeaturesPanel key={key} title={_.title} desc={_.desc} imageSrc={'/ss3/ss-' + key + '.png'} mirror={i % 2 === 0} />
           ))}
         </Box>
-        <Box sx={{display: 'flex', gap: 1, pb: 2, alignItems: 'center', justifyContent: 'center'}}>
+        <Box sx={{display: 'flex', gap: 1, pb: 4, alignItems: 'center', justifyContent: 'center'}}>
           <FeaturesScrollXBtn direction="left" />
           <FeaturesScrollXBtn direction="right" />
         </Box>
