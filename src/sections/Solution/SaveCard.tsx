@@ -32,7 +32,7 @@ export const SaveCard = ({sx, icon: Icon, head, children, ...props}: BoxProps & 
   return (
     <Box
       component="li" sx={{
-      p: 1,
+      p: {xs: .25, sm: 1},
       pl: {xs: 0, sm: 1},
       flex: 1,
       display: 'flex',
@@ -89,7 +89,7 @@ export const SaveCard = ({sx, icon: Icon, head, children, ...props}: BoxProps & 
 function Border() {
   return (
     <Box className="SaveCard-border" sx={{
-      mt: 2,
+      mt: {xs: 1, sm: 2},
       height: '1px',
       width: '100%',
       background: `linear-gradient(90deg, rgba(0, 0, 0, 0.12), white)`,

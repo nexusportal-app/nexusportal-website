@@ -3,7 +3,8 @@ import {createTheme} from '@mui/material'
 import {Open_Sans} from 'next/font/google'
 import {alphaVar} from '@/shared/Pulse'
 
-export const colorPrimary = '#0092e6'
+// export const colorPrimary = '#0092e6'
+export const colorPrimary = '#007fff'
 
 export const openSansFont = Open_Sans({
   variable: '--font-open_sans',

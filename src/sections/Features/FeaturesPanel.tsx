@@ -2,7 +2,7 @@ import {Box} from '@mui/material'
 import {BoxProps} from '@mui/material/Box'
 import Image from 'next/image'
 import style from './FeaturesPanel.module.css'
-import {headerGradiant} from '@/sections/Banner/Header/Header'
+import {headerGradiant} from '@/sections/Header/Header'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
 
 type Props = BoxProps & {
@@ -23,8 +23,8 @@ export const FeaturesPanel = ({
       flex: '0 0 80%',
       width: '100%',
       minWidth: 900,
-      p: 2,
-      gap: 2,
+      p: {xs: 1, sm: 2},
+      gap: {xs: 1, sm: 2},
       display: 'flex',
       alignItems: 'center',
       borderRadius: 1,

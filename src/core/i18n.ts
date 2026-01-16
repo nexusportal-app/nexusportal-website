@@ -1,13 +1,4 @@
-import SyncProblem from '@mui/icons-material/SyncProblem'
-import Hub from '@mui/icons-material/Hub'
-import ShieldLock from '@mui/icons-material/Shield'
-import ManageAccounts from '@mui/icons-material/ManageAccounts'
-import Speed from '@mui/icons-material/Speed'
-import Schema from '@mui/icons-material/Schema'
-import DashboardCustomize from '@mui/icons-material/DashboardCustomize'
-import AccountTree from '@mui/icons-material/Route'
-
-// gpt symbols to replace:
+// gpt symbols to replace
 // —
 const appName = 'NexusPortal'
 export const m = {
@@ -23,24 +14,24 @@ export const m = {
   cta: 'Explore a demo',
   logoAlt: appName + ' logo',
   blog: 'Blog',
-  highlights: {
-    centralized: {
-      title: 'All-in-One Platform',
-      desc: `From data collection to databases, dashboards, and fine-grained access control - <b>everything in a single place.</b>`,
-    },
-    interface: {
-      title: 'Fast & Intuitive',
-      desc: `No steep learning curve, no heavy setup costs. <b>Start in minutes</b>, without training.`,
-    },
-    organization: {
-      title: `Built for Organizations`,
-      desc: `Invite colleagues and ensure resilient access rules <b>automatically up-to-date<b> with your organization.`,
-    },
-    moreToCome: {
-      title: `This Is Just the Beginning`,
-      desc: `Email notifications, merged databases, centralized individual tracking, and <b>much more are on the way</b>.`,
-    },
-  },
+  // highlights: {
+  //   centralized: {
+  //     title: 'All-in-One Platform',
+  //     desc: `From data collection to databases, dashboards, and fine-grained access control - <b>everything in a single place.</b>`,
+  //   },
+  //   interface: {
+  //     title: 'Fast & Intuitive',
+  //     desc: `No steep learning curve, no heavy setup costs. <b>Start in minutes</b>, without training.`,
+  //   },
+  //   organization: {
+  //     title: `Built for Organizations`,
+  //     desc: `Invite colleagues and ensure resilient access rules <b>automatically up-to-date<b> with your organization.`,
+  //   },
+  //   moreToCome: {
+  //     title: `This Is Just the Beginning`,
+  //     desc: `Email notifications, merged databases, centralized individual tracking, and <b>much more are on the way</b>.`,
+  //   },
+  // },
   overviewTitle: 'Overview',
   comparisonTitle: 'Where data workflows start to break down',
   problems: {
@@ -71,95 +62,97 @@ export const m = {
     desc: 'NexusPortal brings KoboToolbox, Excel, and PowerBi together in an coherent and flexible platform.',
     saveMoney: {
       title: 'Save Money',
-      desc: 'Reduce repetitive work and lower operational costs. NexusPortal automates collection, transformations, and dashboards so teams stay efficient while keeping data reliable.',
+      desc: 'Avoid hiring extra staff to fix data errors or handle tasks that should be automated. Keep workflows lean and reduce costly rework.',
+      // desc: 'Reduce repetitive work and lower operational costs. NexusPortal automates collection, transformations, and dashboards so teams stay efficient while keeping data reliable.',
     },
     saveTime: {
       title: 'Save Time',
-      desc: 'Stop manually manage accounts, reconciling forms and dashboards. NexusPortal keeps collection, transformations, and reports in sync automatically so your team can focus on insights instead of firefighting.',
+      desc: 'Forget fragile spreadsheets, duplicated data, repetitive work, and outdated access. NexusPortal keeps your data aligned, calculations automatic, and dashboards always up to date.',
+      // desc: 'Stop manually manage accounts, reconciling forms and dashboards. NexusPortal keeps collection, transformations, and reports in sync automatically so your team can focus on insights instead of firefighting.',
     },
     saveStress: {
       title: 'Save Stress',
-      desc: `No more data leaks, broken dashboards, metrics you can’t trust, unknown accounts, or duplicated data where you don’t know which is the source of truth. Everything stays aligned, accurate, and traceable.`,
+      desc: `No more broken dashboards, duplicate sources, questionable edits, or mystery metrics. Everything is accurate, traceable, and audit-ready.`,
+      // desc: `No more data leaks, broken dashboards, metrics you can’t trust, unknown accounts, or duplicated data where you don’t know which is the source of truth. Everything stays aligned, accurate, and traceable.`,
     },
   },
-  comparison2: {
-    sync: {
-      icon: SyncProblem,
-      title: 'It works… until forms change or data grows.',
-      problem: 'New fields, new form versions, or more data - and things start breaking.',
-      solution: 'Collection, transformations, and dashboards stay in sync, even as things evolve.',
-    },
-    scattered: {
-      icon: Hub,
-      title: 'Information is scattered across tools, and nothing fully matches.',
-      problem: 'Getting a global view takes manual work, and we don’t always get the same result twice.',
-      solution: 'Every figure is traceable, reproducible, and linked to its source and logic.',
-    },
-    access: {
-      icon: ManageAccounts,
-      title: 'People still see data they shouldn’t - or lose access randomly.',
-      problem: 'People change roles, but permissions don’t.',
-      solution: 'Access is defined per dataset or view and stays aligned over time.',
-    },
-    dashboard: {
-      icon: DashboardCustomize,
-      title: 'One dashboard becomes many.',
-      problem:
-        'Language or layout changes force us to duplicate dashboards and the design quickly becomes inconsistent.',
-      solution: 'Dashboards follow shared rules, adapt to screens, and support multiple languages.',
-    },
-  },
-
-  comparison: {
-    sync: {
-      icon: SyncProblem,
-      title: 'Fragile synchronization',
-      problem: 'Synchronization of data and dashboards relies on fragile manual processes.',
-      solution: 'All data, transformations and dashboards live in one system.',
-    },
-    traceability: {
-      icon: AccountTree,
-      title: 'Lack of traceability',
-      problem: 'Hard to understand where figures come from and to reproduce calculations.',
-      solution: 'Every figure is traceable, reproducible, and linked to its source data and logic.',
-    },
-    dataScattered: {
-      icon: Hub,
-      title: 'Scattered data',
-      problem: 'Data is spread across sources, preventing a consistent global view.',
-      solution: 'All sources are unified into a single global view.',
-    },
-    dataAccessFine: {
-      icon: ShieldLock,
-      title: 'Data protection risks',
-      problem: 'Sensitive data cannot be reliably restricted to the right roles.',
-      solution: 'Access stays aligned with organizational roles over time.',
-    },
-    dataAccessUpdate: {
-      icon: ManageAccounts,
-      title: 'Access drift',
-      problem: 'Access rules become outdated due to team turnover.',
-      solution: 'Access can be defined per dataset or view.',
-    },
-    performances: {
-      icon: Speed,
-      title: 'Poor scalability',
-      problem: 'Reporting tools slow down as data volumes grow.',
-      solution: 'Performance remains fast and stable at scale.',
-    },
-    transformations: {
-      icon: Schema,
-      title: 'Fragile data processing',
-      problem: 'Data processing is limited and break as forms evolve.',
-      solution: 'Data processing handles form changes without rework, even for complex cases.',
-    },
-    dashboardInconsistent: {
-      icon: DashboardCustomize,
-      title: 'Inconsistent dashboards',
-      problem: 'Dashboards are inconsistent and must be duplicated for translations.',
-      solution: 'Dashboards follow shared rules and support multiple languages.',
-    },
-  },
+  // comparison2: {
+  //   sync: {
+  //     icon: SyncProblem,
+  //     title: 'It works… until forms change or data grows.',
+  //     problem: 'New fields, new form versions, or more data - and things start breaking.',
+  //     solution: 'Collection, transformations, and dashboards stay in sync, even as things evolve.',
+  //   },
+  //   scattered: {
+  //     icon: Hub,
+  //     title: 'Information is scattered across tools, and nothing fully matches.',
+  //     problem: 'Getting a global view takes manual work, and we don’t always get the same result twice.',
+  //     solution: 'Every figure is traceable, reproducible, and linked to its source and logic.',
+  //   },
+  //   access: {
+  //     icon: ManageAccounts,
+  //     title: 'People still see data they shouldn’t - or lose access randomly.',
+  //     problem: 'People change roles, but permissions don’t.',
+  //     solution: 'Access is defined per dataset or view and stays aligned over time.',
+  //   },
+  //   dashboard: {
+  //     icon: DashboardCustomize,
+  //     title: 'One dashboard becomes many.',
+  //     problem:
+  //       'Language or layout changes force us to duplicate dashboards and the design quickly becomes inconsistent.',
+  //     solution: 'Dashboards follow shared rules, adapt to screens, and support multiple languages.',
+  //   },
+  // },
+  // comparison: {
+  //   sync: {
+  //     icon: SyncProblem,
+  //     title: 'Fragile synchronization',
+  //     problem: 'Synchronization of data and dashboards relies on fragile manual processes.',
+  //     solution: 'All data, transformations and dashboards live in one system.',
+  //   },
+  //   traceability: {
+  //     icon: AccountTree,
+  //     title: 'Lack of traceability',
+  //     problem: 'Hard to understand where figures come from and to reproduce calculations.',
+  //     solution: 'Every figure is traceable, reproducible, and linked to its source data and logic.',
+  //   },
+  //   dataScattered: {
+  //     icon: Hub,
+  //     title: 'Scattered data',
+  //     problem: 'Data is spread across sources, preventing a consistent global view.',
+  //     solution: 'All sources are unified into a single global view.',
+  //   },
+  //   dataAccessFine: {
+  //     icon: ShieldLock,
+  //     title: 'Data protection risks',
+  //     problem: 'Sensitive data cannot be reliably restricted to the right roles.',
+  //     solution: 'Access stays aligned with organizational roles over time.',
+  //   },
+  //   dataAccessUpdate: {
+  //     icon: ManageAccounts,
+  //     title: 'Access drift',
+  //     problem: 'Access rules become outdated due to team turnover.',
+  //     solution: 'Access can be defined per dataset or view.',
+  //   },
+  //   performances: {
+  //     icon: Speed,
+  //     title: 'Poor scalability',
+  //     problem: 'Reporting tools slow down as data volumes grow.',
+  //     solution: 'Performance remains fast and stable at scale.',
+  //   },
+  //   transformations: {
+  //     icon: Schema,
+  //     title: 'Fragile data processing',
+  //     problem: 'Data processing is limited and break as forms evolve.',
+  //     solution: 'Data processing handles form changes without rework, even for complex cases.',
+  //   },
+  //   dashboardInconsistent: {
+  //     icon: DashboardCustomize,
+  //     title: 'Inconsistent dashboards',
+  //     problem: 'Dashboards are inconsistent and must be duplicated for translations.',
+  //     solution: 'Dashboards follow shared rules and support multiple languages.',
+  //   },
+  // },
   // problem: {
   //   title: 'Problems',
   //   sync: 'Keeping databases, views and dashboards synchronized is fragile and hard to automate.',
@@ -184,7 +177,7 @@ export const m = {
   // },
   design: {
     title: 'Designed for clarity and comfort',
-    desc: 'Intuitive design.<br/>Elegant visuals.<br/>Fully responsive.<br/>Dark mode included.',
+    desc: 'Intuitive design.<br/>Elegant visuals.<br/>Mobile-friendly.<br/>Dark mode included.',
   },
   features: {
     title: 'Modern features. Finally.',

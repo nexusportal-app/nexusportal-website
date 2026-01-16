@@ -4,7 +4,7 @@ import {m} from '@/core/i18n'
 import {Box} from '@mui/material'
 import {FeaturesPanel} from '@/sections/Features/FeaturesPanel'
 import {Obj} from '@axanc/ts-utils'
-import {headerGradiant} from '@/sections/Banner/Header/Header'
+import {headerGradiant} from '@/sections/Header/Header'
 import {FeaturesScrollXBtn} from '@/sections/Features/FeaturesScrollXBtn'
 
 export const Features = () => {
@@ -43,14 +43,14 @@ export const Features = () => {
       // `,
     }}>
       <Section sx={{pb: 0}}>
-        <SectionTitle sx={{mb: 0}}>{m.features.title}</SectionTitle>
+        <SectionTitle sx={{mb: 0, pb:0}}>{m.features.title}</SectionTitle>
       </Section>
       <Box sx={{pr: 0, maxWidth: '100%', overflow: 'visible'}}>
         <Box id="Features-container" sx={{
           pl: `calc((100vw - 1100px) / 2)`,
           display: 'flex',
           overflowX: 'auto',
-          gap: 2,
+          gap: {xs: 1, sm: 2},
           pt: 4,
           pr: 2,
           pb: 2,

@@ -7,7 +7,7 @@ export const SectionTitle = ({sx, children, ...props}: BoxProps) => {
     fontWeight: '600',
     lineHeight: '1.15',
     textAlign: 'center',
-    marginBottom: {xs: 1, sm: 3},
+    mb: {xs: 1, sm: 3},
     ...sx,
   }}>{children}</Box>
 }

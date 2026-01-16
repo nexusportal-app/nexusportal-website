@@ -4,7 +4,7 @@ import {CssBaseline, StyledEngineProvider, ThemeProvider} from '@mui/material'
 import {openSansFont, theme} from '@/core/theme'
 import {m} from '@/core/i18n'
 import './layout.css'
-import {Header} from '@/sections/Banner/Header/Header'
+import {Header} from '@/sections/Header/Header'
 import Script from 'next/script'
 
 export const metadata: Metadata = {

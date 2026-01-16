@@ -19,8 +19,8 @@ export const Banner = () => {
       backgroundImage: 'url(/ss1.png)',
       backgroundPosition: '72% 66%',
       backgroundSize: '160% 160%',
-      px: 2,
       display: 'flex',
+      px: {xs: .5, sm: 2},
       // alignItems: 'center',
       ...revealKeyframes,
     }}>
@@ -41,7 +41,7 @@ export const Banner = () => {
         <Box sx={{
           textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
           fontWeight: '600',
-          fontSize: {xs: '3.3rem', sm: '4.6rem'},
+          fontSize: {xs: '3.4rem', sm: '4.6rem'},
           // mt: (headerHeight + 8) + 'px',
           lineHeight: '1.15',
         }}>
@@ -50,7 +50,8 @@ export const Banner = () => {
         </Box>
         <Box sx={{
           fontWeight: '500',
-          fontSize: {xs: '1.2rem', sm: '1.4rem'},
+          mt: -1,
+          fontSize: {xs: '1.2rem', sm: '1.5rem'},
         }}>
           {m.heroTitleSub}
         </Box>
@@ -59,9 +60,9 @@ export const Banner = () => {
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center'}}>
           <Pulse>
             <Button
+              sx={{color: 'primary.light'}}
               variant="outlined"
               size="large"
-              sx={{color: 'white'}}
             >
               {m.ctaSignUp}
             </Button>

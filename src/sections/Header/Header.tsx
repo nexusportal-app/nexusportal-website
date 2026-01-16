@@ -5,19 +5,18 @@ import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
 
 export const contentWidth = 1200
-export const headerHeight = 60
 
 const headerLayout: BoxProps['sx'] = {
   top: 0,
   right: 0,
   left: 0,
-  py: 1,
-  px: 1,
+  py: {xs: .5, sm: 1},
+  px: {xs: .5, sm: 1},
   position: 'fixed',
   margin: 'auto',
   mt: .5,
   borderRadius: 5,
-  height: headerHeight,
+  height: {xs: 50, sm: 60},
   width: contentWidth,
   maxWidth: `calc(100vw - 16px)`,
 }
@@ -61,6 +60,7 @@ export const Header = () => {
         boxShadow: 6,
         transform: 'translateZ(0)',
         background: headerGradiant,
+        opacity: .6,
       }}>
 
       </Box>
@@ -77,12 +77,12 @@ export const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link href="/" style={{display: 'inline-flex', alignItems: 'center'}}>
+        <Link href="/public" style={{display: 'inline-flex', alignItems: 'center'}}>
           <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
           <Box sx={{ml: .5, fontSize: '1.3em'}}>{m.title}</Box>
         </Link>
         <Box component="nav" sx={{
-          gap: 1,
+          gap: {xs: .5, sm: 1},
           width: '100%',
           display: 'flex',
           justifyContent: 'flex-end',

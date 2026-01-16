@@ -12,7 +12,6 @@ const phoneOffset = 2
 export const Design = () => {
   return (
     <Section sx={{
-      mt: {xs: 0, sm: phoneOffset + 2},
       pb: 0,
       '@keyframes followScroll': {
         from: {transform: 'translateY(0px)'},
@@ -20,14 +19,14 @@ export const Design = () => {
       },
     }}>
       <SectionTitle>{m.design.title}</SectionTitle>
-      <Grid container columnSpacing={2}>
+      <Grid container columnSpacing={2} sx={{pt: 2}}>
         <Grid size={{xs: 12, sm: 9}} order={{xs: 2, sm: 1}} sx={{
           flex: 2,
           display: 'flex',
           // alignItems: 'center',
           position: 'relative',
-          mt: {xs: 5, sm: 0},
-          mb: {xs: 5, sm: 2},
+          mt: {xs: 6, sm: 0},
+          mb: {xs: 8, sm: 2},
           justifyContent: 'center',
         }}>
           <Image
@@ -59,7 +58,7 @@ export const Design = () => {
           }} />
         </Grid>
         <Grid size={{xs: 12, sm: 3}} order={{xs: 1, sm: 2}} alignSelf="center">
-          <SectionSubTitle sx={{lineHeight: 1.5, textAlign: 'left'}} dangerouslySetInnerHTML={{__html: m.design.desc}} />
+          <SectionSubTitle sx={{lineHeight: 1.5, textAlign: {xs: 'center', sm: 'left'}, mt: 0}} dangerouslySetInnerHTML={{__html: m.design.desc}} />
         </Grid>
       </Grid>
     </Section>
