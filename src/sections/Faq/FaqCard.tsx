@@ -7,6 +7,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
   const [open, setOpen] = useState(false)
   return (
     <Box
+      component="article"
       sx={{
         // transition: t => t.transitions.create('all'),
         backgroundColor: 'background.paper',

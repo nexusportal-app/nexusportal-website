@@ -38,7 +38,8 @@ export const Banner = () => {
         position: 'relative',
         textAlign: 'center',
       }}>
-        <Box sx={{
+        <Box component="h1" sx={{
+          m: 0,
           textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
           fontWeight: '600',
           fontSize: {xs: '3.4rem', sm: '4.6rem'},

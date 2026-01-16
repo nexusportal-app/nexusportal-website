@@ -86,7 +86,7 @@ export const PhoneLayout = ({
           backgroundColor: 'black',
           overflow: 'hidden',
         }}>
-          <Image src="/ss3/ss-design-mobile.png" height={(screenWidth / 430 * 900) - 8} width={screenWidth - 8} alt="Design screenshot" style={{
+          <Image src="/ss3/ss-design-mobile.png" height={(screenWidth / 430 * 900) - 8} width={screenWidth - 8} alt="Design screenshot - mobile" style={{
             borderRadius: '2px',
             margin: 'auto',
           }} />

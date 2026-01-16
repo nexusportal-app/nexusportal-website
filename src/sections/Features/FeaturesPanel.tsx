@@ -19,25 +19,27 @@ export const FeaturesPanel = ({
   mirror,
 }: Props) => {
   return (
-    <Box sx={{
-      flex: '0 0 80%',
-      width: '100%',
-      minWidth: 900,
-      p: {xs: 1, sm: 2},
-      gap: {xs: 1, sm: 2},
-      display: 'flex',
-      alignItems: 'center',
-      borderRadius: 1,
-      backdropFilter: 'blur(2px)',
-      border: '1px solid #ffffff14',
-      overflow: 'hidden',
-      background: 'rgba(0, 0, 0, .1)',
-      zIndex: 10,
-      // flexDirection: mirror ? 'row-reverse' : undefined,
-      // backgroundColor: 'background.paper',
-      // backgroundColor: 'black',
-      // background: headerGradiant,
-    }}>
+    <Box
+      component="article"
+      sx={{
+        flex: '0 0 80%',
+        width: '100%',
+        minWidth: 900,
+        p: {xs: 1, sm: 2},
+        gap: {xs: 1, sm: 2},
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: 1,
+        backdropFilter: 'blur(2px)',
+        border: '1px solid #ffffff14',
+        overflow: 'hidden',
+        background: 'rgba(0, 0, 0, .1)',
+        zIndex: 10,
+        // flexDirection: mirror ? 'row-reverse' : undefined,
+        // backgroundColor: 'background.paper',
+        // backgroundColor: 'black',
+        // background: headerGradiant,
+      }}>
       <Box sx={{position: 'relative', borderRadius: '10px', mb: -2}}>
         <Box sx={{
           position: 'absolute',
