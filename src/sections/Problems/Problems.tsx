@@ -29,7 +29,7 @@ export const Problems = () => {
     <Section>
       <SectionTitle>{m.problems.question}</SectionTitle>
       <SectionSubTitle>{m.problems.title}</SectionSubTitle>
-      <Paragraph sx={{textAlign: 'center', mb: 2}}>{m.problems.subTitle}</Paragraph>
+      <Paragraph sx={{textAlign: 'center', mb: 3}}>{m.problems.subTitle}</Paragraph>
       <Box component="ul" sx={{
         p: 0,
         display: 'flex',

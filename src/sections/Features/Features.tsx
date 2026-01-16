@@ -1,4 +1,3 @@
-import {Section} from '@/shared/Section'
 import {SectionTitle} from '@/shared/SectionTitle'
 import {m} from '@/core/i18n'
 import {Box} from '@mui/material'
@@ -6,14 +5,15 @@ import {FeaturesPanel} from '@/sections/Features/FeaturesPanel'
 import {Obj} from '@axanc/ts-utils'
 import {headerGradiant} from '@/sections/Header/Header'
 import {FeaturesScrollXBtn} from '@/sections/Features/FeaturesScrollXBtn'
+import {sectionMargin} from '@/shared/Section'
 
 export const Features = () => {
   return (
-    <Box sx={{
+    <Box component="section" sx={{
       position: 'relative',
       color: 'white',
       background: headerGradiant,
-
+      pt: sectionMargin,
       '&::after': {
         content: '""',
         position: 'absolute',
@@ -33,18 +33,8 @@ export const Features = () => {
         backgroundSize: '22px 22px',
         opacity: 0.4,
       },
-
-
-      //     WebkitMaskImage: `
-      //   radial-gradient(120% 60px at 50% 100%, #000 60%, transparent 61%)
-      // `,
-      //     maskImage: `
-      //   radial-gradient(120% 60px at 50% 100%, #000 60%, transparent 61%)
-      // `,
     }}>
-      <Section sx={{pb: 0}}>
-        <SectionTitle sx={{mb: 0, pb:0}}>{m.features.title}</SectionTitle>
-      </Section>
+      <SectionTitle sx={{m: 0, mb: 0, p: 0}}>{m.features.title}</SectionTitle>
       <Box sx={{pr: 0, maxWidth: '100%', overflow: 'visible'}}>
         <Box id="Features-container" sx={{
           pl: `calc((100vw - 1100px) / 2)`,

@@ -12,14 +12,13 @@ const phoneOffset = 2
 export const Design = () => {
   return (
     <Section sx={{
-      pb: 0,
       '@keyframes followScroll': {
         from: {transform: 'translateY(0px)'},
         to: {transform: `translateY(${height / 2}px)`},
       },
     }}>
       <SectionTitle>{m.design.title}</SectionTitle>
-      <Grid container columnSpacing={2} sx={{pt: 2}}>
+      <Grid container columnSpacing={2} sx={{pt: {xs: 0, sm:phoneOffset}}}>
         <Grid size={{xs: 12, sm: 9}} order={{xs: 2, sm: 1}} sx={{
           flex: 2,
           display: 'flex',

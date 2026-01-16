@@ -8,7 +8,7 @@ export const SectionSubTitle = ({sx, ...props}: BoxProps) => {
       fontWeight: '500',
       textAlign: 'center',
       lineHeight: '1.15',
-      mb: {xs: 1, sm: 3},
+      mb: {xs: 2, sm: 3},
       ...sx,
     }} {...props} />
   )
