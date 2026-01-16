@@ -272,7 +272,7 @@ export const m = {
         question: `Is NexusPortal free?`,
         answer: `
           <p>
-            Yes. <b>A free tier</b> will be available for personal use, students, and small teams. 
+            Yes. <b>A free tier</b> will be available for personal use and small teams. 
             For larger organizations, we will offer affordable pricing plans designed to cover infrastructure costs and ensure the long-term sustainability of the platform.          
           </p>
          `,

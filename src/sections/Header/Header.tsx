@@ -79,7 +79,7 @@ export const Header = () => {
       }}>
         <Link href="/public" style={{display: 'inline-flex', alignItems: 'center'}}>
           <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
-          <Box sx={{ml: .5, fontSize: '1.3em'}}>{m.title}</Box>
+          <Box sx={{ml: .5, fontSize: {xs: '1.2rem', sm: '1.3em'}}}> {m.title}</Box>
         </Link>
         <Box component="nav" sx={{
           gap: {xs: .5, sm: 1},
