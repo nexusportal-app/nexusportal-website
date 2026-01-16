@@ -6,6 +6,7 @@ import {m} from '@/core/i18n'
 import './layout.css'
 import {Header} from '@/sections/Header/Header'
 import Script from 'next/script'
+import {Analytics} from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: m.title,
@@ -36,6 +37,7 @@ export default function RootLayout({
         </ThemeProvider>
       </AppRouterCacheProvider>
     </StyledEngineProvider>
+    <Analytics />
     </body>
     </html>
   )
