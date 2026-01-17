@@ -1,3 +1,4 @@
 export const appConf = {
-  repoUrl: 'https://github.com/nexusportal-app/nexusportal',
+  repoUrl: 'https://github.com/nexusportal-app',
+  contactEmail: 'contact@nexusportal.app',
 }

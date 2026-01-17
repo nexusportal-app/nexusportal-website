@@ -13,9 +13,7 @@ export const Footer = () => {
       fontSize: '0.874em',
       marginBottom: 1,
     }}>
-      © 2025 {m.title}
-      <Separator />
-      All rights reserved
+      © 2026 {m.title}
       <Separator />
       <Box
         component="a"
@@ -29,9 +27,22 @@ export const Footer = () => {
         GitHub&nbsp;
         <OpenInNew sx={{fontSize: 'inherit'}} />
       </Box>
+      <Separator />
+      <Box
+        component="a"
+        sx={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          fontWeight: '500',
+        }}
+        href={'mailto:' + appConf.contactEmail}
+      >
+        {appConf.contactEmail}
+      </Box>
     </Box>
   )
 }
+
 
 const Separator = () => {
   return <>&nbsp;&nbsp;•&nbsp;&nbsp;</>
