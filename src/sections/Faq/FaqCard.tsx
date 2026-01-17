@@ -2,6 +2,7 @@
 import {useState} from 'react'
 import {Box, Collapse, IconButton} from '@mui/material'
 import ChevronRight from '@mui/icons-material/ChevronRight'
+import {track} from '@vercel/analytics'
 
 export const FaqCard = ({question, answer}: {question: string; answer: string}) => {
   const [open, setOpen] = useState(false)
@@ -38,7 +39,17 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
         alignItems: 'center',
       }}>
         <IconButton
-          onClick={() => setOpen(_ => !_)}
+          onClick={() => {
+            setOpen(prev => {
+              const next = !prev
+              if (!prev && next) {
+                track('faq_opened', {
+                  question,
+                })
+              }
+              return next
+            })
+          }}
           sx={{
             ml: -.5,
             // transition: t => t.transitions.create('all'),
