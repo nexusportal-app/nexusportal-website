@@ -28,6 +28,16 @@ export default function RootLayout({
       src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"
       strategy="afterInteractive"
     />
+    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NRE24QKY6F"/>
+    <Script>
+      {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NRE24QKY6F');
+      `}
+    </Script>
     <StyledEngineProvider injectFirst>
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>

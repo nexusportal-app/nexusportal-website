@@ -42,8 +42,9 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
           onClick={() => {
             setOpen(prev => {
               const next = !prev
-              if (!prev && next) {
-                track('faq_opened', {
+              if (!prev && next && typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'faq_opened', {
+                  event_category: 'faq',
                   question,
                 })
               }
