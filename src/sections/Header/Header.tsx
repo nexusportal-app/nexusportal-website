@@ -3,6 +3,7 @@ import {Box, Button} from '@mui/material'
 import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
+import {appConf} from '@/core/conf'
 
 export const contentWidth = 1200
 
@@ -89,13 +90,14 @@ export const Header = () => {
         }}>
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
           <Button
+            href={appConf.consoleUrl}
             sx={{color: 'white'}}
             variant="outlined"
             size="small"
           >
             {m.ctaSignUp}
           </Button>
-          <Button size="small" variant="contained">
+          <Button href={appConf.consoleUrl} size="small" variant="contained">
             &nbsp;&nbsp;{m.cta}&nbsp;&nbsp;
           </Button>
         </Box>

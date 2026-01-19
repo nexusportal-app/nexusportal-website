@@ -7,6 +7,7 @@ import Upload from '@mui/icons-material/CloudDownloadOutlined'
 import Settings from '@mui/icons-material/Settings'
 import BarChart from '@mui/icons-material/BarChart'
 import {ScrollDownButton} from '@/sections/Banner/ScrollDownButton'
+import {appConf} from '@/core/conf'
 
 export const Banner = () => {
   return (
@@ -61,6 +62,7 @@ export const Banner = () => {
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center'}}>
           <Pulse>
             <Button
+              href={appConf.consoleUrl}
               sx={{color: 'primary.light'}}
               variant="outlined"
               size="large"
@@ -70,6 +72,7 @@ export const Banner = () => {
           </Pulse>
           <Pulse>
             <Button
+              href={appConf.consoleUrl}
               variant="contained"
               size="large"
             >
