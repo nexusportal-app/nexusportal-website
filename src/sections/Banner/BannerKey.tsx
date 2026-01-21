@@ -72,11 +72,11 @@ export const BannerKey = ({sx, icon: Icon, children, textAnimationDelay, ...prop
         background: `
           linear-gradient(
             120deg,
-            #888 0%,
-            #888 45%,
+            #b9b9b9 0%,
+            #b9b9b9 45%,
             #fff 50%,
-            #888 55%,
-            #888 100%
+            #b9b9b9 55%,
+            #b9b9b9 100%
           )
         `,
         backgroundSize: '300% auto',

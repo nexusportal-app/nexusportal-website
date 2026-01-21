@@ -1,6 +1,6 @@
 'use client'
 
-import {Box} from '@mui/material'
+import {Box, Tooltip} from '@mui/material'
 import {BoxProps} from '@mui/material/Box'
 
 const style: BoxProps['sx'] = {
@@ -23,14 +23,16 @@ const style: BoxProps['sx'] = {
   animationTimeline: 'view()',
 }
 
-export const ProblemChip = ({sx, children, ...props}: BoxProps) => {
+export const ProblemChip = ({sx, title, children, ...props}: BoxProps) => {
   return (
-    <Box component="li" {...props} sx={{
-      display: {xs: children === '' ? 'none' : 'block', sm: 'block'},
-      ...style as any,
-      ...sx,
-    }}>
-      {children === '' ? '-' : children}
-    </Box>
+    <Tooltip title={title && <div dangerouslySetInnerHTML={{__html: title}} />}>
+      <Box component="li" {...props} sx={{
+        display: {xs: children === '' ? 'none' : 'block', sm: 'block'},
+        ...style as any,
+        ...sx,
+      }}>
+        {children === '' ? '-' : children}
+      </Box>
+    </Tooltip>
   )
 }

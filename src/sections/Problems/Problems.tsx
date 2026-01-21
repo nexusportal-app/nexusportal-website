@@ -7,7 +7,7 @@ import {Box} from '@mui/material'
 import {ProblemChip} from '@/sections/Problems/ProblemChip'
 
 const delay = [
-  1, // ''
+  .5, // ''
   0.5, // 'Forms change, metrics break'
   0, // 'People still see data they shouldn’t'
   0.5, // 'One dashboard… ten versions'
@@ -40,9 +40,9 @@ export const Problems = () => {
         justifyContent: 'center',
       }}>
         {m.problems.list.map((_, i) =>
-          <ProblemChip key={i} children={_} sx={{
+          <ProblemChip key={i} children={_.title} title={_.desc} sx={{
             animationDelay: delay[i],
-            animationName: _ === '' ? '' : undefined,
+            animationName: _.title === '' ? '' : undefined,
           }} />,
         )}
       </Box>

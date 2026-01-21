@@ -1,12 +1,16 @@
 // gpt symbols to replace
-// —
+// — ’
 const appName = 'NexusPortal'
 export const m = {
   // desc: 'The next generation of data collection & management software.',
   title: appName,
-  heroTitle1: 'Turn data',
-  heroTitle2: 'Into decisions',
-  heroTitleSub: 'The next generation of information management. Built from real field operations.',
+  heroTitle1: 'From scattered data',
+  heroTitle2: 'To a single, clear picture',
+  // heroTitleSub: 'Your team shouldn't spend hours cleaning messy data,',
+  // heroTitleSub2: 'and with our Information Management app, they won't.',
+  // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
+  // heroTitleSub2: 'NexusPortal structures your data - so reports stay clean and always ready.',
+  heroTitleSub: 'Information management platform helping humanitarian teams <br/> <b>organize and protect</b> data without messy, time-consuming work.',
   key1: 'Collect & Import',
   key2: 'Transform & Manage',
   key3: 'Visualize & Analyze',
@@ -37,43 +41,78 @@ export const m = {
   problems: {
     question: `What's the problem?`,
     title: `Information management is messy`,
-    subTitle: `Managing forms, dashboards, and reports across multiple tools is complex, time-consuming, and error-prone. Small changes can break metrics, duplicate work piles up, and it’s hard to get a single source of truth.`,
+    subTitle: `Managing forms, dashboards, and reports across multiple tools is complex, time-consuming, and error-prone. Small changes can break metrics, duplicate work piles up, and it's hard to get a single source of truth.`,
     list: [
-      '',
-      'Forms change, metrics break',
-      'People still see data they shouldn’t',
-      'One dashboard… ten versions',
-      '',
-      'Numbers never match',
-      '',
-      '',
-      'People lose access randomly',
-      'Data scattered everywhere',
-      'Time-consuming manual tasks',
-      'Repetitive work for every update',
-      '',
-      'Duplication across data',
-      '',
+      {
+        title: 'Time-consuming manual tasks',
+        desc: `<p>Reporting to donors, updating dashboards, recomputing figures, and providing dataset access are all done <b>manually</b>.</p>
+       <p>These tasks take <b>hours</b>, are <b>error-prone</b>, and even small changes can break everything.</p>`,
+      },
+      {title: ''},
+      {
+        title: `People still see data they shouldn't`,
+        desc: `<p>Forms are often shared across teams, but <b>Team A shouldn't see Team B's data</b>, and <b>Person A shouldn't access sensitive info from Person B's cases</b>.</p>
+           <p>In practice, <b>access controls are usually impossible</b> to enforce, leading to data leaks or messy copies of subsets, creating <b>chaos</b>.</p>`,
+      },
+      {
+        title: 'One dashboard… ten versions',
+        desc: `<p>Dashboards are often duplicated because <b>data grows</b>, <b>shapes change</b>, or <b>translation</b> is needed.</p>
+           <p>Over time, <b>multiple copies diverge</b>, creating <b>inconsistencies</b>.</p>`,
+      },
+      {title: ''},
+      {
+        title: 'People lose access randomly',
+        desc: `<p>Access controls in existing solutions are <b>rigid</b>.</p>
+           <p>Staff turnover or role changes leave accounts <b>outdated</b>, and manual updates are <b>slow, error-prone, and chaotic</b>.</p>`,
+      },
+      {title: ''},
+      {
+        title: 'Numbers never match',
+        desc: `<p>When totals are recomputed, the numbers often <b>don't match</b>, and it's unclear why.</p>
+           <p>Without proper tracking, we can't tell if it's due to <b>raw data changes</b> or <b>calculation errors</b>, leaving the system vulnerable to <b>mistakes and fraud</b>.</p>`,
+      },
+      {title: ''},
+      {
+        title: 'Data scattered everywhere',
+        desc: `<p>Many forms get created, sometimes because needs change, sometimes to improve them.</p>
+           <p>Often, a form includes multiple activities, and an activity can be split across several forms.</p>
+           <p>Over time, the data becomes <b>chaotic</b>, impossible to maintain, and <b>difficult to get a clear overview</b>.</p>`,
+      },
+      {title: ''},
+      {
+        title: 'Forms change, metrics break',
+        desc: `<p>Dashboards and spreadsheet formulas are fragile.</p>
+           <p>When forms change, <b>metrics don't adapt</b>, dashboards break, and reports become <b>unreliable</b>.</p>`,
+      },
+      {
+        title: 'Repetitive work for every update',
+        desc: `<p>Every new dataset, dashboard refresh, or report requires repeating the same steps: pulling data, recalculating, updating dashboards, and sharing files.</p>
+           <p>This <b>wastes time</b>, increases <b>errors</b>, and makes <b>tracking changes difficult</b>.</p>`,
+      },
+      {
+        title: 'Duplication across data',
+        desc: `<p>Sharing access often means copying data, creating <b>multiple sources of truth</b>.</p>
+           <p>Without deduplication, the same person or activity can appear multiple times.</p>
+           <p>Over time, data becomes <b>fragmented, inconsistent, and confusing</b> for teams.</p>`,
+      },
+      {title: ''},
     ],
   },
   solution: {
     question: 'How can NexusPortal solve it?',
     title: 'Let us handle the chaos',
-    desc: 'NexusPortal brings KoboToolbox, Excel, and PowerBi together in an coherent and flexible platform.',
+    desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>BI</b><br/>with one coherent system so your team can work in one place instead of moving data between tools.',
     saveMoney: {
       title: 'Save Money',
       desc: 'Avoid hiring extra staff to fix data errors or handle tasks that should be automated. Keep workflows lean and reduce costly rework.',
-      // desc: 'Reduce repetitive work and lower operational costs. NexusPortal automates collection, transformations, and dashboards so teams stay efficient while keeping data reliable.',
     },
     saveTime: {
       title: 'Save Time',
-      desc: 'Forget fragile spreadsheets, duplicated data, repetitive work, and outdated access. NexusPortal keeps your data aligned, calculations automatic, and dashboards always up to date.',
-      // desc: 'Stop manually manage accounts, reconciling forms and dashboards. NexusPortal keeps collection, transformations, and reports in sync automatically so your team can focus on insights instead of firefighting.',
+      desc: 'Data stays aligned, permissions update automatically from your organisation’s accounts, calculations run, and dashboards feed real-time data so your team can focus on decisions, not fixes.',
     },
     saveStress: {
       title: 'Save Stress',
       desc: `No more broken dashboards, duplicate sources, questionable edits, or mystery metrics. Everything is accurate, traceable, and audit-ready.`,
-      // desc: `No more data leaks, broken dashboards, metrics you can’t trust, unknown accounts, or duplicated data where you don’t know which is the source of truth. Everything stays aligned, accurate, and traceable.`,
     },
   },
   // comparison2: {
@@ -86,13 +125,13 @@ export const m = {
   //   scattered: {
   //     icon: Hub,
   //     title: 'Information is scattered across tools, and nothing fully matches.',
-  //     problem: 'Getting a global view takes manual work, and we don’t always get the same result twice.',
+  //     problem: 'Getting a global view takes manual work, and we don't always get the same result twice.',
   //     solution: 'Every figure is traceable, reproducible, and linked to its source and logic.',
   //   },
   //   access: {
   //     icon: ManageAccounts,
-  //     title: 'People still see data they shouldn’t - or lose access randomly.',
-  //     problem: 'People change roles, but permissions don’t.',
+  //     title: 'People still see data they shouldn't - or lose access randomly.',
+  //     problem: 'People change roles, but permissions don't.',
   //     solution: 'Access is defined per dataset or view and stays aligned over time.',
   //   },
   //   dashboard: {
@@ -190,7 +229,7 @@ export const m = {
       },
       dashboard: {
         title: 'Custom dashboards',
-        desc: 'Turn your data into interactive dashboards, updated in real time.',
+        desc: 'Turn your data into interactive dashboards, updated in real time and easy to build in minutes.',
       },
       collaborative: {
         title: 'Real-time Collaborative',

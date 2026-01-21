@@ -2,6 +2,7 @@
 import {createTheme} from '@mui/material'
 import {Open_Sans} from 'next/font/google'
 import {alphaVar} from '@/shared/Pulse'
+import {borderRadius} from '@mui/system'
 
 // export const colorPrimary = '#0092e6'
 export const colorPrimary = '#007fff'
@@ -65,6 +66,17 @@ export const theme = createTheme({
     fontFamily: openSansFont.style.fontFamily,
   },
   components: {
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          borderRadius: '8px',
+          fontSize: '0.95rem',
+          // textAlign: 'justify',
+          backdropFilter: 'blur(4px)',
+          background: 'rgba(10, 20, 40, .8)',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {

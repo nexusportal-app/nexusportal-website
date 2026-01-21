@@ -16,7 +16,7 @@ export const Solution = () => {
       <Grid container columnSpacing={1} alignItems="center">
         <Grid size={{xs: 12, sm: 4}}>
           <SectionSubTitle sx={{fontWeight: 700, mb: 1, textAlign: 'left'}}>{m.solution.title}</SectionSubTitle>
-          <Paragraph sx={{textAlign: 'left'}}>{m.solution.desc}</Paragraph>
+          <Paragraph sx={{textAlign: 'left'}} dangerouslySetInnerHTML={{__html: m.solution.desc}}/>
         </Grid>
         <Grid size={{xs: 12, sm: 7}}>
           <Box component="ul" sx={{

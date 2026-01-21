@@ -43,21 +43,22 @@ export const Banner = () => {
           m: 0,
           textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
           fontWeight: '600',
-          fontSize: {xs: '2.6rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
+          fontSize: {xs: '2.0rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
           // mt: (headerHeight + 8) + 'px',
           lineHeight: '1.15',
         }}>
           {m.heroTitle1}
           <div>{m.heroTitle2}</div>
         </Box>
-        <Box sx={{
-          fontWeight: '500',
-          mt: -1,
-          fontSize: {xs: '1.2rem', sm: '1.5rem'},
-        }}>
-          {m.heroTitleSub}<br />
-          {m.heroTitleSub2}
-        </Box>
+        <Box
+          sx={{
+            fontWeight: '300',
+            mt: -1,
+            fontSize: {xs: '1.0rem', sm: '1.5rem'},
+          }}
+          dangerouslySetInnerHTML={{__html: m.heroTitleSub}}
+        />
+
         <Chip />
 
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center'}}>
