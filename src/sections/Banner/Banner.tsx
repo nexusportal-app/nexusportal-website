@@ -2,12 +2,12 @@ import {m} from '@/core/i18n'
 import {Box, Button} from '@mui/material'
 import {Pulse} from '@/shared/Pulse'
 import {BannerKey, revealKeyframes} from '@/sections/Banner/BannerKey'
-import {BannerArrow} from '@/sections/Banner/BannerArrow'
 import Upload from '@mui/icons-material/CloudDownloadOutlined'
 import Settings from '@mui/icons-material/Settings'
 import BarChart from '@mui/icons-material/BarChart'
 import {ScrollDownButton} from '@/sections/Banner/ScrollDownButton'
 import {appConf} from '@/core/conf'
+import {BannerKeyLink2} from '@/sections/Banner/BannerArrow2'
 
 export const Banner = () => {
   return (
@@ -43,7 +43,7 @@ export const Banner = () => {
           m: 0,
           textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
           fontWeight: '600',
-          fontSize: {xs: '3.4rem', sm: '4.6rem'},
+          fontSize: {xs: '2.6rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
           // mt: (headerHeight + 8) + 'px',
           lineHeight: '1.15',
         }}>
@@ -55,7 +55,8 @@ export const Banner = () => {
           mt: -1,
           fontSize: {xs: '1.2rem', sm: '1.5rem'},
         }}>
-          {m.heroTitleSub}
+          {m.heroTitleSub}<br />
+          {m.heroTitleSub2}
         </Box>
         <Chip />
 
@@ -114,27 +115,17 @@ const Chip = () => {
       alignItems: 'center',
       justifyContent: 'center',
       // flexDirection: {xs: 'column', sm: 'row'},
-      gap: {xs: .5, sm: 1},
+      // gap: {xs: .5, sm: .5, md: 1},
     }}>
       <BannerKey icon={Upload}>
         {m.key1}
       </BannerKey>
-
-      <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-        <BannerArrow sx={{animationDelay: '0s'}} />
-        <BannerArrow sx={{ml: -1.4, animationDelay: '.3s'}} />
-      </Box>
-
-      <BannerKey icon={Settings}>
+      <BannerKeyLink2 />
+      <BannerKey icon={Settings} textAnimationDelay={10}>
         {m.key2}
       </BannerKey>
-
-      <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-        <BannerArrow sx={{animationDelay: '.6s'}} />
-        <BannerArrow sx={{ml: -1.4, animationDelay: '0.9s'}} />
-      </Box>
-
-      <BannerKey icon={BarChart}>
+      <BannerKeyLink2 />
+      <BannerKey icon={BarChart} textAnimationDelay={20}>
         {m.key3}
       </BannerKey>
     </Box>

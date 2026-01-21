@@ -16,7 +16,7 @@ const magicBorder = {
     position: 'absolute',
     inset: 0,
     borderRadius: 'inherit',
-    padding: '1.5px', // Slightly thicker for better reflection visibility
+    padding: '1px', // Slightly thicker for better reflection visibility
     background: `
       conic-gradient(
         from var(--angle),
@@ -48,7 +48,7 @@ const magicBorder = {
   },
 } as const
 
-export const BannerKey = ({sx, icon: Icon, children, ...props}: BoxProps & {icon: ElementType}) => {
+export const BannerKey = ({sx, icon: Icon, children, textAnimationDelay, ...props}: BoxProps & {textAnimationDelay?: number, icon: ElementType}) => {
   return (
     <Box sx={{
       py: 1 / 2,
@@ -67,8 +67,28 @@ export const BannerKey = ({sx, icon: Icon, children, ...props}: BoxProps & {icon
       ...magicBorder,
       ...sx,
     }} {...props} >
-      <Icon sx={{display: {xs: 'none', sm: 'bloc'}, mr: .5, opacity: .8}} />
-      {children}
+      <Icon sx={{display: {xs: 'none', sm: 'block'}, mr: .5, opacity: .8}} />
+      <Box sx={{
+        background: `
+          linear-gradient(
+            120deg,
+            #888 0%,
+            #888 45%,
+            #fff 50%,
+            #888 55%,
+            #888 100%
+          )
+        `,
+        backgroundSize: '300% auto',
+        backgroundPosition: '0% center',
+        color: 'transparent',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        animation: 'wave 8s linear infinite',
+        animationDelay: textAnimationDelay ? textAnimationDelay + 's' : '0s',
+      }}>
+        {children}
+      </Box>
     </Box>
   )
 }

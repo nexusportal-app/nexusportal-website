@@ -82,6 +82,28 @@ export const theme = createTheme({
             transform: 'scale(0.9)',
             filter: 'blur(4px)',
           },
+          // '1%': {
+          //   color: 'black',
+          //   transform: 'scale(1)',
+          //   filter: 'blur(1.5px)',
+          // },
+          // '2%': {
+          //   boxShadow: 'none',
+          //   color: 'black',
+          //   transform: 'scale(0.9)',
+          //   filter: 'blur(3px)',
+          // },
+          // '3%': {
+          //   color: 'black',
+          //   transform: 'scale(1)',
+          //   filter: 'blur(1px)',
+          // },
+          // '4%': {
+          //   boxShadow: 'none',
+          //   color: 'black',
+          //   transform: 'scale(0.95)',
+          //   filter: 'blur(2px)',
+          // },
           '5%': {
             boxShadow: t.vars.shadows[1],
             color: 'black',

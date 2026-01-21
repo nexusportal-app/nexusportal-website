@@ -41,3 +41,15 @@ a {
     --angle: 2200deg;
   }
 }
+
+@keyframes wave {
+  0% {
+    background-position: 100% 0;
+  }
+  25% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}

@@ -1,5 +1,14 @@
 import ArrowRight from '@mui/icons-material/ChevronRight'
-import {SxProps} from '@mui/material'
+import {Box, SxProps} from '@mui/material'
+
+function BannerKeyLink() {
+  return (
+    <Box sx={{display: {sm: 'none', md: 'block'}}}>
+      <BannerArrow sx={{animationDelay: '0s'}} />
+      <BannerArrow sx={{display: {xs: 'none', sm: 'none', md: 'none', lg: 'inline'}, ml: -1, animationDelay: '.3s'}} />
+    </Box>
+  )
+}
 
 export const BannerArrow = ({sx}: {sx?: SxProps}) => {
   return (
