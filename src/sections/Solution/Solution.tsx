@@ -14,9 +14,9 @@ export const Solution = () => {
     <Section sx={{...saveCardAnimation}}>
       <SectionTitle>{m.solution.question}</SectionTitle>
       <Grid container columnSpacing={1} alignItems="center">
-        <Grid size={{xs: 12, sm: 4}}>
-          <SectionSubTitle sx={{fontWeight: 700, mb: 1, textAlign: 'left'}}>{m.solution.title}</SectionSubTitle>
-          <Paragraph sx={{textAlign: 'left'}} dangerouslySetInnerHTML={{__html: m.solution.desc}}/>
+        <Grid size={{xs: 12, sm: 5}}>
+          <SectionTitle sx={{fontWeight: 700, mb: 1, textAlign: 'left'}}>{m.solution.title}</SectionTitle>
+          <Paragraph size="big" sx={{fontWeight: 500}} dangerouslySetInnerHTML={{__html: m.solution.desc}} />
         </Grid>
         <Grid size={{xs: 12, sm: 7}}>
           <Box component="ul" sx={{

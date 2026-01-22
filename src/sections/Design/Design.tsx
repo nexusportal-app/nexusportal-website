@@ -18,7 +18,7 @@ export const Design = () => {
       },
     }}>
       <SectionTitle>{m.design.title}</SectionTitle>
-      <Grid container columnSpacing={2} sx={{pt: {xs: 0, sm:phoneOffset}}}>
+      <Grid container columnSpacing={2} sx={{pt: {xs: 0, sm: phoneOffset}}}>
         <Grid size={{xs: 12, sm: 9}} order={{xs: 2, sm: 1}} sx={{
           flex: 2,
           display: 'flex',
@@ -57,7 +57,7 @@ export const Design = () => {
           }} />
         </Grid>
         <Grid size={{xs: 12, sm: 3}} order={{xs: 1, sm: 2}} alignSelf="center">
-          <SectionSubTitle sx={{lineHeight: 1.5, textAlign: {xs: 'center', sm: 'left'}, mt: 0}} dangerouslySetInnerHTML={{__html: m.design.desc}} />
+          <SectionSubTitle sx={{textAlign: {xs: 'center', sm: 'left'}, mt: 0}} dangerouslySetInnerHTML={{__html: m.design.desc}} />
         </Grid>
       </Grid>
     </Section>

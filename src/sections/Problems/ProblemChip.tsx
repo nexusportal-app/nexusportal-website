@@ -25,7 +25,7 @@ const style: BoxProps['sx'] = {
 
 export const ProblemChip = ({sx, title, children, ...props}: BoxProps) => {
   return (
-    <Tooltip title={title && <div dangerouslySetInnerHTML={{__html: title}} />}>
+    <Tooltip arrow title={title && <div dangerouslySetInnerHTML={{__html: title}} />}>
       <Box component="li" {...props} sx={{
         display: {xs: children === '' ? 'none' : 'block', sm: 'block'},
         ...style as any,

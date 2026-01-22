@@ -1,6 +1,7 @@
 import {Box} from '@mui/material'
 import {BoxProps} from '@mui/material/Box'
 import {ElementType, ReactNode} from 'react'
+import {Paragraph} from '@/shared/Paragraph'
 
 export const saveCardAnimation = {
   '@keyframes saveCardAnimation': {
@@ -72,14 +73,11 @@ export const SaveCard = ({sx, icon: Icon, head, children, ...props}: BoxProps & 
       {...props}
     >
       <Icon sx={{fontSize: '2.4rem', mr: 1, color: 'primary.main'}} />
-      <Box sx={{
-        // borderBottom: '1px solid',
-        // borderColor: 'divider',
-      }}>
-        {/*<Box sx={{border: '1px solid white', borderTopColor: 'black', borderRadius: 50, background: 'grey', p: 1, display: 'inline-flex', alignItems: 'center'}}>*/}
-        {/*</Box>*/}
-        <Box component="b" sx={{mb: .5, fontWeight: '500', display: 'block', fontSize: '1.4rem'}}>{head}</Box>
-        {children}
+      <Box>
+        <Paragraph component="h4" size="big" sx={{m: 0, mb: .5, fontWeight: '500', display: 'block'}}>{head}</Paragraph>
+        <Paragraph sx={{
+          fontWeight: '500',
+        }}>{children}</Paragraph>
         <Border />
       </Box>
     </Box>

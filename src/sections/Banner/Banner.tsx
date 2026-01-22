@@ -52,9 +52,10 @@ export const Banner = () => {
         </Box>
         <Box
           sx={{
+            textWrap: 'balance',
             fontWeight: '300',
             mt: -1,
-            fontSize: {xs: '1.0rem', sm: '1.5rem'},
+            fontSize: {xs: '1.2rem', sm: '1.5rem'},
           }}
           dangerouslySetInnerHTML={{__html: m.heroTitleSub}}
         />

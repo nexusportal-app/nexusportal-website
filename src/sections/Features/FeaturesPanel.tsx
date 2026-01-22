@@ -4,6 +4,7 @@ import Image from 'next/image'
 import style from './FeaturesPanel.module.css'
 import {headerGradiant} from '@/sections/Header/Header'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
+import {Paragraph} from '@/shared/Paragraph'
 
 type Props = BoxProps & {
   mirror?: boolean
@@ -59,7 +60,7 @@ export const FeaturesPanel = ({
       </Box>
       <Box sx={{color: 'white'}}>
         <SectionSubTitle sx={{textAlign: 'left', fontWeight: 700, mb: .5}}>{title}</SectionSubTitle>
-        <Box sx={{fontWeight: '500', fontSize: '1.2rem'}}>{desc}</Box>
+        <Paragraph size="big" sx={{fontWeight: '500'}}>{desc}</Paragraph>
       </Box>
     </Box>
   )

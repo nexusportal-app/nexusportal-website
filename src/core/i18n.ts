@@ -10,7 +10,7 @@ export const m = {
   // heroTitleSub2: 'and with our Information Management app, they won't.',
   // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
   // heroTitleSub2: 'NexusPortal structures your data - so reports stay clean and always ready.',
-  heroTitleSub: 'Information management platform helping humanitarian teams <br/> <b>organize and protect data</b> without messy, time-consuming work.',
+  heroTitleSub: 'Information management platform helping humanitarian teams <b>organize and protect data</b> without messy, time-consuming work.',
   key1: 'Collect & Import',
   key2: 'Transform & Manage',
   key3: 'Visualize & Analyze',
@@ -100,8 +100,8 @@ export const m = {
   },
   solution: {
     question: 'How can NexusPortal solve it?',
-    title: 'Let us handle the chaos',
-    desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>PowerBI</b><br/>with one coherent system so your team can work in one place instead of moving data between tools.',
+    title: 'Reliable at scale',
+    desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>PowerBI</b><br/>with one coherent system so your team can work in one place <b>instead of moving data between tools</b>.',
     saveMoney: {
       title: 'Save Money',
       desc: 'Avoid hiring extra staff to fix data errors or handle tasks that should be automated. Keep workflows lean and reduce costly rework.',
@@ -281,7 +281,7 @@ export const m = {
                 For example, data might be collected in KoboToolbox, exported to Excel, and then visualized in Power BI, therefore without proper access management or a reliable single source of truth. 
               </p>
               <p>
-                This often leads to <b>scattered</b> systems, corrupted data and a <b>loss of the overall picture</b>. 
+                This often leads to <b>scattered</b> systems, manual updates and a <b>loss of the overall picture</b>. 
                 ${appName} solves this by bringing collection, integration, management, and visualization together into one secure, cohesive platform.
               </p>
             `,

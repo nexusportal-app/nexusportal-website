@@ -68,6 +68,9 @@ export const theme = createTheme({
   components: {
     MuiTooltip: {
       styleOverrides: {
+        arrow: {
+          color: 'rgba(10, 20, 40, .8)',
+        },
         tooltip: {
           borderRadius: '8px',
           fontSize: '0.95rem',
