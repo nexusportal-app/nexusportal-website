@@ -2,7 +2,6 @@
 import {useState} from 'react'
 import {Box, Collapse, IconButton} from '@mui/material'
 import ChevronRight from '@mui/icons-material/ChevronRight'
-import {track} from '@vercel/analytics'
 
 export const FaqCard = ({question, answer}: {question: string; answer: string}) => {
   const [open, setOpen] = useState(false)
@@ -13,10 +12,14 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
         // transition: t => t.transitions.create('all'),
         backgroundColor: 'background.paper',
         borderRadius: 1 / 4,
-        p: {xs: .5, sm: 1},
+        py: {xs: .5, sm: .75},
+        px: {xs: .5, sm: 1},
         mb: 0.25,
         boxShadow: 0,
 
+        '& p': {
+          my: .5,
+        },
         '&:first-of-type': {
           borderTopLeftRadius: theme => theme.shape.borderRadius,
           borderTopRightRadius: theme => theme.shape.borderRadius,
@@ -59,7 +62,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
         >
           <ChevronRight />
         </IconButton>
-        <Box sx={{fontSize: '1.2rem', fontWeight: 500}} dangerouslySetInnerHTML={{__html: question}} />
+        <Box sx={{fontSize: '1.1rem', fontWeight: 500}} dangerouslySetInnerHTML={{__html: question}} />
       </Box>
       <Collapse in={open}>
         <Box sx={{fontWeight: 500, textAlign: 'justify'}} dangerouslySetInnerHTML={{__html: answer}} />

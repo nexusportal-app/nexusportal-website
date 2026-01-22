@@ -10,7 +10,7 @@ export const m = {
   // heroTitleSub2: 'and with our Information Management app, they won't.',
   // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
   // heroTitleSub2: 'NexusPortal structures your data - so reports stay clean and always ready.',
-  heroTitleSub: 'Information management platform helping humanitarian teams <br/> <b>organize and protect</b> data without messy, time-consuming work.',
+  heroTitleSub: 'Information management platform helping humanitarian teams <br/> <b>organize and protect data</b> without messy, time-consuming work.',
   key1: 'Collect & Import',
   key2: 'Transform & Manage',
   key3: 'Visualize & Analyze',
@@ -101,14 +101,14 @@ export const m = {
   solution: {
     question: 'How can NexusPortal solve it?',
     title: 'Let us handle the chaos',
-    desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>BI</b><br/>with one coherent system so your team can work in one place instead of moving data between tools.',
+    desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>PowerBI</b><br/>with one coherent system so your team can work in one place instead of moving data between tools.',
     saveMoney: {
       title: 'Save Money',
       desc: 'Avoid hiring extra staff to fix data errors or handle tasks that should be automated. Keep workflows lean and reduce costly rework.',
     },
     saveTime: {
       title: 'Save Time',
-      desc: 'Data stays aligned, permissions update automatically from your organisation’s accounts, calculations run, and dashboards feed real-time data so your team can focus on decisions, not fixes.',
+      desc: `Data stays aligned, permissions update automatically from your organisation's accounts, calculations run, and dashboards feed real-time data so your team can focus on decisions, not fixes.`,
     },
     saveStress: {
       title: 'Save Stress',
@@ -257,121 +257,129 @@ export const m = {
     title: `Questions? Answers.`,
     list: [
       {
-        question: `Why was ${appName} created?`,
-        answer: `
-          <p>
-            ${appName} was first initiated within <b>Danish Refugee Council's</b> (DRC) Ukraine mission to overcome the challenges of traditional <b>Information Management Systems</b>.
-          </p>
-          <p>
-            Over more than two years, it was continuously developed and improved, until it became clear that the solution could benefit organizations far beyond DRC. 
-            The platform has since been redesigned to work across organizations, in a flexible and fully generic way.
-          </p>
-        `,
+        title: 'General',
+        list: [
+          {
+            question: `Why was ${appName} created?`,
+            answer: `
+              <p>
+                NexusPortal was born inside the Danish Refugee Council's Ukraine mission, <b>the largest mission DRC has ever run</b>.
+                At that scale, traditional Information Management Systems <b>simply broke</b> down and became unmanageable.
+              </p>
+              <p>
+                Over more than two years, it was continuously developed and improved, until it became clear that the solution <b>could benefit far beyond DRC</b>. The platform has since been redesigned to work across organizations, in a flexible and fully generic way. Scaling from large, complex operations to the needs of small missions.
+              </p>
+            `,
+          },
+          {
+            question: `What is the added value of ${appName} compared to existing solutions?`,
+            answer: `
+              <p>
+                Most information management workflows today are <b> fragmented across multiple</b> tools that were never designed to work together. 
+              </p>
+              <p>
+                For example, data might be collected in KoboToolbox, exported to Excel, and then visualized in Power BI, therefore without proper access management or a reliable single source of truth. 
+              </p>
+              <p>
+                This often leads to <b>scattered</b> systems, corrupted data and a <b>loss of the overall picture</b>. 
+                ${appName} solves this by bringing collection, integration, management, and visualization together into one secure, cohesive platform.
+              </p>
+            `,
+          },
+          {
+            question: `Is NexusPortal free?`,
+            answer: `
+              <p>
+                Yes. <b>A free tier</b> will be available for personal use and small teams. 
+              </p>
+              <p>
+                For larger organizations, we will offer affordable pricing plans designed to cover infrastructure costs and ensure the long-term sustainability of the platform.          
+              </p>
+            `,
+          },
+        ],
       },
       {
-        question: `What is the added value of ${appName} compared to existing solutions?`,
-        answer: `
-          <p>
-            Most information management workflows today are fragmented across multiple tools that were never designed to work together. 
-          </p>
-          <p>
-            For example, data might be collected in KoboToolbox, exported to Excel, and then visualized in Power BI - therefore without proper access management or a reliable single source of truth. 
-          </p>
-          <p>
-            This often leads to <b>scattered</b> systems, corrupted data and a <b>loss of the overall picture</b>. 
-            ${appName} solves this by bringing collection, integration, management, and visualization together into one secure, cohesive platform.
-          </p>
-        `,
-      },
-      //   {
-      //     question: `When will the final product be launched?`,
-      //     answer: `${appName} is currently in its final stages of development.
-      // We plan to open early access to selected partners within the coming months, with a wider public launch expected later this year.
-      // Join the waitlist to stay informed and get early updates.`,
-      //   },
-      {
-        question: `How data is protected?`,
-        answer: `
-          <p>
-            Data protection is at the core of ${appName}. 
-            All data is encrypted both in transit and at rest, and stored on secure, <b>GDPR-compliant infrastructure</b>.
-          </p> 
-          <p> 
-            Access rights can be finely managed to ensure that only authorized users can view or edit sensitive information. 
-          </p> 
-          <p> 
-            We follow industry best practices to safeguard your data and your users' privacy.
-          </p> 
-          <p> 
-            NexusPortal does not sell, trade, or monetize user data in any form.
-          </p>
-        `,
+        title: 'Data protection',
+        list: [
+          {
+            question: `Where is NexusPortal hosted?`,
+            answer: `
+              <p>NexusPortal is hosted by <b>Hetzner</b> a German cloud provider.</p>
+              <p>Application servers and file storage are located in <b>Finland</b>, ensuring compliance with <b>GDPR</b>.</p>
+            `,
+          },
+          {
+            question: `How is user access managed?`,
+            answer: `
+              <p>Access is managed through <b>organization accounts</b> such as Microsoft 365. User identity, role, and organizational information are <b>automatically synchronized</b>. When staff join, change roles, or leave the organization, access permissions are updated automatically without manual intervention.</p>
+              <p>
+                NexusPortal supports <b>fine-grained, rule-based access</b> control, allowing permissions to be restricted to <b>specific subsets of data</b>.
+                This is especially useful for <b>sensitive data</b> and <b>case management</b>, ensuring users only see what is relevant to their role.
+              </p>
+            `,
+          },
+          {
+            question: `How is data secured in NexusPortal?`,
+            answer: `
+              <p>NexusPortal is built with security by design.</p>
+              <p>All traffic is encrypted via <b>HTTPS</b>, authentication relies on <b>JWT-based tokens</b>, and every action is <b>verified server-side</b>. Users can only access data they are explicitly authorized to see.</p>
+            `,
+          },
+          {
+            question: `Does NexusPortal sell or monetize data?`,
+            answer: `
+              <p>No.</p>
+              <p>NexusPortal <b>does not sell, trade, or monetize user data</b> in any form.</p>
+             `,
+          },
+        ],
       },
       {
-        question: `Is NexusPortal free?`,
-        answer: `
-          <p>
-            Yes. <b>A free tier</b> will be available for personal use and small teams. 
-            For larger organizations, we will offer affordable pricing plans designed to cover infrastructure costs and ensure the long-term sustainability of the platform.          
-          </p>
-         `,
-      },
-      {
-        question: `Which data sources does NexusPortal support?`,
-        answer: `
-          <p>
-           NexusPortal can import <b>KoboToolbox</b> forms and keep them <b>automatically synchronized</b> as data evolves.
-           It also supports importing data from <b>CSV and Excel (XLS/XLSX)</b> files, and allows teams to <b>collect data directly within the platform</b>.           
-          </p>
-         `,
-      },
-      {
-        question: `What can I do with NexusPortal?`,
-        answer: `
-          <p>
-            NexusPortal centralizes your data from multiple sources, keeps it synchronized as it evolves, and turns it into <b>clean, structured datasets</b> ready for analysis and reporting.
-            You can explore data, apply transformations, build dashboards, and share insights without constantly updating formulas or rebuilding processes when forms or data change.
-          </p>
-         `,
-      },
-      {
-        question: `How data access is managed?`,
-        answer: `
-          <p>
-            Access is managed through <b>organization accounts</b> (such as Microsoft 365), where user information like job title and location is <b>automatically retrieved and kept up to date</b>. When staff leave your organization or change roles, access permissions are updated automatically. <b>No manual changes</b> are required in NexusPortal.
-          </p>
-          <p>
-            Access can also be restricted to <b>specific subsets of a dataset</b>, based on configurable filters. This makes NexusPortal suitable for <b>case management and sensitive data</b>, ensuring that only authorized staff can view the information relevant to them.
-          </p>
-         `,
-        // Access is managed through <b>organization accounts</b> (such as Microsoft 365), ensuring user access stays up to date. Fine-grained permissions make it easy to control <b>who can view or edit specific parts of a dataset</b>, down to groups or job titles.
-      },
-      {
-        question: 'Why does NexusPortal integrate with KoboToolbox?',
-        answer: `
-          <p>
-            NexusPortal was originally built during the <b>DRC Ukraine mission</b>, where all data was managed in <b>KoboToolbox</b>. The first version of NexusPortal acted as a wrapper around KoboToolbox, adding <b>essential features for field operations</b> and extending its analytical and reporting capabilities.
-          </p>
-          <p>
-            Because many organizations and humanitarian missions already rely on KoboToolbox and may not want to migrate their existing data, NexusPortal retains this integration. Data is <b>automatically imported and kept synchronized</b> between KoboToolbox and NexusPortal, allowing teams to build on their existing workflows without disruption.
-          </p>
-        `,
-      },
-      {
-        question: 'Can I use NexusPortal without KoboToolbox?',
-        answer: `
-          <p>
-            <b>Yes.</b> While NexusPortal integrates with KoboToolbox, it is not required.
-          </p>
-          <p>
-            You can import data from <b>CSV and Excel (XLS/XLSX)</b> files, or <b>collect data directly within NexusPortal</b>. These data sources benefit from the same synchronization, transformation, and access control features, with better performances.
-          </p>
-          <p>
-            This allows organizations to use NexusPortal as a standalone data platform, or alongside KoboToolbox, depending on their needs and existing workflows.
-          </p>
-        `,
+        title: 'Features',
+        list: [
+          {
+            question: `What can I do with NexusPortal?`,
+            answer: `
+              <p>
+                NexusPortal centralizes your data from multiple sources, keeps it synchronized as it evolves, and turns it into <b>clean, structured datasets</b> ready for analysis and reporting.
+                You can explore data, apply transformations, build dashboards, and share insights without constantly updating formulas or rebuilding processes when forms or data change.
+              </p>
+            `,
+          },
+          {
+            question: `Which data sources does NexusPortal support?`,
+            answer: `<p>Teams can <b>collect data directly within the platform</b>.</p>
+           <p>They can also import <b>KoboToolbox forms</b> and keep them automatically synchronized as data evolves.</p>
+           <p>Additionally, the platform supports importing data from <b>CSV</b> and <b>Excel (XLS/XLSX)</b> files.</p>`,
+          },
+          {
+            question: 'Why does NexusPortal integrate with KoboToolbox?',
+            answer: `
+              <p>
+                NexusPortal was originally built during the <b>DRC Ukraine mission</b>, where all data was managed in <b>KoboToolbox</b>. The first version of NexusPortal acted as a wrapper around KoboToolbox, adding <b>essential features for field operations</b> and extending its analytical and reporting capabilities.
+              </p>
+              <p>
+                Because many organizations and humanitarian missions already rely on KoboToolbox and may not want to migrate their existing data, NexusPortal retains this integration. Data is <b>automatically imported and kept synchronized</b> between KoboToolbox and NexusPortal, allowing teams to build on their existing workflows without disruption.
+              </p>
+            `,
+          },
+          {
+            question: 'Can I use NexusPortal without KoboToolbox?',
+            answer: `
+              <p>
+                <b>Yes.</b> While NexusPortal integrates with KoboToolbox, it is not required.
+              </p>
+              <p>
+                You can import data from <b>CSV and Excel (XLS/XLSX)</b> files, or <b>collect data directly within NexusPortal</b>. These data sources benefit from the same synchronization, transformation, and access control features, with better performances.
+              </p>
+              <p>
+                This allows organizations to use NexusPortal as a standalone data platform, or alongside KoboToolbox, depending on their needs and existing workflows.
+              </p>
+            `,
+          },
+        ],
       },
     ],
   },
-  // created: ``,
 }
