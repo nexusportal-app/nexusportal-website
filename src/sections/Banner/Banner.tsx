@@ -1,13 +1,14 @@
 import {m} from '@/core/i18n'
-import {Box, Button} from '@mui/material'
+import {Box} from '@mui/material'
 import {Pulse} from '@/shared/Pulse'
 import {BannerKey, revealKeyframes} from '@/sections/Banner/BannerKey'
 import Upload from '@mui/icons-material/CloudDownloadOutlined'
 import Settings from '@mui/icons-material/Settings'
 import BarChart from '@mui/icons-material/BarChart'
 import {ScrollDownButton} from '@/sections/Banner/ScrollDownButton'
-import {appConf} from '@/core/conf'
 import {BannerKeyLink2} from '@/sections/Banner/BannerArrow2'
+import {BtnSignUp} from '@/shared/BtnSignUp'
+import {BtnExplore} from '@/shared/BtnExplore'
 
 export const Banner = () => {
   return (
@@ -64,23 +65,10 @@ export const Banner = () => {
 
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center'}}>
           <Pulse>
-            <Button
-              href={appConf.consoleUrl}
-              sx={{color: 'primary.light'}}
-              variant="outlined"
-              size="large"
-            >
-              {m.ctaSignUp}
-            </Button>
+            <BtnSignUp size="large" />
           </Pulse>
           <Pulse>
-            <Button
-              href={appConf.consoleUrl}
-              variant="contained"
-              size="large"
-            >
-              {m.cta}
-            </Button>
+            <BtnExplore size="large" />
           </Pulse>
         </Box>
 
