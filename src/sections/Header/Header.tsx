@@ -4,6 +4,8 @@ import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
 import {appConf} from '@/core/conf'
+import {BtnSignUp} from '@/shared/BtnSignUp'
+import {BtnExplore} from '@/shared/BtnExplore'
 
 export const contentWidth = 1200
 
@@ -89,17 +91,8 @@ export const Header = () => {
           justifyContent: 'flex-end',
         }}>
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
-          <Button
-            href={appConf.consoleUrl}
-            sx={{color: 'white'}}
-            variant="outlined"
-            size="small"
-          >
-            {m.ctaSignUp}
-          </Button>
-          <Button href={appConf.consoleUrl} size="small" variant="contained">
-            &nbsp;&nbsp;{m.cta}&nbsp;&nbsp;
-          </Button>
+          <BtnSignUp />
+          <BtnExplore />
         </Box>
       </Box>
     </>
