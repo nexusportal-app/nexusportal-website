@@ -10,7 +10,7 @@ import {AnalyticsTracker} from '@/core/AnalyticsTracker'
 
 export const metadata: Metadata = {
   title: m.title,
-  description: m.heroTitleSub,
+  description: m.heroTitleSubRaw,
   icons: {
     icon: '/app-logo.svg',
   },

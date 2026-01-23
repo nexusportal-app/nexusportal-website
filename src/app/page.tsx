@@ -5,7 +5,6 @@ import {Problems} from '@/sections/Problems/Problems'
 import {Solution} from '@/sections/Solution/Solution'
 import {Features} from '@/sections/Features/Features'
 import {Design} from '@/sections/Design/Design'
-import {Snackbar} from '@mui/material'
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       <Design />
       <Faq />
       <Footer />
-      <Snackbar open={true} message="Our beta goes live in just a few days. 🚀" />
+      {/*<Snackbar open={true} message="Our beta goes live in just a few days. 🚀" />*/}
     </main>
   )
 }

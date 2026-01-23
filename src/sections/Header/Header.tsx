@@ -91,8 +91,8 @@ export const Header = () => {
           justifyContent: 'flex-end',
         }}>
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
-          <BtnSignUp />
-          <BtnExplore />
+          <BtnSignUp size="small" />
+          <BtnExplore size="small" />
         </Box>
       </Box>
     </>

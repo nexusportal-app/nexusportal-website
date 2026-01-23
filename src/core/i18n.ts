@@ -11,6 +11,7 @@ export const m = {
   // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
   // heroTitleSub2: 'NexusPortal structures your data - so reports stay clean and always ready.',
   heroTitleSub: 'Information management platform helping humanitarian teams <b>organize and protect data</b> without messy, time-consuming work.',
+  heroTitleSubRaw: 'Information management platform helping humanitarian teams organize and protect data without messy, time-consuming work.',
   key1: 'Collect & Import',
   key2: 'Transform & Manage',
   key3: 'Visualize & Analyze',
@@ -305,7 +306,7 @@ export const m = {
           {
             question: `Where is NexusPortal hosted?`,
             answer: `
-              <p>NexusPortal is hosted by <b>Hetzner</b> a German cloud provider.</p>
+              <p>NexusPortal is hosted by <b>Hetzner</b>, a German cloud provider.</p>
               <p>Application servers and file storage are located in <b>Finland</b>, ensuring compliance with <b>GDPR</b>.</p>
             `,
           },
