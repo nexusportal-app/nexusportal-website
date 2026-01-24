@@ -94,7 +94,7 @@ export const Header = () => {
         }}>
           <BtnContact />
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
-          <BtnSignUp size="small" />
+          <BtnSignUp size="small" sx={{color: 'white'}}/>
           <BtnExplore size="small" />
         </Box>
       </Box>

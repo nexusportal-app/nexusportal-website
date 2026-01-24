@@ -17,6 +17,7 @@ export const m = {
   key3: 'Visualize & Analyze',
   ctaSignUp: 'Sign-up',
   cta: 'Explore a demo',
+  ctaShort: 'Explore',
   logoAlt: appName + ' logo',
   blog: 'Blog',
   // highlights: {
