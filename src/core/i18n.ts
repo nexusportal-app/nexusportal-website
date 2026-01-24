@@ -254,6 +254,10 @@ export const m = {
       },
     },
   },
+  contact: {
+    title: 'Contact Us',
+    paragraph: `Have questions or want to get started? <br/>Contact us at <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>, and we'll help you set everything up and get the most out of the platform.`,
+  },
   faq: {
     title: `Questions? Answers.`,
     list: [

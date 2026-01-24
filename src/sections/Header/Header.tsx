@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import {Box, Button} from '@mui/material'
+import {Box, IconButton} from '@mui/material'
 import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
-import {appConf} from '@/core/conf'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
+import ContactIcon from '@mui/icons-material/AlternateEmail'
+import {BtnContact} from '@/sections/Header/BtnContact'
 
 export const contentWidth = 1200
 
@@ -88,8 +89,10 @@ export const Header = () => {
           gap: {xs: .5, sm: 1},
           width: '100%',
           display: 'flex',
+          alignItems: 'center',
           justifyContent: 'flex-end',
         }}>
+          <BtnContact />
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
           <BtnSignUp size="small" />
           <BtnExplore size="small" />
