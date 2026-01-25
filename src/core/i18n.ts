@@ -223,8 +223,10 @@ export const m = {
   features: {
     title: 'Modern features. Finally.',
     list: {
-      xls: {title: 'A new way to build XLS Forms', desc: `Stop uploading the same form over and over. See changes instantly, with clear indicators when something isn't valid.`},
-      // xls: {title: 'Built on XLS Form', desc: 'The most flexible open standard to design surveys with complex logic.'},
+      xls: {
+        title: 'A new way to build XLS Forms',
+        desc: `Stop uploading the same form over and over. See changes instantly, with clear indicators when something isn't valid.`,
+      },
       db: {
         title: 'Full control of your data',
         desc: 'A powerful, intuitive interface inspired by spreadsheets, designed to keep your data consistent.',
@@ -255,9 +257,40 @@ export const m = {
       },
     },
   },
+  testimonial: {
+    title: 'Testimonials',
+    desc: 'Feedback from DRC Ukraine team based on the initial field deployment of NexusPortal.',
+    list: [
+      {
+        author: 'Katrina Zacharewski',
+        job: 'Head of Programme @DRC',
+        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. Infoportal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      },
+      {
+        author: 'Kat0',
+        job: 'Head of Program @DRC',
+        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. Infoportal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      },
+      {
+        author: 'Kat1',
+        job: 'Head of Program @DRC',
+        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. Infoportal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      },
+      {
+        author: 'Kat2',
+        job: 'Head of Program @DRC',
+        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. Infoportal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      },
+      {
+        author: 'Kat3',
+        job: 'Head of Program @DRC',
+        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. Infoportal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      },
+    ],
+  },
   contact: {
     title: 'Contact Us',
-    paragraph: `Have questions or want to get started? <br/>Contact us at <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>, and we'll help you set everything up and get the most out of the platform.`,
+    paragraph: `Have questions or want to get started? <p>Contact us at <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>, and we'll help you set everything up and get the most out of the platform.</p>`,
   },
   faq: {
     title: `Questions? Answers.`,

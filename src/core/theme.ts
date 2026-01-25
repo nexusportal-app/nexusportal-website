@@ -119,7 +119,7 @@ export const theme = createTheme({
           //   transform: 'scale(0.95)',
           //   filter: 'blur(2px)',
           // },
-          '5%': {
+          '2%': {
             boxShadow: t.vars.shadows[1],
             color: 'black',
             transform: 'scale(1)',

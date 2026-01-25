@@ -3,7 +3,6 @@ import {Box} from '@mui/material'
 import {m} from '@/core/i18n'
 import {SectionTitle} from '@/shared/SectionTitle'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
-import Icon from '@mui/icons-material/Mail'
 
 export const Contact = () => {
   return (

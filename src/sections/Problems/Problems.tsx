@@ -7,21 +7,21 @@ import {Box} from '@mui/material'
 import {ProblemChip} from '@/sections/Problems/ProblemChip'
 
 const delay = [
-  .5, // ''
-  0.5, // 'Forms change, metrics break'
-  0, // 'People still see data they shouldn’t'
-  0.5, // 'One dashboard… ten versions'
-  0.7, // ''
-  0.3, // 'Numbers never match'
-  0.4, // ''
-  0,
-  0.5, // 'People lose access randomly'
-  0.1, // 'Data scattered everywhere'
-  0.05, // 'Time-consuming manual tasks'
-  0.1, // 'Repetitive work for every update'
-  0.4, // ''
-  0.3, // 'Duplication across data'
-  0.2, // ''
+  .5,       // 'Time-consuming manual tasks'
+  0.5,      // ''
+  0.1,        // `People still see data they shouldn't`
+  0.5,      // 'One dashboard… ten versions'
+  0.7,      // ''
+  0.3,      // 'People lose access randomly'
+  0.4,      // ''
+  0.1,        // 'Numbers never match'
+  0,        // ''
+  0.1,      // 'Data scattered everywhere'
+  0.05,     // ''
+  0.1,        // 'Forms change, metrics break'
+  0.2,      // 'Repetitive work for every update'
+  0.1,      // 'Duplication across data'
+  0.2,      // ''
 ].map(_ => _ + 's')
 
 export const Problems = () => {
