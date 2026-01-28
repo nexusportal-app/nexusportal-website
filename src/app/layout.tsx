@@ -11,6 +11,11 @@ import {AnalyticsTracker} from '@/core/AnalyticsTracker'
 export const metadata: Metadata = {
   title: m.title,
   description: m.heroTitleSubRaw,
+  openGraph: {
+    images: [
+      'https://www.nexusportal.app/ss3/ss-dashboard.png',
+    ],
+  },
   icons: {
     icon: '/app-logo.svg',
   },

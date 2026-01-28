@@ -13,7 +13,7 @@ export const m = {
   heroTitleSub: 'Information management platform helping humanitarian teams <b>organize and protect data</b> without messy, time-consuming work.',
   heroTitleSubRaw: 'Information management platform helping humanitarian teams organize and protect data without messy, time-consuming work.',
   key1: 'Collect & Import',
-  key2: 'Transform & Manage',
+  key2: 'Transform & Report',
   key3: 'Visualize & Analyze',
   ctaSignUp: 'Sign-up',
   cta: 'Explore a demo',

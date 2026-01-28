@@ -48,8 +48,8 @@ export const Banner = () => {
           // mt: (headerHeight + 8) + 'px',
           lineHeight: '1.15',
         }}>
-          {m.heroTitle1}
-          <div>{m.heroTitle2}</div>
+          {m.heroTitle1}<br />
+          {m.heroTitle2}
         </Box>
         <Box
           sx={{
