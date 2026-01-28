@@ -21,6 +21,17 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'NexusPortal',
+  applicationCategory: 'BusinessApplication',
+  description:
+    'Information management platform for humanitarian organizations',
+  operatingSystem: 'Web',
+  url: 'https://www.nexusportal.app',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +55,10 @@ export default function RootLayout({
       </AppRouterCacheProvider>
     </StyledEngineProvider>
     <AnalyticsTracker />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
+    />
     </body>
     </html>
   )
