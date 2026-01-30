@@ -13,23 +13,26 @@ const delay = [
   0.5,      // 'One dashboard… ten versions'
   0.7,      // ''
   0.3,      // 'People lose access randomly'
-  0.4,      // ''
+  0.3,      // ''
   0.1,        // 'Numbers never match'
-  0,        // ''
+  0.1,        // ''
   0.1,      // 'Data scattered everywhere'
   0.05,     // ''
   0.1,        // 'Forms change, metrics break'
   0.2,      // 'Repetitive work for every update'
-  0.1,      // 'Duplication across data'
-  0.2,      // ''
+  0.2,      // 'Duplication across data'
+  0.1,      // ''
 ].map(_ => _ + 's')
 
 export const Problems = () => {
   return (
     <Section>
       <SectionTitle>{m.problems.question}</SectionTitle>
-      <SectionSubTitle sx={{mb: 0}}>{m.problems.title}</SectionSubTitle>
-      <Paragraph size="big" sx={{textAlign: 'center', mb: 3}}>{m.problems.subTitle}</Paragraph>
+      <SectionSubTitle sx={{mb: 1}}>{m.problems.title}</SectionSubTitle>
+      <Paragraph animate alt size="big" sx={{textAlign: 'center'}} dangerouslySetInnerHTML={{__html: m.problems.subTitle1}} />
+      <Paragraph animate alt size="big" sx={{textAlign: 'center'}} dangerouslySetInnerHTML={{__html: m.problems.subTitle2}} />
+      <Paragraph animate alt size="big" sx={{textAlign: 'center', mb: 3}} dangerouslySetInnerHTML={{__html: m.problems.subTitle3}} />
+
       <Box component="ul" sx={{
         textWrap: 'balance',
         p: 0,

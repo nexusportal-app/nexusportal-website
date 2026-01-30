@@ -43,31 +43,43 @@ export const m = {
   problems: {
     question: `What's the problem?`,
     title: `Information management is messy`,
-    subTitle: `Managing forms, dashboards, and reports across multiple tools is complex, time-consuming, and error-prone. Small changes can break metrics, duplicate work piles up, and it's hard to get a single source of truth.`,
+    subTitle1: `Data lives in multiple forms and tools, so teams spend days <b>cleaning and reconciling</b> just to answer simple questions.`,
+    subTitle2: `Data gets <b>copied across workflows</b> and quickly diverges, <b>reports stop matching</b>, audits become difficult, and <b>access rights</b> are hard to maintain, creating real <b>data-protection risks</b>.`,
+    subTitle3: `As a result, teams waste time <b>fixing data</b> instead of using it. `,
+    subTitle__: `
+      Teams collect data in many tools, then spend days cleaning, reconciling and rebuilding just to answer simple questions.
+      Small changes in a form can break indicators, numbers don't match between reports, and producing donor or cluster reporting becomes a manual, stressful process.
+      Accesses are hard to maintain over all the tools, and never up-to-date.
+      As a result, teams waste time fixing data instead of using it.
+    `,
+    // subTitle: `Managing forms, dashboards, and reports across multiple tools is complex, time-consuming, and error-prone. Small changes can break metrics, duplicate work piles up, and it's hard to get a single source of truth.`,
     list: [
+      {title: ''},
       {
         title: 'Time-consuming manual tasks',
-        desc: `<p>Reporting to donors, updating dashboards, recomputing figures, and providing dataset access are all done <b>manually</b>.</p>
+        desc: `<p>Reporting to donors, updating dashboards, recomputing figures, and providing data access are all done <b>manually</b>.</p>
        <p>These tasks take <b>hours</b>, are <b>error-prone</b>, and even small changes can break everything.</p>`,
       },
-      {title: ''},
       {
         title: `People still see data they shouldn't`,
         desc: `<p>Forms are often shared across teams, but <b>Team A shouldn't see Team B's data</b>, and <b>Person A shouldn't access sensitive info from Person B's cases</b>.</p>
            <p>In practice, <b>access controls are usually impossible</b> to enforce, leading to data leaks or messy copies of subsets, creating <b>chaos</b>.</p>`,
       },
+      {title: ''},
       {
         title: 'One dashboard… ten versions',
-        desc: `<p>Dashboards are often duplicated because <b>data grows</b>, <b>shapes change</b>, or <b>translation</b> is needed.</p>
-           <p>Over time, <b>multiple copies diverge</b>, creating <b>inconsistencies</b>.</p>`,
+        desc: `
+          <p>Dashboards are often duplicated because <b>data grows</b>, <b>shapes change</b>, or <b>translation</b> is needed.</p>
+          <p>Over time, <b>multiple copies diverge</b>, creating <b>inconsistencies</b>.</p>
+          <p>Their capacity is limited, they can’t handle the full dataset, and <b>synchronisation becomes manual</b>.</p>
+        `,
       },
       {title: ''},
       {
-        title: 'People lose access randomly',
+        title: 'Outdated permissions',
         desc: `<p>Access controls in existing solutions are <b>rigid</b>.</p>
-           <p>Staff turnover or role changes leave accounts <b>outdated</b>, and manual updates are <b>slow, error-prone, and chaotic</b>.</p>`,
+           <p>Staff turnover or role changes leave accounts <b>outdated</b>, and manual updates are <b>time-consuming, error-prone, and chaotic</b>.</p>`,
       },
-      {title: ''},
       {
         title: 'Numbers never match',
         desc: `<p>When totals are recomputed, the numbers often <b>don't match</b>, and it's unclear why.</p>
@@ -76,28 +88,28 @@ export const m = {
       {title: ''},
       {
         title: 'Data scattered everywhere',
-        desc: `<p>Many forms get created, sometimes because needs change, sometimes to improve them.</p>
+        desc: `<p>Many forms get created and quickly evolve overtime.</p>
            <p>Often, a form includes multiple activities, and an activity can be split across several forms.</p>
-           <p>Over time, the data becomes <b>chaotic</b>, impossible to maintain, and <b>difficult to get a clear overview</b>.</p>`,
+           <p>Over time, the data becomes <b>chaotic</b>, impossible to maintain, and <b>it becomes impossible to have a clear overview</b>.</p>`,
       },
-      {title: ''},
       {
         title: 'Forms change, metrics break',
         desc: `<p>Dashboards and spreadsheet formulas are fragile.</p>
            <p>When forms change, <b>metrics don't adapt</b>, dashboards break, and reports become <b>unreliable</b>.</p>`,
       },
+      {title: ''},
       {
         title: 'Repetitive work for every update',
         desc: `<p>Every new dataset, dashboard refresh, or report requires repeating the same steps: pulling data, recalculating, updating dashboards, and sharing files.</p>
            <p>This <b>wastes time</b>, increases <b>errors</b>, and makes <b>tracking changes difficult</b>.</p>`,
       },
+      {title: ''},
       {
         title: 'Duplication across data',
         desc: `<p>Sharing access often means copying data, creating <b>multiple sources of truth</b>.</p>
            <p>Without deduplication, the same person or activity can appear multiple times.</p>
            <p>Over time, data becomes <b>fragmented, inconsistent, and confusing</b> for teams.</p>`,
       },
-      {title: ''},
     ],
   },
   solution: {
@@ -218,38 +230,38 @@ export const m = {
   // },
   design: {
     title: 'Designed for clarity and comfort',
-    desc: 'Intuitive design.<br/>Elegant visuals.<br/>Mobile-friendly.<br/>Dark mode included.',
+    desc: 'Fast.<br/>Intuitive design.<br/>Elegant visuals.<br/>Dark mode.<br/>Mobile-friendly.',
   },
   features: {
     title: 'Modern features. Finally.',
     list: {
       xls: {
         title: 'A new way to build XLS Forms',
-        desc: `Stop uploading the same form over and over. See changes instantly, with clear indicators when something isn't valid.`,
+        desc: `Stop uploading the same form over and over. <b>See changes instantly</b>, with clear indicators when something isn't valid.`,
       },
       db: {
         title: 'Full control of your data',
-        desc: 'A powerful, intuitive interface inspired by spreadsheets, designed to keep your data consistent.',
+        desc: 'A powerful, intuitive interface inspired by spreadsheets, designed to keep your <b>data consistent</b>.',
       },
       dashboard: {
         title: 'Custom dashboards',
-        desc: 'Turn your data into interactive dashboards, updated in real time and easy to build in minutes.',
+        desc: 'Turn your data into interactive <b>dashboards</b>, updated in <b>real time</b> and easy to build in minutes.',
       },
       collaborative: {
         title: 'Real-time Collaborative',
-        desc: `Work together live, see teammates' edits instantly and keep a transparent history.`,
+        desc: `<b>Work together live</b>, see teammates' edits instantly and keep a <b>transparent history</b>.`,
       },
       access: {
         title: 'Granular access control',
-        desc: 'Accounts stay in sync with your organization. Define fine-grained permissions by user, role, or group, and keep datasets always up to date.',
+        desc: 'Accounts stay <b>in sync</b> with your organization. Define fine-grained <b>permissions by user, role, or group</b>, and keep datasets always up to date.',
       },
       kobo: {
-        title: 'Seamless KoboToolbox integration',
-        desc: `Already using KoboToolbox and not ready to move on? No problem. Import your data into NexusPortal and keep everything automatically synchronized.`,
+        title: 'Seamless Kobo integration',
+        desc: `Already using KoboToolbox and not ready to move on? No problem. <b>Import your data into NexusPortal</b> and keep everything automatically synchronized.`,
       },
       smart: {
         title: `Transform data without limits`,
-        desc: `Connect, transform, and combine data from multiple surveys with confidence. NexusPortal validates every step so even complex workflows run safely and reliably.`,
+        desc: `Connect, transform, and combine data from multiple surveys with confidence. NexusPortal validates every step so even complex workflows run <b>safely and reliably</b>.`,
       },
       repeat: {
         title: 'From impossible to intuitive',
@@ -290,7 +302,8 @@ export const m = {
   },
   contact: {
     title: 'Contact Us',
-    paragraph: `Curious how teams during operations Ukraine reduced days of manual reporting to a few clicks with reliable data?<br/> Request a live demo by emailing <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>.`,
+    paragraph: `<p>Curious how teams operating in Ukraine reduced days of manual reporting to just a few clicks, while keeping data reliable?</p>`
+      + `Request a live demo by emailing <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>.`,
   },
   faq: {
     title: `Questions? Answers.`,

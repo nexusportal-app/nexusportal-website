@@ -45,8 +45,8 @@ export const Features = () => {
           pr: 2,
           pb: 4,
         }}>
-          {Obj.entries(m.features.list).map(([key, _], i) => (
-            <FeaturesPanel key={key} title={_.title} desc={_.desc} imageSrc={'/ss3/ss-' + key + '.png'} mirror={i % 2 === 0} />
+          {Obj.entries(m.features.list).map(([key, _]) => (
+            <FeaturesPanel key={key} title={_.title} desc={_.desc} imageSrc={'/ss3/ss-' + key + '.png'} />
           ))}
         </Box>
         <Box sx={{display: 'flex', gap: 1, pb: 4, alignItems: 'center', justifyContent: 'center'}}>

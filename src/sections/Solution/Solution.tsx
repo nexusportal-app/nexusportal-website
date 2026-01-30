@@ -1,9 +1,8 @@
 import {SectionTitle} from '@/shared/SectionTitle'
 import {m} from '@/core/i18n'
-import {SectionSubTitle} from '@/shared/SectionSubTitle'
 import {Section} from '@/shared/Section'
 import {Box, Grid} from '@mui/material'
-import {SaveCard, saveCardAnimation} from '@/sections/Solution/SaveCard'
+import {SaveCard} from '@/sections/Solution/SaveCard'
 import IconSaveMoney from '@mui/icons-material/Savings'
 import IconSaveStress from '@mui/icons-material/SelfImprovement'
 import IconSaveTime from '@mui/icons-material/Timelapse'
@@ -11,12 +10,12 @@ import {Paragraph} from '@/shared/Paragraph'
 
 export const Solution = () => {
   return (
-    <Section sx={{...saveCardAnimation}}>
+    <Section>
       <SectionTitle>{m.solution.question}</SectionTitle>
       <Grid container columnSpacing={1} alignItems="center">
         <Grid size={{xs: 12, sm: 5}}>
-          <SectionTitle sx={{fontWeight: 700, mb: 1, textAlign: 'left'}}>{m.solution.title}</SectionTitle>
-          <Paragraph size="big" sx={{fontWeight: 500}} dangerouslySetInnerHTML={{__html: m.solution.desc}} />
+          <SectionTitle sx={{textAlign: {xs: 'center', sm: 'left'}, fontWeight: 700, mb: 1}}>{m.solution.title}</SectionTitle>
+          <Paragraph alt size="big" sx={{textAlign: {xs: 'center', sm: 'left'}, fontWeight: 500}} dangerouslySetInnerHTML={{__html: m.solution.desc}} />
         </Grid>
         <Grid size={{xs: 12, sm: 7}}>
           <Box component="ul" sx={{

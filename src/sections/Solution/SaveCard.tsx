@@ -3,29 +3,6 @@ import {BoxProps} from '@mui/material/Box'
 import {ElementType, ReactNode} from 'react'
 import {Paragraph} from '@/shared/Paragraph'
 
-export const saveCardAnimation = {
-  '@keyframes saveCardAnimation': {
-    '0%': {
-      opacity: 0,
-      color: 'transparent',
-      transform: 'translate(50px, -50px)',
-      filter: 'blur(4px)',
-    },
-    '15%': {
-      opacity: 1,
-      color: 'black',
-      transform: 'translate(0)',
-      filter: 'blur(0)',
-    },
-    '100%': {
-      opacity: 1,
-      color: 'black',
-      transform: 'translate(0)',
-      filter: 'blur(0)',
-    },
-  },
-}
-
 export const SaveCard = ({sx, icon: Icon, head, children, ...props}: BoxProps & {
   icon: ElementType
   head?: ReactNode

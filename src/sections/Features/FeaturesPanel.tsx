@@ -7,7 +7,6 @@ import {SectionSubTitle} from '@/shared/SectionSubTitle'
 import {Paragraph} from '@/shared/Paragraph'
 
 type Props = BoxProps & {
-  mirror?: boolean
   title: string
   desc: string
   imageSrc: string
@@ -17,7 +16,6 @@ export const FeaturesPanel = ({
   imageSrc,
   title,
   desc,
-  mirror,
 }: Props) => {
   return (
     <Box
@@ -25,8 +23,13 @@ export const FeaturesPanel = ({
       sx={{
         flex: '0 0 80%',
         width: '100%',
-        minWidth: 900,
-        p: {xs: 1, sm: 2},
+        minWidth: 930,
+        px: 1,
+        pt: 1,
+        pb: 2,
+        // py: 0,
+        // p: 1,
+        // p: {xs: 1, sm: 1},
         gap: {xs: 1, sm: 2},
         display: 'flex',
         alignItems: 'center',
@@ -60,7 +63,18 @@ export const FeaturesPanel = ({
       </Box>
       <Box sx={{color: 'white'}}>
         <SectionSubTitle sx={{textAlign: 'left', fontWeight: 700, mb: .5}}>{title}</SectionSubTitle>
-        <Paragraph size="big" sx={{fontWeight: '500'}}>{desc}</Paragraph>
+        <Paragraph
+          size="big"
+          sx={{
+            fontWeight: '500',
+            color: 'rgba(255,255,255,.6)',
+            'b': {
+              fontWeight: 500,
+              color: 'rgba(255,255,255,1)',
+            },
+          }}
+          dangerouslySetInnerHTML={{__html: desc}}
+        />
       </Box>
     </Box>
   )
