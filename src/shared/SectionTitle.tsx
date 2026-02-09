@@ -8,5 +8,5 @@ export const SectionTitle = ({sx, children, ...props}: BoxProps) => {
     textAlign: 'center',
     mb: {xs: 2, sm: 3},
     ...sx,
-  }}>{children}</Box>
+  }} {...props}>{children}</Box>
 }

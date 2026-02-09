@@ -1,24 +1,24 @@
 'use client'
-import {ButtonBase, IconButtonProps, useTheme} from '@mui/material'
-// import ArrowRight from '@mui/icons-material/ChevronRight'
-// import ArrowLeft from '@mui/icons-material/ChevronLeft'
+import {ButtonBase, IconButtonProps} from '@mui/material'
 import ArrowRight from '@mui/icons-material/ArrowForward'
 import ArrowLeft from '@mui/icons-material/ArrowBack'
-import {useEffect, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 
-// Lazy cached container
-let cachedContainer: HTMLElement | null = null
-const getContainer = () => {
-  if (cachedContainer) return cachedContainer
-  cachedContainer = document.querySelector<HTMLElement>('#Features-container')
-  return cachedContainer
+type Props = IconButtonProps & {
+  direction: 'left' | 'right'
+  containerId: string
 }
 
-export const FeaturesScrollXBtn = ({sx, direction, ...props}: IconButtonProps & {
-  direction: 'left' | 'right'
-}) => {
-  const theme = useTheme()
+export const ScrollXBtn = ({sx, direction, containerId, ...props}: Props) => {
+  const containerRef = useRef<HTMLElement | null>(null)
   const [hide, setHide] = useState(false)
+
+  const getContainer = () => {
+    if (!containerRef.current) {
+      containerRef.current = document.querySelector<HTMLElement>(`#${containerId}`)
+    }
+    return containerRef.current
+  }
 
   const checkVisibility = () => {
     const container = getContainer()
@@ -38,15 +38,16 @@ export const FeaturesScrollXBtn = ({sx, direction, ...props}: IconButtonProps & 
 
     container.addEventListener('scroll', checkVisibility)
     window.addEventListener('resize', checkVisibility)
+
     return () => {
       container.removeEventListener('scroll', checkVisibility)
       window.removeEventListener('resize', checkVisibility)
     }
-  }, [direction])
+  }, [direction, containerId])
 
   return (
     <ButtonBase
-      disabled={hide} // disable instead of hiding completely
+      disabled={hide}
       onClick={() => {
         const container = getContainer()
         if (!container) return
@@ -56,10 +57,10 @@ export const FeaturesScrollXBtn = ({sx, direction, ...props}: IconButtonProps & 
       }}
       sx={{
         ...sx,
-        p: .25,
+        p: 0.25,
         borderRadius: '50%',
         color: 'primary.light',
-        opacity: hide ? .3 : 1,
+        opacity: hide ? 0.3 : 1,
         transition: 'all 0.3s',
       }}
       {...props}

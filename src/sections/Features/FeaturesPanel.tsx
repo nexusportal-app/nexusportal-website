@@ -34,7 +34,7 @@ export const FeaturesPanel = ({
         display: 'flex',
         alignItems: 'center',
         borderRadius: 1,
-        backdropFilter: 'blur(2px)',
+        backdropFilter: 'blur(3px)',
         border: '1px solid #ffffff14',
         overflow: 'hidden',
         background: 'rgba(0, 0, 0, .1)',

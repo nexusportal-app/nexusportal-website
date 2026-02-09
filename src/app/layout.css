@@ -80,7 +80,7 @@ a {
 @keyframes paragraph {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(50px);
     filter: blur(4px);
   }
   15% {

@@ -15,7 +15,7 @@ export const Solution = () => {
       <Grid container columnSpacing={1} alignItems="center">
         <Grid size={{xs: 12, sm: 5}}>
           <SectionTitle sx={{textAlign: {xs: 'center', sm: 'left'}, fontWeight: 700, mb: 1}}>{m.solution.title}</SectionTitle>
-          <Paragraph alt size="big" sx={{textAlign: {xs: 'center', sm: 'left'}, fontWeight: 500}} dangerouslySetInnerHTML={{__html: m.solution.desc}} />
+          <Paragraph alt size="big" sx={{mb: {xs: 2, sm: 0}, textAlign: {xs: 'center', sm: 'left'}, fontWeight: 500}} dangerouslySetInnerHTML={{__html: m.solution.desc}} />
         </Grid>
         <Grid size={{xs: 12, sm: 7}}>
           <Box component="ul" sx={{

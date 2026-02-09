@@ -6,6 +6,8 @@ import {Solution} from '@/sections/Solution/Solution'
 import {Features} from '@/sections/Features/Features'
 import {Design} from '@/sections/Design/Design'
 import {Contact} from '@/sections/Contact/Contact'
+import {DarkBackground} from '@/shared/DarkBackground'
+import {Testimonials} from '@/sections/Testimonials/Testimonials'
 
 export default function Home() {
   return (
@@ -13,9 +15,12 @@ export default function Home() {
       <Banner />
       <Problems />
       <Solution />
-      <Features />
+      <DarkBackground>
+        <Testimonials/>
+        <Features />
+      </DarkBackground>
       <Design />
-      <Contact/>
+      <Contact />
       <Faq />
       <Footer />
       {/*<Snackbar open={true} message="Our beta goes live in just a few days. 🚀" />*/}
