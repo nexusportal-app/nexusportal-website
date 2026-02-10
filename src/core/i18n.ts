@@ -276,7 +276,7 @@ export const m = {
       {
         author: 'Sacha Kuilman',
         job: 'Area Programme Manager',
-        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. In previous missions without NexusPortal, we struggled with a lot of mistakes and had to wait 1 months between each Excel reports.<br/> It’s a brilliant project.`,
+        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.<br/> It’s a brilliant project.`,
       },
       {
         author: 'Katrina Zacharewski',

@@ -19,7 +19,7 @@ const headerLayout: BoxProps['sx'] = {
   position: 'fixed',
   margin: 'auto',
   mt: .5,
-  borderRadius: 5,
+  borderRadius: '16px',
   height: {xs: 50, sm: 60},
   width: contentWidth,
   maxWidth: `calc(100vw - 16px)`,
@@ -64,14 +64,14 @@ export const Header = () => {
         boxShadow: 6,
         transform: 'translateZ(0)',
         background: headerGradiant,
-        opacity: .6,
+        // opacity: .6,
+        backdropFilter: 'blur(6px)',
       }}>
 
       </Box>
       <Box component="header" sx={{
         ...headerLayout,
         zIndex: 30,
-        backdropFilter: 'blur(6px)',
         color: 'white',
         overflow: 'hidden',
         background: 'rgba(255,255,255, 0.1)',
