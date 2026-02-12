@@ -3,4 +3,5 @@ export const appConf = {
   contactEmail: 'contact@nexusportal.app',
   consoleUrl: 'https://console.nexusportal.app',
   linkedInUrl: 'https://www.linkedin.com/company/nexusportal',
+  replyDelayDelay: '24-48h',
 }

@@ -309,6 +309,9 @@ export const m = {
   },
   contact: 'Contact',
   contact_: {
+    submitSuccess: `Thanks! Your message has been sent. We’ll get back to you within ${appConf.replyDelayDelay}.`,
+    wantADemo: `I'd like a demo`,
+    submitError: `Internal error.`,
     preferDirect: `Rather email us directly? Write to <a href="mailto:${appConf.contactEmail}">${appConf.contactEmail}</a>.`,
     title: `See if NexusPortal is a good fit for your team`,
     subTitle: `Book a short demo to discuss your current tools, your reporting challenges, and how NexusPortal could simplify your workflows.`,
@@ -339,7 +342,7 @@ export const m = {
     ],
     submit: 'Submit',
     message: `Message`,
-    footer: `No spam. We reply within 24h.`,
+    footer: `No spam. We reply within ${appConf.replyDelayDelay}.`,
   },
   faq: {
     title: `Questions? Answers.`,
