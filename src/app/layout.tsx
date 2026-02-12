@@ -1,12 +1,13 @@
 import type {Metadata} from 'next'
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter'
 import {CssBaseline, StyledEngineProvider, ThemeProvider} from '@mui/material'
-import {openSansFont, theme} from '@/core/theme'
+import {lightTheme, openSansFont, theme} from '@/core/theme'
 import {m} from '@/core/i18n'
 import './layout.css'
 import {Header} from '@/sections/Header/Header'
 import Script from 'next/script'
 import {AnalyticsTracker} from '@/core/AnalyticsTracker'
+import {Footer} from '@/sections/Footer/Footer'
 
 export const metadata: Metadata = {
   title: m.title,
@@ -47,7 +48,7 @@ export default function RootLayout({
     />
     <StyledEngineProvider injectFirst>
       <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={lightTheme} defaultMode="light">
           <CssBaseline />
           {children}
           <Header />

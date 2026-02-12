@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import {Box, IconButton} from '@mui/material'
+import {Box, Button, ButtonProps, IconButton} from '@mui/material'
 import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
 import ContactIcon from '@mui/icons-material/AlternateEmail'
-import {BtnContact} from '@/sections/Header/BtnContact'
 
 export const contentWidth = 1200
 
@@ -81,7 +80,7 @@ export const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link href="/public" style={{display: 'inline-flex', alignItems: 'center'}}>
+        <Link href="/" style={{display: 'inline-flex', alignItems: 'center'}}>
           <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
           <Box sx={{ml: .5, fontSize: {xs: '1.2rem', sm: '1.3em'}}}> {m.title}</Box>
         </Link>
@@ -92,12 +91,36 @@ export const Header = () => {
           alignItems: 'center',
           justifyContent: 'flex-end',
         }}>
-          <BtnContact />
+          <Box sx={{display: {xs: 'none', sm: 'contents'}}}>
+            <HeadLink href="/contact">
+              {m.contact}
+            </HeadLink>
+          </Box>
+          <Box sx={{display: {xs: 'contents', sm: 'none'}}}>
+            <Link href="/contact">
+              <IconButton sx={{mr: -1 / 4, color: 'inherit'}}>
+                <ContactIcon />
+              </IconButton>
+            </Link>
+          </Box>
           {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
-          <BtnSignUp size="small" sx={{color: 'white'}}/>
+          <BtnSignUp size="small" sx={{color: 'white'}} />
           <BtnExplore size="small" />
         </Box>
       </Box>
     </>
+  )
+}
+
+function HeadLink({sx, href, ...props}: ButtonProps & {href: string}) {
+  return (
+    <Link href={href}>
+      <Button variant="text" sx={{
+        // fontSize: '1rem',
+        color: 'inherit', borderRadius: 10,
+        fontWeight: 600,
+        ...sx,
+      }} {...props} />
+    </Link>
   )
 }

@@ -62,7 +62,7 @@ const TestimonialCard = ({testimonial, index}: {
 }) => {
   return (
     <Box sx={{
-      zIndex: 10,
+      // zIndex: 10,
       flex: '0 0 auto',
       // overflow: 'hidden',
       maxWidth: 'min(100vw, 600px)',

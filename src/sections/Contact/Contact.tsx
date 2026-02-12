@@ -22,7 +22,7 @@ export const Contact = () => {
 
         {/*  <Icon sx={{fontSize: 250, color: 'rgba(0, 0, 0, .06)'}} />*/}
         {/*</Box>*/}
-        <SectionTitle>{m.contact.title}</SectionTitle>
+        <SectionTitle>{m.contactSection_.title}</SectionTitle>
         <SectionSubTitle sx={{
           'a': {
             fontWeight: 'bold',
@@ -31,7 +31,7 @@ export const Contact = () => {
             backgroundClip: 'text',
             color: 'transparent',
           },
-        }} dangerouslySetInnerHTML={{__html: m.contact.paragraph}} />
+        }} dangerouslySetInnerHTML={{__html: m.contactSection_.paragraph}} />
       </Box>
     </Section>
   )

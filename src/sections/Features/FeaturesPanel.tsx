@@ -38,7 +38,7 @@ export const FeaturesPanel = ({
         border: '1px solid #ffffff14',
         overflow: 'hidden',
         background: 'rgba(0, 0, 0, .1)',
-        zIndex: 10,
+        // zIndex: 10,
         // flexDirection: mirror ? 'row-reverse' : undefined,
         // backgroundColor: 'background.paper',
         // backgroundColor: 'black',

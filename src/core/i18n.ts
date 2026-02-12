@@ -1,5 +1,7 @@
 // gpt symbols to replace
 // — ’
+import {appConf} from '@/core/conf'
+
 const appName = 'NexusPortal'
 export const m = {
   // desc: 'The next generation of data collection & management software.',
@@ -300,10 +302,44 @@ export const m = {
       },
     ],
   },
-  contact: {
+  contactSection_: {
     title: 'Contact Us',
     paragraph: `<p>Curious how teams operating in Ukraine reduced days of manual reporting to just a few clicks, while keeping data reliable?</p>`
       + `Request a live demo by emailing <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>.`,
+  },
+  contact: 'Contact',
+  contact_: {
+    preferDirect: `Rather email us directly? Write to <a href="mailto:${appConf.contactEmail}">${appConf.contactEmail}</a>.`,
+    title: `See if NexusPortal is a good fit for your team`,
+    subTitle: `Book a short demo to discuss your current tools, your reporting challenges, and how NexusPortal could simplify your workflows.`,
+    testimony: `Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.`,
+    testimonyAuthor: `Sacha Kuilman`,
+    testimonyRole: `Area Programme Manager`,
+    email: 'Work email',
+    orgName: 'Organization name',
+    roles: `What best describes you?`,
+    roles_: [
+      'Information Management',
+      'MEAL / M&E',
+      'Programme / Operations',
+      'HQ / Global team',
+      'Other',
+    ],
+    tools: 'What tools do you currently use?',
+    tools_: [
+      'KoboToolbox',
+      'Excel',
+      'PowerBI',
+      'PowerApps',
+      'Ona',
+      'ActivityInfo',
+      'ArcGis',
+      'Custom tools',
+      'Other',
+    ],
+    submit: 'Submit',
+    message: `Message`,
+    footer: `No spam. We reply within 24h.`,
   },
   faq: {
     title: `Questions? Answers.`,

@@ -4,21 +4,24 @@ import GitHub from '@mui/icons-material/GitHub'
 import {Box} from '@mui/material'
 import {m} from '@/core/i18n'
 import {BoxProps} from '@mui/material/Box'
+import Link from 'next/link'
 
 export const Footer = () => {
   return (
-    <Box sx={{
+    <Box component="footer" sx={{
       p: 1,
+      position: 'relative',
       display: 'flex',
       flexDirection: {xs: 'column', sm: 'row'},
       gap: {xs: .5, sm: 0},
       justifyContent: 'space-between',
       alignItems: 'center',
-      maxWidth: 700,
+      maxWidth: 800,
+      width: '100%',
       color: 'text.disabled',
       margin: 'auto',
       fontSize: '0.874em',
-      marginBottom: 1,
+      mt: 2,
       '& a': {
         transition: 'all 200ms ease',
       },
@@ -29,20 +32,16 @@ export const Footer = () => {
       <Box sx={{
         display: 'flex',
         gap: .5,
+        'a': {
+          fontWeight: 500,
+        },
       }}>
         <div>© 2026 {m.title}</div>
         <Separator />
-        <Box
-          component="a"
-          sx={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            fontWeight: '500',
-          }}
-          href={'mailto:' + appConf.contactEmail}
-        >
-          {appConf.contactEmail}
-        </Box>
+        <Link href="/contact">
+          {m.contact}
+        </Link>
+        <Separator />
       </Box>
       <Box sx={{
         display: 'flex',

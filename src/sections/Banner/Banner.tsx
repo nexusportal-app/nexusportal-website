@@ -13,7 +13,7 @@ import {BtnExplore} from '@/shared/BtnExplore'
 export const Banner = () => {
   return (
     <Box component="section" sx={{
-      zIndex: 2,
+      // zIndex: 2,
       position: 'relative',
       height: '100vh',
       color: 'white',
@@ -85,7 +85,7 @@ export const Banner = () => {
   )
 }
 
-const Backdrop = () => {
+export const Backdrop = () => {
   return (
     <Box sx={{
       position: 'absolute',
