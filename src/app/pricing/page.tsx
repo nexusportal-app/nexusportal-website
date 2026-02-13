@@ -7,7 +7,8 @@ import DataUsage from '@mui/icons-material/DataUsage'
 import AddBox from '@mui/icons-material/AddBox'
 import Key from '@mui/icons-material/Key'
 import Support from '@mui/icons-material/Support'
-import Info from '@mui/icons-material/Help'
+import Help from '@mui/icons-material/Help'
+import Info from '@mui/icons-material/Info'
 import {Page} from '@/shared/Page'
 import {ContactContent} from '@/app/contact/page'
 import {SectionTitle} from '@/shared/SectionTitle'
@@ -56,7 +57,7 @@ const features: Feature[] = [
     label: m.pricing_.maxSubmissions,
     category: 'Usage',
     values: {
-      starter: {type: 'limit', value: 1_000},
+      starter: {type: 'limit', value: 500},
       mission: {type: 'limit', value: 5_000},
       impact: {type: 'limit', value: 25_000},
       enterprise: {type: 'unlimited'},
@@ -84,17 +85,17 @@ const features: Feature[] = [
       enterprise: {type: 'unlimited'},
     },
   },
-  {
-    id: 'workspaces',
-    label: m.pricing_.maxWorkspaces,
-    category: 'Usage',
-    values: {
-      starter: {type: 'limit', value: 2},
-      mission: {type: 'unlimited'},
-      impact: {type: 'unlimited'},
-      enterprise: {type: 'unlimited'},
-    },
-  },
+  // {
+  //   id: 'workspaces',
+  //   label: m.pricing_.maxWorkspaces,
+  //   category: 'Usage',
+  //   values: {
+  //     starter: {type: 'limit', value: 2},
+  //     mission: {type: 'unlimited'},
+  //     impact: {type: 'unlimited'},
+  //     enterprise: {type: 'unlimited'},
+  //   },
+  // },
   {
     id: 'formBuilder',
     label: m.pricing_.formBuilder,
@@ -208,6 +209,10 @@ export default function Pricing() {
             <PlanCard planId={planId} index={index} />
           </Grid>
         ))}
+        <Box sx={{display: 'flex', mt: 1, gap: .5, alignItems: 'center', justifyContent: 'center', width: '100%', fontWeight: 500, color: 'info.main'}}>
+          <Info color="info" fontSize="small" />
+          {m.pricing_.perWorkspace}
+        </Box>
       </Grid>
       <Section sx={{px: 0, scrollMarginTop: 80}} id="book-a-demo">
         <SectionTitle>{m.bookDemo}</SectionTitle>
@@ -240,7 +245,7 @@ function PlanCard({planId, index}: {planId: PlanId; index: number}) {
                     <Box sx={{flex: 1}}>
                       {feature.label}
                       {feature.tooltip && (
-                        <Tooltip title={feature.tooltip}><Info fontSize="inherit" color="disabled" /></Tooltip>
+                        <Tooltip placement="right" title={feature.tooltip}><Help fontSize="inherit" color="disabled" sx={{ml: .25}} /></Tooltip>
                       )}
                     </Box>
                   )}
@@ -264,9 +269,10 @@ function Header({planId, plan, index}: {planId: PlanId; plan: Plan; index: numbe
       borderColor: 'divider',
       background: `linear-gradient(to top, #fff 1%, rgba(0,165,255,${index / 12}) 100%)`,
     }}>
-      <Box component="h3">{m.pricing_[planId]}</Box>
-      <Price price={plan.price} sx={{mb: 2}} />
-
+      <Box sx={{mb: 2}}>
+        <Box component="h3">{m.pricing_[planId]}</Box>
+        <Price price={plan.price} />
+      </Box>
       {{
         starter: <Button href={appConf.consoleUrl} fullWidth variant="contained">{m.pricing_.getStarted}</Button>,
         mission: <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">{m.bookDemo}</BtnScrollTo>,

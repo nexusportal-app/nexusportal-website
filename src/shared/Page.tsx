@@ -46,7 +46,8 @@ export const Page = ({title, subTitle, width, sx, children, ...props}: PageProps
       <Box sx={{
         margin: 'auto',
         pt: 4,
-        px: .5,
+        px: {xs: .5, sm: 1},
+        width: '100%',
         flex: 1,
         position: 'relative',
         transition: 'all 0.3s',

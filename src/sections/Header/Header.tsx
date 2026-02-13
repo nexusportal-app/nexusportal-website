@@ -6,8 +6,7 @@ import {BoxProps} from '@mui/material/Box'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
 import ContactIcon from '@mui/icons-material/AlternateEmail'
-
-export const contentWidth = 1200
+import {sectionWidth} from '@/shared/Section'
 
 const headerLayout: BoxProps['sx'] = {
   top: 0,
@@ -20,8 +19,10 @@ const headerLayout: BoxProps['sx'] = {
   mt: .5,
   borderRadius: '16px',
   height: {xs: 50, sm: 60},
-  width: contentWidth,
-  maxWidth: `calc(100vw - 16px)`,
+  width: '100%',
+  maxWidth: sectionWidth,
+  // width: contentWidth,
+  // maxWidth: `calc(100vw - 16px)`,
 }
 
 export const headerGradiant = `
@@ -57,7 +58,7 @@ export const headerGradiant = `
 
 export const Header = () => {
   return (
-    <>
+    <Box component="header" sx={{px: 1}}>
       <Box sx={{
         ...headerLayout,
         boxShadow: 6,
@@ -68,7 +69,7 @@ export const Header = () => {
       }}>
 
       </Box>
-      <Box component="header" sx={{
+      <Box sx={{
         ...headerLayout,
         zIndex: 30,
         color: 'white',
@@ -111,7 +112,7 @@ export const Header = () => {
           <BtnExplore size="small" />
         </Box>
       </Box>
-    </>
+    </Box>
   )
 }
 

@@ -68,7 +68,7 @@ export const ContactForm = () => {
           <FormGroup
             sx={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
+              gridTemplateColumns: {sm: '1fr 1fr 1fr', xs: '1fr 1fr'},
               columnGap: 2,
             }}
           >
@@ -87,7 +87,7 @@ export const ContactForm = () => {
             border: '1px solid',
             m: 0,
             pl: .25,
-            py: 1/5,
+            py: 1 / 5,
             borderRadius: '12px',
             borderColor: 'divider',
           }}

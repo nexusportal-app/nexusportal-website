@@ -14,7 +14,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
         borderRadius: 1 / 4,
         py: {xs: .5, sm: .75},
         px: {xs: .5, sm: 1},
-        mb: 0.25,
+        mb: 0.125,
         boxShadow: 0,
 
         '& p': {

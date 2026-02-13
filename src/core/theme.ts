@@ -96,6 +96,9 @@ export const theme = ({cssVarPrefix = 'main', dark}: {cssVarPrefix?: string; dar
       styleOverrides: {
         root: ({theme}) => ({
           padding: theme.spacing(1.5),
+          [theme.breakpoints.down('sm')]: {
+            padding: theme.spacing(1),
+          },
         }),
       },
     },
@@ -104,8 +107,8 @@ export const theme = ({cssVarPrefix = 'main', dark}: {cssVarPrefix?: string; dar
         elevation: 0,
       },
       styleOverrides: {
-        root: ({theme}) => ({
-          border: '1px solid',
+        root: ({theme, elevation}) => ({
+          border: !dark && elevation ? undefined : '1px solid',
           borderColor: theme.palette.divider,
           // border: '1px solid rgba(255,255,255, 0.05)',
           // borderTopColor: 'rgba(255,255,255, 0.06)',
