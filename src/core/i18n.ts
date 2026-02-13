@@ -1,13 +1,23 @@
 // gpt symbols to replace
-// — ’
+// — '
 import {appConf} from '@/core/conf'
 
 const appName = 'NexusPortal'
+
+export const formatLargeNumber = (n?: number, options?: Intl.NumberFormatOptions): string => {
+  return n !== undefined && n !== null && !isNaN(n) ? n.toLocaleString('en-EN', options) : '-'
+}
+
+export const formatPrice = (n: number) => {
+  return '$' + formatLargeNumber(n)
+}
+
 export const m = {
   // desc: 'The next generation of data collection & management software.',
   title: appName,
   heroTitle1: 'From scattered data',
   heroTitle2: 'To a single, clear picture',
+  bookDemo: 'Book a demo',
   // heroTitleSub: 'Your team shouldn't spend hours cleaning messy data,',
   // heroTitleSub2: 'and with our Information Management app, they won't.',
   // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
@@ -22,6 +32,7 @@ export const m = {
   ctaShort: 'Explore',
   logoAlt: appName + ' logo',
   blog: 'Blog',
+  perMonth: ' / month',
   // highlights: {
   //   centralized: {
   //     title: 'All-in-One Platform',
@@ -73,7 +84,7 @@ export const m = {
         desc: `
           <p>Dashboards are often duplicated because <b>data grows</b>, <b>shapes change</b>, or <b>translation</b> is needed.</p>
           <p>Over time, <b>multiple copies diverge</b>, creating <b>inconsistencies</b>.</p>
-          <p>Their capacity is limited, they can’t handle the full dataset, and <b>synchronisation becomes manual</b>.</p>
+          <p>Their capacity is limited, they can't handle the full dataset, and <b>synchronisation becomes manual</b>.</p>
         `,
       },
       {title: ''},
@@ -278,7 +289,7 @@ export const m = {
       {
         author: 'Sacha Kuilman',
         job: 'Area Programme Manager',
-        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.<br/> It’s a brilliant project.`,
+        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.<br/> It's a brilliant project.`,
       },
       {
         author: 'Katrina Zacharewski',
@@ -298,7 +309,7 @@ export const m = {
       {
         author: 'Romane Breton',
         job: 'Protection Coordinator',
-        content: `It has transformed how we manage protection information, setting a high standard for both operational efficiency and compliance with data protection requirements. The platform made it easy to establish a secure referral system and helped prevent double counting when working with the same groups over multiple sessions. The protection monitoring dashboard gave us real-time access and made creating analysis and visualization much easier. As a Protection Coordinator, I could produce high-quality protection information management products without needing extra IM staff. Reporting was just as simple, with what we jokingly called the “one-click report” to ActivityInfo, while other organizations struggled to meet OCHA’s monthly requirements.`,
+        content: `It has transformed how we manage protection information, setting a high standard for both operational efficiency and compliance with data protection requirements. The platform made it easy to establish a secure referral system and helped prevent double counting when working with the same groups over multiple sessions. The protection monitoring dashboard gave us real-time access and made creating analysis and visualization much easier. As a Protection Coordinator, I could produce high-quality protection information management products without needing extra IM staff. Reporting was just as simple, with what we jokingly called the “one-click report” to ActivityInfo, while other organizations struggled to meet OCHA's monthly requirements.`,
       },
     ],
   },
@@ -309,10 +320,26 @@ export const m = {
   },
   contact: 'Contact',
   contact_: {
-    submitSuccess: `Thanks! Your message has been sent. We’ll get back to you within ${appConf.replyDelayDelay}.`,
+    arguments: {
+      title: 'Start for free',
+      list: [
+        'Start for free',
+        `If you're using Kobo, no migration needed`,
+        `Built in field operation`,
+      ],
+    },
+    targets: {
+      title: 'NexusPortal is perfect for teams who',
+      list: [
+        'Use KoboToolbox and Excel for reporting',
+        'Struggle with manual data cleaning and consolidation',
+        'Need faster and more reliable dashboards',
+      ],
+    },
+    submitSuccess: `Thanks! Your message has been sent. We'll get back to you within ${appConf.replyDelayDelay}.`,
     wantADemo: `I'd like a demo`,
     submitError: `Internal error.`,
-    preferDirect: `Rather email us directly? Write to <a href="mailto:${appConf.contactEmail}">${appConf.contactEmail}</a>.`,
+    preferDirect: `Prefer email? Write to <a href="mailto:${appConf.contactEmail}">${appConf.contactEmail}</a>.`,
     title: `See if NexusPortal is a good fit for your team`,
     subTitle: `Book a short demo to discuss your current tools, your reporting challenges, and how NexusPortal could simplify your workflows.`,
     testimony: `Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.`,
@@ -369,7 +396,7 @@ export const m = {
                 Most information management workflows today are <b> fragmented across multiple</b> tools that were never designed to work together. 
               </p>
               <p>
-                For example, data might be collected in KoboToolbox, exported to Excel, and then visualized in Power BI, therefore without proper access management or a reliable single source of truth. 
+                For example, data might be collected in KoboToolbox, exported to Excel, and then visualized in Power BI, therefore without proper access management or a reliable <b>single source of truth</b>. 
               </p>
               <p>
                 This often leads to <b>scattered</b> systems, manual updates and a <b>loss of the overall picture</b>. 
@@ -378,13 +405,69 @@ export const m = {
             `,
           },
           {
-            question: `Is NexusPortal free?`,
+            question: `Do I need to migrate my data?`,
             answer: `
-              <p>
-                Yes. <b>A free tier</b> will be available for personal use and small teams. 
+              <ul>
+              <li><p>
+                If you are using <b>KoboToolbox</b>, you <b>don't need to manually migrate your data</b>. NexusPortal can <b>automatically import and keep your Kobo data synchronized</b>. 
+                <br/>➡️ &nbsp;Updates made in NexusPortal will be reflected in KoboToolbox. 
+                <br/>⬅️ &nbsp;Changes made in KoboToolbox will be detected and synced back to NexusPortal. 
               </p>
               <p>
-                For larger organizations, we will offer affordable pricing plans designed to cover infrastructure costs and ensure the long-term sustainability of the platform.          
+                Once imported, your Kobo form data can be used in your workflow <b>just like any other form</b>.
+                In short, you can start using NexusPortal <b>without disrupting your current processes</b>.
+              </p>
+              </li>
+              <li>
+                <p>
+                  If your data is in <b>Excel files</b>, you can import them as well. Simply create a form that matches your data structure, and use NexusPortal's <b>Excel import feature</b>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  For any other data sources or special cases, <b>contact us</b> and we'll help you integrate your data into NexusPortal.
+                </p>
+              </li>
+              </ul>
+            `,
+          },
+        ],
+      },
+      {
+        title: 'Pricing',
+        list: [
+          {
+            question: `Can I use NexusPortal for free?`,
+            answer: `
+              <p>
+                Yes. <b>A free tier</b> is available for personal use and small teams. 
+              </p>
+              <p>
+                For larger organizations, we provide affordable pricing plans that cover infrastructure costs and support the long-term sustainability of the platform.
+              </p>
+            `,
+          },
+          {
+            question: `What payment methods do you accept?`,
+            answer: `
+              <p>
+                For now, we handle paid plans via <b>invoice and bank transfer</b>. After signing up for a paid plan, you'll receive an invoice with instructions to complete your payment. Paid plans will become automated via Stripe in the future.          
+              </p>
+            `,
+          },
+          {
+            question: `Are there any hidden costs?`,
+            answer: `
+              <p>
+                No, we are fully transparent about our pricing, and you can find all the details on our <b>Pricing page</b>. There are no setup fees or hidden costs, and pricing is simple.
+              </p>
+            `,
+          },
+          {
+            question: `What happens if I exceed the usage limit?`,
+            answer: `
+              <p>
+                You can contact us to update your plan and increase your usage limit.          
               </p>
             `,
           },
@@ -473,4 +556,36 @@ export const m = {
       },
     ],
   },
+  pricing: 'Pricing',
+  pricing_: {
+    freeTrial: 'Start <b>30-day free trial</b> · No credit card',
+    title: 'Start free. Scale when your data grows.',
+    subTitle: `No limits on team size. No feature tiers. No hidden costs. Pricing grows only with your submissions.`,
+    starter: 'Starter',
+    mission: 'Mission',
+    impact: 'Scale',
+    enterprise: 'Enterprise',
+    formBuilder: 'Form builder',
+    koboImports: 'Import from KoboToolbox',
+    koboImportsTooltip: 'You can import all your existing forms, regardless of the number of submissions. From then on, each new Kobo submission imported into NexusPortal will count toward your submissions limit.',
+    maxSubmissions: 'Submissions/month',
+    maxForms: 'Number of forms',
+    maxAutomaticDatabases: 'Auto-generated databases',
+    maxDashboards: 'Real-time dashboards',
+    fileStorageGb: 'File storage',
+    maxUsers: 'Team members',
+    maxGroups: 'User groups',
+    customUserRoles: 'Custom user roles',
+    supportContact: 'Support contact',
+    supportContactEmail: 'Direct email support',
+    guidedSupport: `Guided setup`,
+    maxWorkspaces: 'Workspaces',
+    startFreeTrial: 'Start free trial',
+    getStarted: 'Get started',
+    contactUs: 'Contact us',
+    free: 'Free',
+    unlimited: 'Unlimited',
+    features: 'Features',
+  },
 }
+

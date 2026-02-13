@@ -1,23 +1,19 @@
 'use client'
-import {IconButton} from '@mui/material'
-import ContactIcon from '@mui/icons-material/AlternateEmail'
+import {Button, ButtonProps} from '@mui/material'
 
-const scrollToContact = () => {
-  document.getElementById('contact')?.scrollIntoView({
+const scrollToContact = (selector: string) => () => {
+  document.querySelector(selector)?.scrollIntoView({
     behavior: 'smooth',
   })
 }
 
-export const BtnContact = () => {
+export const BtnScrollTo = ({scrollToElSelector, ...props}: ButtonProps & {
+  scrollToElSelector: string
+}) => {
   return (
-    <IconButton
-      onClick={scrollToContact}
-      sx={{
-        mr: -1 / 4,
-        color: 'inherit',
-      }}
-    >
-      <ContactIcon />
-    </IconButton>
+    <Button
+      onClick={scrollToContact(scrollToElSelector)}
+      {...props}
+    />
   )
 }

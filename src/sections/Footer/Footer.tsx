@@ -41,7 +41,10 @@ export const Footer = () => {
         <Link href="/contact">
           {m.contact}
         </Link>
-        {/*<Separator />*/}
+        <Separator />
+        <Link href="/pricing">
+          {m.pricing}
+        </Link>
       </Box>
       <Box sx={{
         display: 'flex',

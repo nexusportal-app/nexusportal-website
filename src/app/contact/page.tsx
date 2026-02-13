@@ -1,5 +1,5 @@
 import {Page} from '@/shared/Page'
-import {Box, Card, CardContent, Grid, ThemeProvider} from '@mui/material'
+import {Box, Card, CardContent, Divider, Grid, ThemeProvider} from '@mui/material'
 import {m} from '@/core/i18n'
 import Star from '@mui/icons-material/Star'
 import {darkTheme} from '@/core/theme'
@@ -11,40 +11,78 @@ export default function ContactPage() {
     <ThemeProvider theme={darkTheme}>
       <DarkBg>
         <Page width="lg" title={m.contact_.title} subTitle={m.contact_.subTitle}>
-          <Grid container spacing={1}>
-            <Grid size={{xs: 12, sm: 12, md: 6}}>
-              <Card>
-                <ContactForm />
-              </Card>
-            </Grid>
-
-            <Grid size={{xs: 12, sm: 12, md: 6}}>
-              <Card>
-                <CardContent sx={{display: 'flex', flexDirection: 'column', gap: 1, textAlign: 'center', textWrap: 'balance'}}>
-                  <Box sx={{
-                    fontWeight: 500,
-                    fontSize: '1.6rem',
-                  }}>
-                    "{m.contact_.testimony}"
-                  </Box>
-                  <Box>
-                    <Star sx={{color: '#fbbc02'}} />
-                    <Star sx={{color: '#fbbc02'}} />
-                    <Star sx={{color: '#fbbc02'}} />
-                    <Star sx={{color: '#fbbc02'}} />
-                    <Star sx={{color: '#fbbc02'}} />
-                  </Box>
-                  <Box sx={{fontSize: '1.2rem'}}>
-                    <Box sx={{fontWeight: 500}}>{m.contact_.testimonyAuthor}</Box>
-                    <Box sx={{opacity: .85}}>{m.contact_.testimonyRole}</Box>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
+          <ContactContent />
         </Page>
       </DarkBg>
     </ThemeProvider>
+  )
+}
+
+export function ContactContent() {
+  return (
+    <Grid container spacing={1}>
+      <Grid size={{xs: 12, sm: 12, md: 6}}>
+        <Card>
+          <ContactForm />
+        </Card>
+      </Grid>
+
+      <Grid size={{xs: 12, sm: 12, md: 6}} sx={{flexDirection: 'column', display: 'flex'}}>
+        <Card sx={{mb: 1}}>
+          <CardContent sx={{display: 'flex', flexDirection: 'column', gap: 1, textWrap: 'balance'}}>
+            <Box sx={{fontWeight: 600, textAlign: 'center'}}>
+                {m.contact_.arguments.list.map((_, i) =>
+                  <Box key={i} sx={{fontSize: '1.2rem', mb: .5}}>
+                    {_}
+                  </Box>,
+                )}
+              {/*<Box sx={{fontWeight: 600, fontSize: '1.2rem'}}>{m.contact_.arguments.title}</Box>*/}
+              {/*<Box component="ul" sx={{mt: .5, fontSize: '1.1rem', 'li': {mb: .5}}}>*/}
+              {/*  {m.contact_.arguments.list.map((_, i) =>*/}
+              {/*    <li key={i}>*/}
+              {/*      {_}*/}
+              {/*    </li>,*/}
+              {/*  )}*/}
+              {/*</Box>*/}
+            </Box>
+            <Divider sx={{my: .5}}/>
+            <Box sx={{fontWeight: 500}}>
+              <Box sx={{fontWeight: 600, fontSize: '1.2rem'}}>{m.contact_.targets.title}</Box>
+              <Box component="ul" sx={{mt: .5, fontSize: '1.1rem', 'li': {mb: .5}}}>
+                {m.contact_.targets.list.map((_, i) =>
+                  <li key={i}>
+                    {_}
+                  </li>,
+                )}
+              </Box>
+            </Box>
+          </CardContent>
+        </Card>
+        <Card sx={{flex: 1, display: 'flex', alignItems: 'center'}}>
+          <CardContent>
+            <Box sx={{display: 'flex', flexDirection: 'column', gap: 1, textAlign: 'center'}}>
+              <Box sx={{
+                fontWeight: 500,
+                fontSize: '1.6rem',
+              }}>
+                "{m.contact_.testimony}"
+              </Box>
+              <Box>
+                <Star sx={{color: '#fbbc02'}} />
+                <Star sx={{color: '#fbbc02'}} />
+                <Star sx={{color: '#fbbc02'}} />
+                <Star sx={{color: '#fbbc02'}} />
+                <Star sx={{color: '#fbbc02'}} />
+              </Box>
+              <Box sx={{fontSize: '1.2rem'}}>
+                <Box sx={{fontWeight: 500}}>{m.contact_.testimonyAuthor}</Box>
+                <Box sx={{opacity: .85}}>{m.contact_.testimonyRole}</Box>
+              </Box>
+            </Box>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
   )
 }
 

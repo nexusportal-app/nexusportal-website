@@ -95,6 +95,9 @@ export const Header = () => {
             <HeadLink href="/contact">
               {m.contact}
             </HeadLink>
+            <HeadLink href="/pricing">
+              {m.pricing}
+            </HeadLink>
           </Box>
           <Box sx={{display: {xs: 'contents', sm: 'none'}}}>
             <Link href="/contact">
