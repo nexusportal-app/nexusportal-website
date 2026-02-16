@@ -11,7 +11,7 @@ export const Paragraph = ({sx, alt, size, animate, ...props}: BoxProps & {animat
       mb: 1,
       ...animate ? {
         animationName: 'paragraph',
-        animationDuration: '0.6s',
+        animationDuration: '1s',
         animationTimingFunction: 'ease-out',
         animationFillMode: 'forwards',
         animationTimeline: 'view()',

@@ -19,6 +19,7 @@ export const Solution = () => {
         </Grid>
         <Grid size={{xs: 12, sm: 7}}>
           <Box component="ul" sx={{
+            overflowX: 'clip',
             display: 'flex',
             borderLeft: '1px solid',
             borderColor: {xs: 'transparent', sm: 'divider'},

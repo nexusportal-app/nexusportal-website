@@ -1,12 +1,15 @@
+'use client'
+
 import Image from 'next/image'
-import {Box, Button, ButtonProps, IconButton} from '@mui/material'
+import {Box, Button, ButtonProps, IconButton, Menu, MenuItem} from '@mui/material'
 import {m} from '@/core/i18n'
 import Link from 'next/link'
 import {BoxProps} from '@mui/material/Box'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
-import ContactIcon from '@mui/icons-material/AlternateEmail'
+import MenuIcon from '@mui/icons-material/Menu'
 import {sectionWidth} from '@/shared/Section'
+import {MouseEvent, useState} from 'react'
 
 const headerLayout: BoxProps['sx'] = {
   top: 0,
@@ -19,7 +22,7 @@ const headerLayout: BoxProps['sx'] = {
   mt: .5,
   borderRadius: '16px',
   height: {xs: 50, sm: 60},
-  width: '100%',
+  width: 'calc(100% - 16px)',
   maxWidth: sectionWidth,
   // width: contentWidth,
   // maxWidth: `calc(100vw - 16px)`,
@@ -57,8 +60,19 @@ export const headerGradiant = `
 `
 
 export const Header = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const open = Boolean(anchorEl)
+
+  const handleMenuOpen = (event: MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleMenuClose = () => {
+    setAnchorEl(null)
+  }
+
   return (
-    <Box component="header" sx={{px: 1}}>
+    <>
       <Box sx={{
         ...headerLayout,
         boxShadow: 6,
@@ -69,7 +83,7 @@ export const Header = () => {
       }}>
 
       </Box>
-      <Box sx={{
+      <Box component="header" sx={{
         ...headerLayout,
         zIndex: 30,
         color: 'white',
@@ -92,6 +106,7 @@ export const Header = () => {
           alignItems: 'center',
           justifyContent: 'flex-end',
         }}>
+          {/* Desktop Navigation */}
           <Box sx={{display: {xs: 'none', sm: 'contents'}}}>
             <HeadLink href="/contact">
               {m.contact}
@@ -99,20 +114,63 @@ export const Header = () => {
             <HeadLink href="/pricing">
               {m.pricing}
             </HeadLink>
+            <BtnSignUp size="small" sx={{color: 'white'}} />
           </Box>
+
+          {/* Mobile Navigation */}
           <Box sx={{display: {xs: 'contents', sm: 'none'}}}>
-            <Link href="/contact">
-              <IconButton sx={{mr: -1 / 4, color: 'inherit'}}>
-                <ContactIcon />
-              </IconButton>
-            </Link>
+            <IconButton
+              sx={{mr: -1 / 4, color: 'inherit'}}
+              onClick={handleMenuOpen}
+              aria-label="menu"
+              aria-controls={open ? 'mobile-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="mobile-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleMenuClose}
+              slotProps={{
+                paper: {
+                  sx: {
+                    background: headerGradiant,
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255,255,255, 0.1)',
+                    color: 'white',
+                    minWidth: 200,
+                  },
+                },
+              }}
+            >
+              <Link href="/contact" style={{textDecoration: 'none', color: 'inherit'}}>
+                <MenuItem onClick={handleMenuClose} sx={{fontWeight: 500}}>
+                  {m.contact}
+                </MenuItem>
+              </Link>
+              <Link href="/pricing" style={{textDecoration: 'none', color: 'inherit'}}>
+                <MenuItem onClick={handleMenuClose} sx={{fontWeight: 500}}>
+                  {m.pricing}
+                </MenuItem>
+              </Link>
+              <Box sx={{px: 1, py: .5}}>
+                <BtnSignUp
+                  size="small"
+                  sx={{color: 'white', width: '100%'}}
+                  onClick={handleMenuClose}
+                />
+              </Box>
+            </Menu>
           </Box>
-          {/*<MenuItem href="/blog">{m.blog}</MenuItem>*/}
-          <BtnSignUp size="small" sx={{color: 'white'}} />
+
+          {/* Explore button always visible */}
           <BtnExplore size="small" />
         </Box>
       </Box>
-    </Box>
+    </>
   )
 }
 

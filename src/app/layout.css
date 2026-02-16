@@ -89,7 +89,7 @@ a {
     transform: translateY(50px);
     filter: blur(4px);
   }
-  15% {
+  20% {
     opacity: 1;
     transform: translate(0);
     filter: blur(0);
