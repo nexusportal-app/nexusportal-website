@@ -27,6 +27,7 @@ export const CarouselContainer = ({id, children, sx, ...props}: BoxProps & {id: 
       <Box id={id} sx={{
         pl: `calc((100vw - 1100px) / 2)`,
         display: 'flex',
+        alignItems: 'center',
         overflowX: 'auto',
         gap: {xs: 1, sm: 2},
         pt: 4,

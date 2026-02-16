@@ -46,7 +46,7 @@ export const Testimonials = () => {
     }}>
       <SectionTitle id="testimonials" sx={{m: 0, p: 0}}>{m.testimonial.title}</SectionTitle>
       <SectionSubTitle sx={{mb: 0}}>{m.testimonial.desc}</SectionSubTitle>
-      <CarouselContainer id="Testimonials-container">
+      <CarouselContainer id="Testimonials-container" sx={{py: 1}}>
         {m.testimonial.list.map((_, i) => <TestimonialCard key={_.author} index={i} testimonial={_} />)}
       </CarouselContainer>
     </Box>

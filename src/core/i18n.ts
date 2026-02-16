@@ -298,7 +298,7 @@ export const m = {
       },
       {
         author: 'Vladyslav Marchenko',
-        job: 'Information Management Officer',
+        job: 'IM Officer',
         content: `With a team of just 2, we could support the entire mission. We brought together over 200 Kobo form, made inconsistent by years of staff turnover and changing needs, into a single, unified database. From it, we could automatically generate cluster and donor reports that were always accurate and ready. This eliminated one of the main IM problems: the loss of a single source of truth when data is shared, copied, and quickly diverges. It also allowed us to build a MEAL verification process, beneficiaries deduplication, CFM, etc. We could quickly build dashboards and snapshots without manual syncing.`,
       },
       {
