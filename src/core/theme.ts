@@ -97,7 +97,7 @@ export const theme = ({cssVarPrefix = 'main', dark}: {cssVarPrefix?: string; dar
         root: ({theme}) => ({
           padding: theme.spacing(1.5),
           [theme.breakpoints.down('sm')]: {
-            padding: theme.spacing(1),
+            padding: theme.spacing(1)
           },
         }),
       },
