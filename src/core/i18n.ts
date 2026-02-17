@@ -15,8 +15,7 @@ export const formatPrice = (n: number) => {
 export const m = {
   // desc: 'The next generation of data collection & management software.',
   title: appName,
-  heroTitle1: 'From scattered data',
-  heroTitle2: 'To a single, clear picture',
+  heroTitle1: 'From scattered data<br/>To a single, <b>clear picture</b>',
   bookDemo: 'Book a demo',
   // heroTitleSub: 'Your team shouldn't spend hours cleaning messy data,',
   // heroTitleSub2: 'and with our Information Management app, they won't.',

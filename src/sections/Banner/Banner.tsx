@@ -40,17 +40,21 @@ export const Banner = () => {
         position: 'relative',
         textAlign: 'center',
       }}>
-        <Box component="h1" sx={{
-          m: 0,
-          textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
-          fontWeight: '600',
-          fontSize: {xs: '2.0rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
-          // mt: (headerHeight + 8) + 'px',
-          lineHeight: '1.15',
-        }}>
-          {m.heroTitle1}<br />
-          {m.heroTitle2}
-        </Box>
+        <Box
+          component="h1"
+          dangerouslySetInnerHTML={{__html: m.heroTitle1}}
+          sx={{
+            'b': {
+              color: '#90e6ff',
+            },
+            m: 0,
+            textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
+            fontWeight: '600',
+            fontSize: {xs: '2.0rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
+            // mt: (headerHeight + 8) + 'px',
+            lineHeight: '1.15',
+          }}
+        />
         <Box
           sx={{
             textWrap: 'balance',
@@ -74,7 +78,7 @@ export const Banner = () => {
 
         <Box sx={{
           position: 'absolute',
-          bottom: 0, right: 0, left: 0,
+          bottom: 32, right: 0, left: 0,
           display: 'flex',
           justifyContent: 'center',
         }}>
@@ -92,7 +96,7 @@ export const Backdrop = () => {
       inset: 0,
       flex: 1,
       textAlign: 'center',
-      backdropFilter: 'blur(2px)',
+      backdropFilter: 'blur(3.5px)',
       background: 'radial-gradient(80% 60% at 50% 20%, rgba(13,50,120,0.7) 0%, rgba(2,12,27,0.94) 70%)',
     }} />
   )

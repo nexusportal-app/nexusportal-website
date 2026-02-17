@@ -50,7 +50,7 @@ export const FeaturesPanel = ({
           bottom: 0,
           right: 0,
           left: 0,
-          top: '45%',
+          top: '40%',
           background: `linear-gradient(to top, #131d2e 0%, rgba(0,0,0,0) 100% )`,
         }}></Box>
         <Image
