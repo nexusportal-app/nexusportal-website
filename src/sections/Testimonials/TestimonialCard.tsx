@@ -49,7 +49,7 @@ export const TestimonialCard = ({testimonial, index}: {
       }} />
       <Box sx={{
         flex: 1, textAlign: 'justify',
-        fontSize: testimonial.author === 'Romane Breton' ? '.9rem' : '1rem',
+        fontSize: testimonial.author === 'Romane Breton' || testimonial.author === 'Alix Journoud' ? '.9rem' : '1rem',
         fontWeight: 500,
       }}>
         <Box component="span" sx={{position: 'absolute', top: {xs: 6, sm: 16}, left: 16, opacity: .4, lineHeight: '1.2rem', fontWeight: 'bold', fontSize: '1.6rem'}}>“</Box>

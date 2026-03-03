@@ -291,6 +291,11 @@ export const m = {
         content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.<br/> It's a brilliant project.`,
       },
       {
+        author: 'Alix Journoud',
+        job: 'Country Director',
+        content: `The NexusPortal proved to be a highly adaptable and field‑driven information management solution, offering full customization to our country needs, rapid iteration of new modules, and easy in‑country maintenance by IM and ICT teams. By integrating databases, activity tracking, targets, and geographic coverage into a single real‑time environment, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision‑making. Automated reporting significantly reduced the burden of routine submissions, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability. Overall, it delivered for us a very context‑responsive, sustainable system that streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation rather than administrative tasks.`,
+      },
+      {
         author: 'Katrina Zacharewski',
         job: 'Head of Programme',
         content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. NexusPortal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
