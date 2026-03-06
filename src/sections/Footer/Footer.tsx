@@ -42,6 +42,14 @@ export const Footer = () => {
           {m.contact}
         </Link>
         <Separator />
+        <Link href="/privacy">
+          {m.privacyPolicy}
+        </Link>
+        <Separator />
+        <Link href="/terms-of-service">
+          {m.termOfService}
+        </Link>
+        <Separator />
         <Link href="/pricing">
           {m.pricing}
         </Link>

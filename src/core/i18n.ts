@@ -30,6 +30,8 @@ export const m = {
   cta: 'Explore a demo',
   ctaShort: 'Explore',
   logoAlt: appName + ' logo',
+  privacyPolicy: 'Privacy Policy',
+  termOfService: 'Terms of Service',
   blog: 'Blog',
   perMonth: ' / month',
   // highlights: {

@@ -7,15 +7,16 @@ import {SectionSubTitle} from '@/shared/SectionSubTitle'
 type PageProps = BoxProps & {
   title?: string
   subTitle?: string
-  width?: number | 'xxs' | 'xs' | 'md' | 'lg' | 'full'
+  width?: number | 'xs' | 'sm' | 'md' | 'lg' | 'full'
+  noAnimation?: boolean
 }
 
 function calculatePageWidth(width?: string | number) {
   if (!width) return '100%'
   return typeof width === 'string'
     ? {
-      xxs: 520,
-      xs: 780,
+      xs: 520,
+      sm: 700,
       md: 1000,
       lg: 1290,
       full: 3000,
@@ -40,19 +41,19 @@ const pageEnter = {
   },
 }
 
-export const Page = ({title, subTitle, width, sx, children, ...props}: PageProps) => {
+export const Page = ({title, noAnimation, subTitle, width, sx, children, ...props}: PageProps) => {
   return (
     <>
-      <Box sx={{
+      <Box component="main" sx={{
         margin: 'auto',
-        pt: 4,
+        pt: 5,
         px: {xs: .5, sm: 1},
         width: '100%',
         flex: 1,
         position: 'relative',
         transition: 'all 0.3s',
         maxWidth: calculatePageWidth(width),
-        animation: 'pageEnter 220ms ease-out',
+        animation: noAnimation ? undefined : 'pageEnter 220ms ease-out',
         animationFillMode: 'both',
         ...pageEnter,
         ...sx,
