@@ -2,7 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import {remark} from 'remark'
-import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeHighlight from 'rehype-highlight'
+import rehypeStringify from 'rehype-stringify'
+import remarkGithubAlerts from 'remark-github-blockquote-alert'
+
 
 const postsDirectory = path.join(process.cwd(), 'src/posts')
 
@@ -16,6 +21,8 @@ export type Post = {
     date: string
     title: string
     coverPath: string
+    tags: string
+    author: string
   }
   contentHtml: string
 }
@@ -27,7 +34,14 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 
   const {data, content} = matter(fileContents)
 
-  const processedContent = await remark().use(html).process(content)
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkGithubAlerts)
+    .use(remarkRehype)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
+    .process(content)
+
   const contentHtml = processedContent.toString()
 
   return {

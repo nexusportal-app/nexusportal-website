@@ -32,7 +32,7 @@ export const m = {
   logoAlt: appName + ' logo',
   privacyPolicy: 'Privacy Policy',
   termOfService: 'Terms of Service',
-  blog: 'Blog',
+  blog: 'Resources',
   perMonth: ' / month',
   // highlights: {
   //   centralized: {

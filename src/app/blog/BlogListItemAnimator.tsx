@@ -1,7 +1,7 @@
 'use client'
 import React, {ReactElement, useEffect, useState} from 'react'
 import {keyframes, SxProps, useTheme} from '@mui/material'
-import {blogListItemHeight} from '@/app/blog/BlogListItem'
+import {blogListItemHeight} from '@/app/blog/blog.settings'
 
 let ignore = false
 const animationDuration = 190
@@ -33,7 +33,7 @@ export const BlogListItemAnimator = ({
   const [appeared, setAppeared] = useState(false)
   const t = useTheme()
   const duration = animationDuration + position * 30
-  const top = offset + position * (blogListItemHeight + 16)
+  const top = position * (blogListItemHeight + 16)
 
   useEffect(() => {
     setTimeout(() => {
@@ -55,9 +55,9 @@ export const BlogListItemAnimator = ({
       },
       ...(isRedirecting
         ? {
-            animation: `${pulse} ${animationDuration}ms ease-in-out`,
-            top: 0,
-          }
+          animation: `${pulse} ${animationDuration}ms ease-in-out`,
+          top: 0,
+        }
         : {}),
     },
     onClick: e => {
@@ -70,7 +70,6 @@ export const BlogListItemAnimator = ({
         behavior: 'smooth',
       })
       setTimeout(() => {
-        console.log(e)
         ignore = true
         e.target.click()
         ignore = false

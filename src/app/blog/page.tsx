@@ -1,21 +1,21 @@
 import {getAllPosts} from '@/app/blog/postsParser'
-import {SectionTitle} from '@/shared/SectionTitle'
-import style from './blog.module.css'
-import {BlogListItemAnimator} from '@/app/blog/BlogListItemAnimator'
 import {BlogListItem} from '@/app/blog/BlogListItem'
+import {Page} from '@/shared/Page'
+import {Box} from '@mui/material'
 
 export default async function BlogPage() {
   const posts = await getAllPosts()
   return (
-    <main className={style.root}>
-      <SectionTitle>Blog</SectionTitle>
-      <ul className={style.ul + ' ' + style.resetList}>
+    <Page width="sm" noAnimation>
+      <Box component="ul" sx={{
+        margin: 0,
+        padding: 0,
+        listStyle: 'none',
+      }}>
         {posts.map((post, i) => (
-          <BlogListItemAnimator key={post.slug} position={i}>
-            <BlogListItem post={post} />
-          </BlogListItemAnimator>
+          <BlogListItem post={post} key={post.slug} sx={{mb: 2}} animate />
         ))}
-      </ul>
-    </main>
+      </Box>
+    </Page>
   )
 }

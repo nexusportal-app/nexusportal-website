@@ -77,7 +77,7 @@ export const PhoneLayout = ({
         <Box sx={{
           borderBottomLeftRadius: (radius - 6) + 'px',
           borderBottomRightRadius: (radius - 6) + 'px',
-          borderRadius: '4px',
+          borderRadius: '14px',
           position: 'absolute',
           top: 14,
           bottom: 14,

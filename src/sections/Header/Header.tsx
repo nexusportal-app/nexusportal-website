@@ -108,6 +108,9 @@ export const Header = () => {
         }}>
           {/* Desktop Navigation */}
           <Box sx={{display: {xs: 'none', sm: 'contents'}}}>
+            <HeadLink href="/blog">
+              {m.blog}
+            </HeadLink>
             <HeadLink href="/contact">
               {m.contact}
             </HeadLink>
@@ -146,6 +149,11 @@ export const Header = () => {
                 },
               }}
             >
+              <Link href="/blog" style={{textDecoration: 'none', color: 'inherit'}}>
+                <MenuItem onClick={handleMenuClose} sx={{fontWeight: 500}}>
+                  {m.blog}
+                </MenuItem>
+              </Link>
               <Link href="/contact" style={{textDecoration: 'none', color: 'inherit'}}>
                 <MenuItem onClick={handleMenuClose} sx={{fontWeight: 500}}>
                   {m.contact}
