@@ -44,7 +44,8 @@ export const BlogListItem = ({
             sx={{
               borderRadius: 1,
               mb: 1,
-              height: blogListItemHeight,
+              width: '100%',
+              aspectRatio: '16 / 9',
               position: 'relative',
               background: `url(${post.frontmatter.coverPath})`,
               backgroundSize: 'cover',
