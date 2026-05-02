@@ -68,8 +68,8 @@ function HistoryTracking({
       <Box sx={{display: 'flex', gap: '2px', ...sx}} {...props}>
         {mapFor(maxDays, i => {
           return (
-            <Tooltip title={subDays(now, i).toLocaleDateString()}>
-              <Box key={i} sx={{height: 32, flex: 1, backgroundColor: 'success.light'}} />
+            <Tooltip key={i} title={subDays(now, i).toLocaleDateString()}>
+              <Box sx={{height: 32, flex: 1, backgroundColor: 'success.light'}} />
             </Tooltip>
           )
         })}

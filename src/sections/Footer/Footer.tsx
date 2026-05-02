@@ -38,31 +38,34 @@ export const Footer = () => {
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
-          justifyContent: {xs: 'center', sm: 'flex-start'},
-          gap: 1,
-          textAlign: {xs: 'center', sm: 'left'},
+          flexDirection: 'column',
+          justifyContent: 'center',
+          gap: .5,
+          textAlign: 'center',
+          // flexDirection: {md: 'column', lg: 'row'},
+          // justifyContent: {md: 'center', lg: 'flex-start'},
+          // gap: {md: .5, lg: 1},
+          // textAlign: {md: 'center', lg: 'left'},
 
           '& a': {
             fontWeight: 500,
           },
         }}
       >
-        {/*<Column>*/}
-        <Link href="/blog">{m.blog}</Link>
-        <Link href="/contact">{m.contact}</Link>
-        <Link href="/pricing">{m.pricing}</Link>
-        <Separator />
-        {/*</Column>*/}
-        {/*<Column>*/}
-        <Link href="/legal">{m.legalNotice}</Link>
-        <Link href="/privacy">{m.privacyPolicy}</Link>
-        <Link href="/terms-of-service">{m.termOfService}</Link>
-        {/*</Column>*/}
-        {/*<Separator />*/}
-        {/*<Separator />*/}
-        {/*<Separator />*/}
-        {/*<Separator />*/}
-        {/*<Separator />*/}
+        <Column>
+          <Link href="/blog">{m.blog}</Link>
+          <Separator />
+          <Link href="/contact">{m.contact}</Link>
+          <Separator />
+          <Link href="/pricing">{m.pricing}</Link>
+        </Column>
+        <Column>
+          <Link href="/legal">{m.legalNotice}</Link>
+          <Separator />
+          <Link href="/privacy">{m.privacyPolicy}</Link>
+          <Separator />
+          <Link href="/terms-of-service">{m.termOfService}</Link>
+        </Column>
       </Box>
 
       <Box
@@ -87,7 +90,7 @@ export const Footer = () => {
               backgroundColor: 'divider',
             },
           }}>
-            <FooterHealthCheck /> {m.status}
+            <FooterHealthCheck /><Box component="span" sx={{mr: .5}}>{m.status}</Box>
           </Box>
         </Link>
         <Box sx={{display: 'contents', marginLeft: 'auto'}} component="a" target="_blank" href={appConf.repoUrl}>
@@ -102,7 +105,7 @@ export const Footer = () => {
 }
 
 function Column({sx, ...props}: BoxProps) {
-  return <Box {...props} sx={{flex: 1, display: 'flex', flexDirection: 'column', gap: .5, ...sx}} />
+  return <Box {...props} sx={{flex: 1, display: 'flex', flexDirection: 'row', gap: .5, ...sx}} />
 }
 
 const Separator = (props: BoxProps) => {
@@ -110,7 +113,7 @@ const Separator = (props: BoxProps) => {
     <Box
       {...props}
       sx={{
-        display: {xs: 'none', sm: 'inline'},
+        // display: {xs: 'none', sm: 'inline'},
       }}
     >
       •

@@ -13,8 +13,8 @@ export const AppStatusDot = ({status}: {status: AppStatus}) => {
     <Tooltip title={m.status_[status].title}>
       <Box
         sx={{
-          width: 15,
-          height: 15,
+          width: 14,
+          height: 14,
           borderRadius: '50%',
           backgroundColor: configColor,
           boxShadow: `0 0 4px ${configColor}`,
