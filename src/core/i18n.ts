@@ -1,6 +1,7 @@
 // gpt symbols to replace
 // — '
 import {appConf} from '@/core/conf'
+import {AppStatus} from '@/shared/appStatus/useAppStatus'
 
 const appName = 'NexusPortal'
 
@@ -34,6 +35,20 @@ export const m = {
   termOfService: 'Terms of Service',
   blog: 'Resources',
   perMonth: ' / month',
+  status: 'Status',
+  today: 'Today',
+  ago: 'days ago',
+  uptime: 'uptime',
+  status_:{
+    title: 'Current Status',
+    apiRequests: `API Requests`,
+    xlsFormManager: `XLS Form manager`,
+    databases: `Database`,
+    [AppStatus.ok]: {title: 'Operational', desc: 'All systems operational'},
+    [AppStatus.down]: {title: 'Down', desc: 'Service unavailable'},
+    [AppStatus.loading]: {title: 'Checking', desc: 'Checking system status...'},
+  },
+
   // highlights: {
   //   centralized: {
   //     title: 'All-in-One Platform',

@@ -5,6 +5,7 @@ import {Box} from '@mui/material'
 import {m} from '@/core/i18n'
 import {BoxProps} from '@mui/material/Box'
 import Link from 'next/link'
+import {FooterHealthCheck} from '@/sections/Footer/FooterHealthCheck'
 
 export const Footer = () => {
   return (
@@ -13,7 +14,7 @@ export const Footer = () => {
       sx={{
         p: 1,
         display: 'flex',
-        flexDirection: {xs: 'column', sm: 'row'},
+        flexDirection: {xs: 'column', sm: 'column'},
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: 1,
@@ -46,27 +47,49 @@ export const Footer = () => {
           },
         }}
       >
-        <Box sx={{opacity: .7}}>© 2026 {m.title}</Box>
-        <Separator />
+        {/*<Column>*/}
+        <Link href="/blog">{m.blog}</Link>
         <Link href="/contact">{m.contact}</Link>
-        <Separator />
-        <Link href="/privacy">{m.privacyPolicy}</Link>
-        <Separator />
-        <Link href="/terms-of-service">{m.termOfService}</Link>
-        <Separator />
         <Link href="/pricing">{m.pricing}</Link>
         <Separator />
-        <Link href="/blog">{m.blog}</Link>
+        {/*</Column>*/}
+        {/*<Column>*/}
+        <Link href="/privacy">{m.privacyPolicy}</Link>
+        <Link href="/terms-of-service">{m.termOfService}</Link>
+        {/*</Column>*/}
+        {/*<Separator />*/}
+        {/*<Separator />*/}
+        {/*<Separator />*/}
+        {/*<Separator />*/}
+        {/*<Separator />*/}
       </Box>
 
       <Box
         sx={{
           display: 'flex',
-          gap: 1,
+          gap: {xs: 1, sm: 2},
+          alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <Box sx={{display: 'contents'}} component="a" target="_blank" href={appConf.repoUrl}>
+        <Box sx={{opacity: .7}}>© 2026 {m.title}</Box>
+        <Link href="/status">
+          <Box sx={{
+            display: 'inline-flex', fontWeight: '500',
+            gap: .25, alignItems: 'center',
+            border: '1px solid',
+            borderColor: 'divider',
+            px: .5,
+            py: .125,
+            borderRadius: 30,
+            ':hover': {
+              backgroundColor: 'divider',
+            },
+          }}>
+            <FooterHealthCheck /> {m.status}
+          </Box>
+        </Link>
+        <Box sx={{display: 'contents', marginLeft: 'auto'}} component="a" target="_blank" href={appConf.repoUrl}>
           <GitHub />
         </Box>
         <Box sx={{display: 'contents'}} component="a" target="_blank" href={appConf.linkedInUrl}>
@@ -75,6 +98,10 @@ export const Footer = () => {
       </Box>
     </Box>
   )
+}
+
+function Column({sx, ...props}: BoxProps) {
+  return <Box {...props} sx={{flex: 1, display: 'flex', flexDirection: 'column', gap: .5, ...sx}} />
 }
 
 const Separator = (props: BoxProps) => {
