@@ -31,6 +31,7 @@ export const m = {
   cta: 'Explore a demo',
   ctaShort: 'Explore',
   logoAlt: appName + ' logo',
+  legalNotice: 'Legal Notice',
   privacyPolicy: 'Privacy Policy',
   termOfService: 'Terms of Service',
   blog: 'Resources',

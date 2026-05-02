@@ -54,6 +54,7 @@ export const Footer = () => {
         <Separator />
         {/*</Column>*/}
         {/*<Column>*/}
+        <Link href="/legal">{m.legalNotice}</Link>
         <Link href="/privacy">{m.privacyPolicy}</Link>
         <Link href="/terms-of-service">{m.termOfService}</Link>
         {/*</Column>*/}
