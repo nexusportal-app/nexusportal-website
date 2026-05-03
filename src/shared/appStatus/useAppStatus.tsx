@@ -7,7 +7,7 @@ export enum AppStatus {
   down = 'down',
 }
 
-export function useAppStatus(url: string, interval = 5000) {
+export function useAppStatus(url: string, interval = 20000) {
   const [status, setStatus] = useState<AppStatus>(AppStatus.loading)
 
   useEffect(() => {

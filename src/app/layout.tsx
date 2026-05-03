@@ -6,7 +6,7 @@ import {m} from '@/core/i18n'
 import './layout.css'
 import {Header} from '@/sections/Header/Header'
 import Script from 'next/script'
-import {AnalyticsTracker} from '@/core/AnalyticsTracker'
+import {AnalyticsProvider} from '@/core/AnalyticsTracker'
 
 export const metadata: Metadata = {
   title: m.title,
@@ -48,13 +48,14 @@ export default function RootLayout({
     <StyledEngineProvider injectFirst>
       <AppRouterCacheProvider>
         <ThemeProvider theme={lightTheme} defaultMode="light">
-          <CssBaseline />
-          {children}
-          <Header />
+          <AnalyticsProvider>
+            <CssBaseline />
+            {children}
+            <Header />
+          </AnalyticsProvider>
         </ThemeProvider>
       </AppRouterCacheProvider>
     </StyledEngineProvider>
-    <AnalyticsTracker />
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}

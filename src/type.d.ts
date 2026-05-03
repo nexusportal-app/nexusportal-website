@@ -7,5 +7,6 @@ declare global {
       targetId: string,
       params?: Record<string, any>
     ) => void
+    [key: string]: any
   }
 }

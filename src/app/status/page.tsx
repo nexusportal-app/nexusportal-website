@@ -25,7 +25,7 @@ const incidents: Incident[] = [
 ]
 
 export default function StatusPage() {
-  const consoleStatus = useAppStatus(appConf.consoleUrl, 1000)
+  const consoleStatus = useAppStatus(appConf.consoleUrl)
   return (
     <Page width="sm" title={m.status_.title}>
       <AppStatusAlert status={consoleStatus} />

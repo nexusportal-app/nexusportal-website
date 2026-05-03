@@ -40,7 +40,7 @@ export const m = {
   today: 'Today',
   ago: 'days ago',
   uptime: 'uptime',
-  status_:{
+  status_: {
     title: 'Current Status',
     apiRequests: `API Requests`,
     xlsFormManager: `XLS Form manager`,
@@ -611,6 +611,13 @@ export const m = {
     free: 'Free',
     unlimited: 'Unlimited',
     features: 'Features',
+  },
+  edit: `Edit`,
+  cookiePreferences: `Cookie Preferences`,
+  cookieBanner: {
+    title: 'Help us improve by allowing anonymous analytics. No ads, no tracking across sites.',
+    accept: 'Accept',
+    deny: 'Deny',
   },
 }
 
