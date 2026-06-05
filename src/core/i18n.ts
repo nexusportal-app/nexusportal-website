@@ -42,6 +42,7 @@ export const m = {
   uptime: 'uptime',
   status_: {
     title: 'Current Status',
+    client: `Interface Web`,
     apiRequests: `API Requests`,
     xlsFormManager: `XLS Form manager`,
     databases: `Database`,
