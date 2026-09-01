@@ -343,6 +343,7 @@ export const m = {
   },
   contact: 'Contact',
   contact_: {
+    submitErrorCaptcha: `Verification failed. Please try again.`,
     arguments: {
       title: 'Start for free',
       list: [
