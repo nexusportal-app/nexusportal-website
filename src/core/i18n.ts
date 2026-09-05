@@ -147,17 +147,17 @@ export const m = {
     question: 'How can NexusPortal solve it?',
     title: 'Reliable at scale',
     desc: 'NexusPortal replaces fragile workflows like <br/><b>KoboToolbox</b> → <b>Excel</b> → <b>PowerBI</b><br/>with one coherent system so your team can work in one place <b>instead of moving data between tools</b>.',
-    saveMoney: {
-      title: 'Save Money',
-      desc: 'Avoid hiring extra staff to fix data errors or handle tasks that should be automated. Keep workflows lean and reduce costly rework.',
-    },
     saveTime: {
       title: 'Save Time',
-      desc: `Data stays aligned, permissions update automatically from your organisation's accounts, calculations run, and dashboards feed real-time data so your team can focus on decisions, not fixes.`,
+      desc: `Data stays aligned, permissions update automatically from your organisation's accounts, calculations run, and dashboards feed <b>real-time data</b> so your team can focus on decisions, not fixes.`,
+    },
+    saveMoney: {
+      title: 'Save Money',
+      desc: '<b>Run an entire mission with a single person.</b> Avoid hiring just to clean data errors or handle tasks that should be automated. Keep workflows simple and predictable.',
     },
     saveStress: {
       title: 'Save Stress',
-      desc: `No more broken dashboards, duplicate sources, questionable edits, or mystery metrics. Everything is accurate, traceable, and audit-ready.`,
+      desc: `No more broken dashboards, duplicate sources, questionable edits, or mystery metrics. Everything is accurate, traceable, and <b>audit-ready</b>.`,
     },
   },
   // comparison2: {
@@ -266,10 +266,6 @@ export const m = {
   features: {
     title: 'Modern features. Finally.',
     list: {
-      xls: {
-        title: 'A new way to build XLS Forms',
-        desc: `Stop uploading the same form over and over. <b>See changes instantly</b>, with clear indicators when something isn't valid.`,
-      },
       db: {
         title: 'Full control of your data',
         desc: 'A powerful, intuitive interface inspired by spreadsheets, designed to keep your <b>data consistent</b>.',
@@ -278,25 +274,33 @@ export const m = {
         title: 'Custom dashboards',
         desc: 'Turn your data into interactive <b>dashboards</b>, updated in <b>real time</b> and easy to build in minutes.',
       },
-      collaborative: {
-        title: 'Real-time Collaborative',
-        desc: `<b>Work together live</b>, see teammates' edits instantly and keep a <b>transparent history</b>.`,
+      email: {
+        title: 'Automated emails',
+        desc: 'Set up <b>automatic email notifications</b> with flexible parameters and conditions, so the right people get the <b>right information at the right time</b>.',
       },
       access: {
-        title: 'Granular access control',
+        title: 'Automatic access control',
         desc: 'Accounts stay <b>in sync</b> with your organization. Define fine-grained <b>permissions by user, role, or group</b>, and keep datasets always up to date.',
       },
       kobo: {
         title: 'Seamless Kobo integration',
         desc: `Already using KoboToolbox and not ready to move on? No problem. <b>Import your data into NexusPortal</b> and keep everything automatically synchronized.`,
       },
+      collaborative: {
+        title: 'Real-time Collaborative',
+        desc: `<b>Work together live</b>, see teammates' edits instantly and keep a <b>transparent history</b>.`,
+      },
       smart: {
         title: `Transform data without limits`,
         desc: `Connect, transform, and combine data from multiple surveys with confidence. NexusPortal validates every step so even complex workflows run <b>safely and reliably</b>.`,
       },
+      xls: {
+        title: 'A new way to build XLS Forms',
+        desc: `Stop uploading the same form over and over. <b>See changes instantly</b>, with clear indicators when something isn't valid.`,
+      },
       repeat: {
         title: 'From impossible to intuitive',
-        desc: `Forget complex workarounds for repeated survey sections. NexusPortal presents them in a way that's easy to analyze.`,
+        desc: `Forget complex workarounds for <b>begin_repeat</b> sections. NexusPortal presents them in a way that's easy to analyze.`,
       },
     },
   },
@@ -307,32 +311,32 @@ export const m = {
       {
         author: 'Sacha Kuilman',
         job: 'Area Programme Manager',
-        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see real-time progress against targets and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with a lot of mistakes and had to wait up to a month between Excel reports.<br/> It's a brilliant project.`,
+        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see <b>real-time progress against targets</b> and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with <b>a lot of mistakes</b> and had to wait up to a month between Excel reports.<br/> It's a brilliant project.`,
       },
       {
         author: 'Alix Journoud',
         job: 'Country Director',
-        content: `The NexusPortal proved to be a highly adaptable and field‑driven information management solution, offering full customization to our country needs, rapid iteration of new modules, and easy in‑country maintenance by IM and ICT teams. By integrating databases, activity tracking, targets, and geographic coverage into a single real‑time environment, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision‑making. Automated reporting significantly reduced the burden of routine submissions, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability. Overall, it delivered for us a very context‑responsive, sustainable system that streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation rather than administrative tasks.`,
+        content: `The NexusPortal proved to be a <b>highly adaptable and field-driven information management solution</b>, offering full customization to our country needs, rapid iteration of new modules, and easy in-country maintenance by IM and ICT teams. By integrating databases, activity tracking, targets, and geographic coverage into a <b>single real-time environment</b>, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision-making. <b>Automated reporting significantly reduced the burden of routine submissions</b>, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability. Overall, it delivered for us a very context-responsive, sustainable system that <b>streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation</b> rather than administrative tasks.`,
       },
       {
         author: 'Katrina Zacharewski',
         job: 'Head of Programme',
-        content: `NexusPortal is a platform that helps keep humanitarian programming accountable at a time when accountability is more critical than ever. NexusPortal supports with oversight over project progress, targeting, trend analysis, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+        content: `NexusPortal is a platform that helps keep <b>humanitarian programming accountable</b> at a time when accountability is more critical than ever. NexusPortal supports with oversight over <b>project progress, targeting, and trend analysis</b>, and supports in enhancing the overall quality and effectiveness of program implementation.`,
       },
       {
         author: 'Vladyslav Marchenko',
         job: 'IM Officer',
-        content: `With a team of just 2, we could support the entire mission. We brought together over 200 Kobo form, made inconsistent by years of staff turnover and changing needs, into a single, unified database. From it, we could automatically generate cluster and donor reports that were always accurate and ready. This eliminated one of the main IM problems: the loss of a single source of truth when data is shared, copied, and quickly diverges. It also allowed us to build a MEAL verification process, beneficiaries deduplication, CFM, etc. We could quickly build dashboards and snapshots without manual syncing.`,
+        content: `With a team of just 2, we could <b>support the entire mission</b>. We brought together over 200 Kobo forms, made inconsistent by years of staff turnover and changing needs, into a <b>single, unified database</b>. From it, we could automatically generate cluster and donor reports that were <b>always accurate and ready</b>. This eliminated one of the main IM problems: the loss of a <b>single source of truth</b> when data is shared, copied, and quickly diverges. It also allowed us to build a MEAL verification process, beneficiaries deduplication, CFM, etc. We could quickly build <b>dashboards and snapshots without manual syncing</b>.`,
       },
       {
         author: 'Isabelle Langerak',
         job: 'EcRec Coordinator',
-        content: `NexusPortal helped me understand the enormous figures of people we were registering and supporting, a and know exactly when and what assistance they received. This was of immense value to report to the cluster and communicate with donors.`,
+        content: `NexusPortal helped me understand the enormous figures of people we were registering and supporting, and know exactly <b>when and what assistance they received</b>. This was of immense value to report to the cluster and communicate with donors.`,
       },
       {
         author: 'Romane Breton',
         job: 'Protection Coordinator',
-        content: `It has transformed how we manage protection information, setting a high standard for both operational efficiency and compliance with data protection requirements. The platform made it easy to establish a secure referral system and helped prevent double counting when working with the same groups over multiple sessions. The protection monitoring dashboard gave us real-time access and made creating analysis and visualization much easier. As a Protection Coordinator, I could produce high-quality protection information management products without needing extra IM staff. Reporting was just as simple, with what we jokingly called the “one-click report” to ActivityInfo, while other organizations struggled to meet OCHA's monthly requirements.`,
+        content: `It has transformed how we manage protection information, setting a high standard for both <b>operational efficiency and compliance with data protection requirements</b>. The platform made it easy to establish a secure referral system and helped <b>prevent double counting</b> when working with the same groups over multiple sessions. The protection monitoring dashboard gave us <b>real-time access</b> and made creating analysis and visualization much easier. As a Protection Coordinator, I could produce <b>high-quality protection information management products without needing extra IM staff</b>. Reporting was just as simple, with what we jokingly called the <b>“one-click report” to ActivityInfo</b>, while other organizations struggled to meet OCHA's monthly requirements.`,
       },
     ],
   },

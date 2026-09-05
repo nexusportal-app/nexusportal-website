@@ -52,9 +52,11 @@ export const SaveCard = ({sx, icon: Icon, head, children, ...props}: BoxProps & 
       <Icon sx={{fontSize: '2.4rem', mr: 1, color: 'primary.main'}} />
       <Box>
         <Paragraph component="h4" size="big" sx={{m: 0, mb: .5, fontWeight: '500', display: 'block'}}>{head}</Paragraph>
-        <Paragraph sx={{
-          fontWeight: '500',
-        }}>{children}</Paragraph>
+        <Paragraph
+          dangerouslySetInnerHTML={{__html: children as string}}
+          sx={{
+            fontWeight: '500',
+          }} />
         <Border />
       </Box>
     </Box>

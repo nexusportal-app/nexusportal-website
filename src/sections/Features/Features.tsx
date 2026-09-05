@@ -5,6 +5,33 @@ import {FeaturesPanel} from '@/sections/Features/FeaturesPanel'
 import {Obj} from '@axanc/ts-utils'
 import {ScrollXBtn} from '@/sections/Features/FeaturesScrollXBtn'
 import {BoxProps} from '@mui/material/Box'
+import TableViewIcon from '@mui/icons-material/TableView'
+import DashboardIcon from '@mui/icons-material/BarChart'
+import NotificationsIcon from '@mui/icons-material/ForwardToInbox'
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings'
+import SyncIcon from '@mui/icons-material/Sync'
+import GroupsIcon from '@mui/icons-material/Groups'
+import AccountTreeIcon from '@mui/icons-material/AccountTree'
+import EditNoteIcon from '@mui/icons-material/EditNote'
+import RepeatIcon from '@mui/icons-material/Repeat'
+import {ReactNode} from 'react'
+
+const featuresNew: Partial<Record<keyof typeof m['features']['list'], boolean>> = {
+  email: true,
+}
+
+const featuresIcons: Record<keyof typeof m['features']['list'], ReactNode> = {
+  db: <TableViewIcon />,
+  dashboard: <DashboardIcon />,
+  email: <NotificationsIcon />,
+  access: <AdminPanelSettingsIcon />,
+  kobo: <SyncIcon />,
+  collaborative: <GroupsIcon />,
+  smart: <AccountTreeIcon />,
+  xls: <EditNoteIcon />,
+  repeat: <RepeatIcon />,
+
+}
 
 export const Features = () => {
   return (
@@ -14,7 +41,15 @@ export const Features = () => {
       <SectionTitle sx={{mb: 0, p: 0}}>{m.features.title}</SectionTitle>
       <CarouselContainer id="Features-container">
         {Obj.entries(m.features.list).map(([key, _], i) => (
-          <FeaturesPanel key={key} title={_.title} desc={_.desc} imageSrc={'/ss3/ss-' + key + '.png'} />
+          <FeaturesPanel
+            key={key}
+            isNew={featuresNew[key]}
+            icon={featuresIcons[key]}
+            index={i}
+            title={_.title}
+            desc={_.desc}
+            imageSrc={'/ss3/ss-' + key + '.png'}
+          />
         ))}
       </CarouselContainer>
     </Box>
@@ -30,6 +65,7 @@ export const CarouselContainer = ({id, children, sx, ...props}: BoxProps & {id: 
         alignItems: 'center',
         overflowX: 'auto',
         gap: {xs: 1, sm: 2},
+        ml: 1,
         pt: 4,
         pr: {xs: 0, sm: 2},
         pb: 4,

@@ -57,7 +57,12 @@ export const ScrollXBtn = ({sx, direction, containerId, ...props}: Props) => {
       }}
       sx={{
         ...sx,
-        p: 0.25,
+        boxShadow: 'inset 0 1px #ffffff1a',
+        borderTop: `1px solid var(--Card-Border, #ffffff0f)`,
+        borderRight: `1px solid var(--Card-Border, #ffffff0f)`,
+        borderLeft: `1px solid var(--Card-Border, #ffffff0f)`,
+        p: 0.5,
+        backgroundImage: 'linear-gradient(137deg, rgb(17, 18, 20) 4.87%, rgb(12, 13, 15) 75.88%)',
         borderRadius: '50%',
         color: 'primary.light',
         opacity: hide ? 0.3 : 1,
