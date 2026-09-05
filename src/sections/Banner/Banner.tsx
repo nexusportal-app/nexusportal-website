@@ -50,7 +50,7 @@ export const Banner = () => {
             m: 0,
             textShadow: '0 1px 1px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25)',
             fontWeight: '600',
-            fontSize: {xs: '2.0rem', sm: '3rem', md: '3.8rem', lg: '4rem'},
+            fontSize: {xs: '2.0rem', sm: '3rem', md: '3.2rem', lg: '3.4rem'},
             // mt: (headerHeight + 8) + 'px',
             lineHeight: '1.15',
           }}
@@ -60,14 +60,14 @@ export const Banner = () => {
             textWrap: 'balance',
             fontWeight: '300',
             mt: -1,
-            fontSize: {xs: '1.2rem', sm: '1.5rem'},
+            fontSize: {xs: '1.2rem', sm: '1.4rem'},
           }}
           dangerouslySetInnerHTML={{__html: m.heroTitleSub}}
         />
 
         <Chip />
 
-        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center'}}>
+        <Box sx={{display: 'flex', alignItems: 'center', mt: 3, mb: -3, gap: 1, justifyContent: 'center'}}>
           <Pulse>
             <BtnSignUp size="large" />
           </Pulse>
@@ -97,7 +97,7 @@ export const Backdrop = () => {
       flex: 1,
       textAlign: 'center',
       backdropFilter: 'blur(3.5px)',
-      background: 'radial-gradient(80% 60% at 50% 20%, rgba(13,50,120,0.7) 0%, rgba(2,12,27,0.94) 70%)',
+      background: 'radial-gradient(80% 60% at 50% 20%, rgba(8,32,80,0.7) 0%, rgba(1,7,17,0.96) 70%)',
     }} />
   )
 }
