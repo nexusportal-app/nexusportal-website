@@ -263,6 +263,38 @@ export const m = {
     title: 'Designed for clarity and comfort',
     desc: 'Fast.<br/>Intuitive design.<br/>Elegant visuals.<br/>Dark mode.<br/>Mobile-friendly.',
   },
+  shortTestimonials: [
+    {
+      author: 'Sacha Kuilman',
+      job: 'Area Programme Manager',
+      content: `Extremely easy to use, well organized, and accessible. `,
+    },
+    {
+      author: 'Alix Journoud',
+      job: 'Country Director',
+      content: `Highly adaptable and field-driven information management solution`,
+    },
+    {
+      author: 'Katrina Zacharewski',
+      job: 'Head of Programme',
+      content: `Enhancing the overall quality and effectiveness of program implementation`,
+    },
+    {
+      author: 'Vladyslav Marchenko',
+      job: 'IM Officer',
+      content: `Build dashboards and snapshots without manual syncing.`,
+    },
+    {
+      author: 'Isabelle Langerak',
+      job: 'EcRec Coordinator',
+      content: `This was of immense value to report to the cluster and communicate with donors.`,
+    },
+    {
+      author: 'Romane Breton',
+      job: 'Protection Coordinator',
+      content: `Made it easy to establish a secure referral system and helped prevent double counting`,
+    },
+  ],
   features: {
     title: 'Modern features. Finally.',
     list: {

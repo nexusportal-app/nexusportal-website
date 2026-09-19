@@ -9,11 +9,11 @@ import {ScrollDownButton} from '@/sections/Banner/ScrollDownButton'
 import {BannerKeyLink2} from '@/sections/Banner/BannerArrow2'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
+import {ShortTestimonial} from '@/sections/Banner/ShortTestimonial'
 
 export const Banner = () => {
   return (
     <Box component="section" sx={{
-      // zIndex: 2,
       position: 'relative',
       height: '100vh',
       color: 'white',
@@ -22,7 +22,7 @@ export const Banner = () => {
       backgroundPosition: '72% 66%',
       backgroundSize: '160% 160%',
       display: 'flex',
-      px: {xs: .5, sm: 2},
+      // px: {xs: .5, sm: 2},
       // alignItems: 'center',
       ...revealKeyframes,
     }}>
@@ -65,6 +65,30 @@ export const Banner = () => {
           dangerouslySetInnerHTML={{__html: m.heroTitleSub}}
         />
 
+        <Box
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 1,
+              width: 'max-content',
+              animation: 'scroll 80s linear infinite',
+              '@keyframes scroll': {
+                from: {
+                  transform: 'translateX(0)',
+                },
+                to: {
+                  transform: 'translateX(-50%)',
+                },
+              },
+              '&:hover': {
+                animationPlayState: 'paused',
+              },
+            }}
+          >
+            {[...m.shortTestimonials, ...m.shortTestimonials].map((_, i) => <ShortTestimonial index={i} key={i} testimonial={_} />)}
+          </Box>
+        </Box>
         <Chip />
 
         <Box sx={{display: 'flex', alignItems: 'center', mt: 3, mb: -3, gap: 1, justifyContent: 'center'}}>
