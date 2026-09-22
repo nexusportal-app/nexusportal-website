@@ -17,7 +17,7 @@ export const people = {
   katrina: {
     name: 'Katrina Zacharewski',
     job: 'Head of Programme',
-    avatar: undefined,
+    avatar: '/people/kat.jpeg',
   },
   vladyslav: {
     name: 'Vladyslav Marchenko',
