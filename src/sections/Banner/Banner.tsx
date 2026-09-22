@@ -10,8 +10,11 @@ import {BannerKeyLink2} from '@/sections/Banner/BannerArrow2'
 import {BtnSignUp} from '@/shared/BtnSignUp'
 import {BtnExplore} from '@/shared/BtnExplore'
 import {ShortTestimonial} from '@/sections/Banner/ShortTestimonial'
+import {Obj} from '@axanc/ts-utils'
+import {AutoScroll} from '@/sections/Testimonials/AutoScroll'
 
 export const Banner = () => {
+  const testimonials = Obj.entries(m.testimonial.list)
   return (
     <Box component="section" sx={{
       position: 'relative',
@@ -67,29 +70,14 @@ export const Banner = () => {
 
         <Box
         >
-          <Box
-            sx={{
-              display: 'flex',
-              gap: 1,
-              width: 'max-content',
-              animation: 'scroll 80s linear infinite',
-              '@keyframes scroll': {
-                from: {
-                  transform: 'translateX(0)',
-                },
-                to: {
-                  transform: 'translateX(-50%)',
-                },
-              },
-              '&:hover': {
-                animationPlayState: 'paused',
-              },
-            }}
-          >
-            {[...m.shortTestimonials, ...m.shortTestimonials].map((_, i) => <ShortTestimonial index={i} key={i} testimonial={_} />)}
-          </Box>
+          <AutoScroll direction="X" sx={{
+            width: 'max-content',
+          }}>
+            {[...testimonials, ...testimonials].map(([name, {shortContent}], i) => <ShortTestimonial sx={{width: 340}} index={i} key={i} name={name} content={`<b>${shortContent}</b>`} />)}
+          </AutoScroll>
         </Box>
-        <Chip />
+
+        {/*<Chip />*/}
 
         <Box sx={{display: 'flex', alignItems: 'center', mt: 3, mb: -3, gap: 1, justifyContent: 'center'}}>
           <Pulse>

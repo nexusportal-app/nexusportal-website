@@ -27,7 +27,7 @@ export const m = {
   key1: 'Collect & Import',
   key2: 'Transform & Report',
   key3: 'Visualize & Analyze',
-  ctaSignUp: 'Sign-up',
+  ctaSignUp: 'Sign-up for Free',
   cta: 'Explore a demo',
   ctaShort: 'Explore',
   logoAlt: appName + ' logo',
@@ -263,38 +263,6 @@ export const m = {
     title: 'Designed for clarity and comfort',
     desc: 'Fast.<br/>Intuitive design.<br/>Elegant visuals.<br/>Dark mode.<br/>Mobile-friendly.',
   },
-  shortTestimonials: [
-    {
-      author: 'Sacha Kuilman',
-      job: 'Area Programme Manager',
-      content: `Extremely easy to use, well organized, and accessible. `,
-    },
-    {
-      author: 'Alix Journoud',
-      job: 'Country Director',
-      content: `Highly adaptable and field-driven information management solution`,
-    },
-    {
-      author: 'Katrina Zacharewski',
-      job: 'Head of Programme',
-      content: `Enhancing the overall quality and effectiveness of program implementation`,
-    },
-    {
-      author: 'Vladyslav Marchenko',
-      job: 'IM Officer',
-      content: `Build dashboards and snapshots without manual syncing.`,
-    },
-    {
-      author: 'Isabelle Langerak',
-      job: 'EcRec Coordinator',
-      content: `This was of immense value to report to the cluster and communicate with donors.`,
-    },
-    {
-      author: 'Romane Breton',
-      job: 'Protection Coordinator',
-      content: `Made it easy to establish a secure referral system and helped prevent double counting`,
-    },
-  ],
   features: {
     title: 'Modern features. Finally.',
     list: {
@@ -339,38 +307,32 @@ export const m = {
   testimonial: {
     title: 'Real Impact in the Field',
     desc: 'What teams achieved with NexusPortal.',
-    list: [
-      {
-        author: 'Sacha Kuilman',
-        job: 'Area Programme Manager',
-        content: `Extremely easy to use, well organized, and accessible. Once logged in, teams could instantly see <b>real-time progress against targets</b> and better understand their work, increasing awareness through transparent data. The protection monitoring dashboard made the information feel “real” because it was easy to access and read. Before NexusPortal, we struggled with <b>a lot of mistakes</b> and had to wait up to a month between Excel reports.<br/> It's a brilliant project.`,
+    list: {
+      sacha: {
+        shortContent: `Extremely <b>easy to use</b>, well organized, and accessible`,
+        content: `Extremely easy to use, well organized, and accessible.<br/><br/>Once logged in, teams could instantly see <b>real-time progress against targets</b> and better understand their work, increasing awareness through transparent data.<br/><br/>The protection monitoring dashboard made the information feel “real” because it was easy to access and read.<br/><br/>Before NexusPortal, we struggled with <b>a lot of mistakes</b> and had to wait up to a month between Excel reports.<br/><br/>It's a brilliant project.`,
       },
-      {
-        author: 'Alix Journoud',
-        job: 'Country Director',
-        content: `The NexusPortal proved to be a <b>highly adaptable and field-driven information management solution</b>, offering full customization to our country needs, rapid iteration of new modules, and easy in-country maintenance by IM and ICT teams. By integrating databases, activity tracking, targets, and geographic coverage into a <b>single real-time environment</b>, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision-making. <b>Automated reporting significantly reduced the burden of routine submissions</b>, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability. Overall, it delivered for us a very context-responsive, sustainable system that <b>streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation</b> rather than administrative tasks.`,
+      romane: {
+        shortContent: `Made it easy to establish a secure referral system and helped prevent double counting`,
+        content: `It has transformed how we manage protection information, setting a high standard for both <b>operational efficiency and compliance with data protection requirements</b>.<br/><br/>The platform made it easy to establish a secure referral system and helped <b>prevent double counting</b> when working with the same groups over multiple sessions.<br/><br/>The protection monitoring dashboard gave us <b>real-time access</b> and made creating analysis and visualization much easier.<br/><br/>As a Protection Coordinator, I could produce <b>high-quality protection information management products without needing extra IM staff</b>.<br/><br/>Reporting was just as simple, with what we jokingly called the <b>“one-click report” to ActivityInfo</b>, while other organizations struggled to meet OCHA's monthly requirements.`,
       },
-      {
-        author: 'Katrina Zacharewski',
-        job: 'Head of Programme',
-        content: `NexusPortal is a platform that helps keep <b>humanitarian programming accountable</b> at a time when accountability is more critical than ever. NexusPortal supports with oversight over <b>project progress, targeting, and trend analysis</b>, and supports in enhancing the overall quality and effectiveness of program implementation.`,
+      vladyslav: {
+        shortContent: `Over 200 Kobo forms into a unified database [...] without manual syncing`,
+        content: `With a team of just 2, we could <b>support the entire mission</b>. We brought together over 200 Kobo forms, made inconsistent by years of staff turnover and changing needs, into a <b>single, unified database</b>.<br/><br/>From it, we could automatically generate cluster and donor reports that were <b>always accurate and ready</b>.<br/><br/>This eliminated one of the main IM problems: the loss of a <b>single source of truth</b> when data is shared, copied, and quickly diverges.<br/><br/>It also allowed us to build a MEAL verification process, beneficiaries deduplication, CFM, etc. We could quickly build <b>dashboards and snapshots without manual syncing</b>.`,
       },
-      {
-        author: 'Vladyslav Marchenko',
-        job: 'IM Officer',
-        content: `With a team of just 2, we could <b>support the entire mission</b>. We brought together over 200 Kobo forms, made inconsistent by years of staff turnover and changing needs, into a <b>single, unified database</b>. From it, we could automatically generate cluster and donor reports that were <b>always accurate and ready</b>. This eliminated one of the main IM problems: the loss of a <b>single source of truth</b> when data is shared, copied, and quickly diverges. It also allowed us to build a MEAL verification process, beneficiaries deduplication, CFM, etc. We could quickly build <b>dashboards and snapshots without manual syncing</b>.`,
+      isabelle: {
+        shortContent: `This was of immense value to report to the cluster and communicate with donors.`,
+        content: `NexusPortal helped me understand the enormous figures of people we were registering and supporting, and know exactly <b>when and what assistance they received</b>.<br/><br/>This was of immense value to report to the cluster and communicate with donors.`,
       },
-      {
-        author: 'Isabelle Langerak',
-        job: 'EcRec Coordinator',
-        content: `NexusPortal helped me understand the enormous figures of people we were registering and supporting, and know exactly <b>when and what assistance they received</b>. This was of immense value to report to the cluster and communicate with donors.`,
+      katrina: {
+        shortContent: `Enhancing the overall quality and effectiveness of program implementation`,
+        content: `NexusPortal is a platform that helps keep <b>humanitarian programming accountable</b> at a time when accountability is more critical than ever.<br/><br/>NexusPortal supports with oversight over <b>project progress, targeting, and trend analysis</b>, and supports in enhancing the overall quality and effectiveness of program implementation.`,
       },
-      {
-        author: 'Romane Breton',
-        job: 'Protection Coordinator',
-        content: `It has transformed how we manage protection information, setting a high standard for both <b>operational efficiency and compliance with data protection requirements</b>. The platform made it easy to establish a secure referral system and helped <b>prevent double counting</b> when working with the same groups over multiple sessions. The protection monitoring dashboard gave us <b>real-time access</b> and made creating analysis and visualization much easier. As a Protection Coordinator, I could produce <b>high-quality protection information management products without needing extra IM staff</b>. Reporting was just as simple, with what we jokingly called the <b>“one-click report” to ActivityInfo</b>, while other organizations struggled to meet OCHA's monthly requirements.`,
+      alix: {
+        shortContent: `Highly adaptable and field-driven information management solution`,
+        content: `The NexusPortal proved to be a <b>highly adaptable and field-driven information management solution</b>, offering full customization to our country needs, rapid iteration of new modules, and easy in-country maintenance by IM and ICT teams.<br/><br/>By integrating databases, activity tracking, targets, and geographic coverage into a <b>single real-time environment</b>, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision-making.<br/><br/><b>Automated reporting significantly reduced the burden of routine submissions</b>, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability.<br/><br/>Overall, it delivered for us a very context-responsive, sustainable system that <b>streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation</b> rather than administrative tasks.`,
       },
-    ],
+    } satisfies Record<string, {shortContent: string, content: string}>,
   },
   contactSection_: {
     title: 'Contact Us',

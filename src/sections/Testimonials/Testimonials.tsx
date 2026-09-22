@@ -1,10 +1,10 @@
 import {SectionTitle} from '@/shared/SectionTitle'
 import {m} from '@/core/i18n'
 import {Box} from '@mui/material'
-import {CarouselContainer} from '@/sections/Features/Features'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
-import {sectionMargin} from '@/shared/Section'
-import {TestimonialCard} from '@/sections/Testimonials/TestimonialCard'
+import {Section} from '@/shared/Section'
+import {Obj} from '@axanc/ts-utils'
+import {ShortTestimonial} from '@/sections/Banner/ShortTestimonial'
 
 export const liquidLineAnimation = {
   // '@keyframes liquidLineFlow': {
@@ -38,18 +38,44 @@ export const liquidLineAnimation = {
 }
 
 export const Testimonials = () => {
+  const list = Obj.entries(m.testimonial.list)
   return (
-    <Box component="section" sx={{
-      pt: sectionMargin,
-      position: 'relative',
+    <Section sx={{
+      display: 'flex',
+      py: 0,
+      alignItems: 'center',
+      flexDirection: {xs: 'column', md: 'row'},
       ...liquidLineAnimation,
     }}>
-      <SectionTitle id="testimonials" sx={{m: 0, p: 0}}>{m.testimonial.title}</SectionTitle>
-      <SectionSubTitle sx={{mb: 0}}>{m.testimonial.desc}</SectionSubTitle>
-      <CarouselContainer id="Testimonials-container" sx={{py: 1}}>
-        {m.testimonial.list.map((_, i) => <TestimonialCard key={_.author} index={i} testimonial={_} />)}
-      </CarouselContainer>
-    </Box>
+      <Box sx={{flex: 1}}>
+        <SectionTitle id="testimonials" sx={{mb: 0, p: 0}}>{m.testimonial.title}</SectionTitle>
+        <SectionSubTitle sx={{m: 0}}>{m.testimonial.desc}</SectionSubTitle>
+      </Box>
+      <Box sx={{
+        borderRadius: .5,
+        borderTopRightRadius: {xs: undefined, sm: 0},
+        borderTopLeftRadius: {xs: undefined, sm: 0},
+        overflow: 'hidden', flex: 1, mx: {xs: 1, md: 2}, position: 'relative',
+      }}>
+        <Box sx={{
+          overflow: 'auto',
+          pt: 1,
+          height: 600,
+          gap: 1,
+          display: 'flex',
+          flexDirection: 'column',
+        }}>
+          {list.map(([name, {content}], i) => <
+              ShortTestimonial
+              key={name + i} index={i}
+              content={content}
+              name={name}
+            />,
+          )}
+        </Box>
+      </Box>
+      {/*<CarouselContainer id="Testimonials-container" sx={{py: 1}}>*/}
+      {/*</CarouselContainer>*/}
+    </Section>
   )
 }
-

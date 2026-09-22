@@ -1,12 +1,11 @@
 import {Box} from '@mui/material'
+import {people} from '@/sections/Testimonials/people'
+import {TestimonialQuote} from '@/sections/Banner/ShortTestimonial'
 
-export const TestimonialCard = ({testimonial, index}: {
+export const TestimonialCard = ({name, content, index}: {
   index: number,
-  testimonial: {
-    author: string
-    job: string
-    content: string
-  }
+  name: keyof typeof people,
+  content: string
 }) => {
   return (
     <Box sx={{
@@ -29,21 +28,28 @@ export const TestimonialCard = ({testimonial, index}: {
       position: 'relative',
       flexDirection: 'column',
     }}>
-      <Laser index={index}/>
+      <Laser index={index} />
       <Box sx={{
         flex: 1, textAlign: 'justify',
-        fontSize: testimonial.author === 'Romane Breton' || testimonial.author === 'Alix Journoud' ? '.9rem' : '1rem',
+        fontSize: name === 'romane' || name === 'alix' ? '.9rem' : '1rem',
         fontWeight: 500,
       }}>
-        <Box component="span" sx={{position: 'absolute', top: {xs: 6, sm: 16}, left: 16, opacity: .4, lineHeight: '1.2rem', fontWeight: 'bold', fontSize: '1.6rem'}}>“</Box>
-        <Box component="span" sx={{fontWeight: 400, color: 'rgba(255,255,255,.7)', '& b': {color: '#fff !important', fontWeight: 500}}}
-             dangerouslySetInnerHTML={{__html: testimonial.content}} />
-        <Box component="span" sx={{opacity: .4, lineHeight: '1.2rem', fontWeight: 'bold', fontSize: '1.6rem'}}>”</Box>
+        <TestimonialQuote sx={{mr: .25}}>“</TestimonialQuote>
+        <Box
+          component="span"
+          sx={{
+            fontWeight: 400,
+            color: 'rgba(255,255,255,.5)',
+            '& b': {color: '#fff !important', fontWeight: 500},
+          }}
+          dangerouslySetInnerHTML={{__html: content}}
+        />
+        <TestimonialQuote sx={{ml: .25}}>”</TestimonialQuote>
       </Box>
       <Box sx={{borderTop: '1px solid #ffffff14', mt: 1, pt: 1, opacity: .8}}>
-        <Box component="span" sx={{fontWeight: 'bold'}}>{testimonial.author}</Box>
+        <Box component="span" sx={{fontWeight: 'bold'}}>{people[name].name}</Box>
         <Box sx={{mx: .5}} component="span">•</Box>
-        {testimonial.job}
+        {people[name].job}
       </Box>
     </Box>
   )

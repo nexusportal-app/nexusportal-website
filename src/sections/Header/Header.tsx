@@ -76,6 +76,7 @@ export const Header = () => {
       <Box sx={{
         ...headerLayout,
         boxShadow: 6,
+        zIndex: 30,
         transform: 'translateZ(0)',
         background: headerGradiant,
         // opacity: .6,

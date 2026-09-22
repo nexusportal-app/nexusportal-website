@@ -55,7 +55,7 @@ export const DarkBackground = ({sx, ...props}: BoxProps) => {
             transparent 1px
           )
         `,
-        backgroundSize: '8px 8px',
+        backgroundSize: '20px 20px',
         opacity: 0.4,
 
       },
