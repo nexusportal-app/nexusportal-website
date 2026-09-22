@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack -p 4000",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json}\" --config .prettierrc --"
   },
   "dependencies": {
     "@axanc/ts-utils": "3.1.0",
@@ -34,6 +35,7 @@
     "resend": "^6.9.2"
   },
   "devDependencies": {
+    "prettier": "^3.9.8",
     "@types/node": "^20",
     "@types/react-dom": "^19.2.5",
     "react": "19.1.0",

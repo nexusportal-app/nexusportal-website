@@ -13,14 +13,16 @@ export function BannerKeyLink2() {
 
 const BannerArrow2 = ({sx}: {sx?: SxProps}) => {
   return (
-    <Box sx={{
-      height: 3,
-      width: 3,
-      borderRadius: 4,
-      opacity: .3,
-      animation: 'reveal 3s ease-out infinite',
-      background: 'rgba(255, 255, 255, 1)',
-      ...sx,
-    }} />
+    <Box
+      sx={{
+        height: 3,
+        width: 3,
+        borderRadius: 4,
+        opacity: 0.3,
+        animation: 'reveal 3s ease-out infinite',
+        background: 'rgba(255, 255, 255, 1)',
+        ...sx,
+      }}
+    />
   )
 }

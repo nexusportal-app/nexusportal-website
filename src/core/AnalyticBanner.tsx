@@ -34,10 +34,8 @@ export default function AnalyticBanner({open, onReject, onAccept, onOpenSettings
         }}
       >
         <Box sx={{flex: 1}}>
-          <Typography variant="body2">
-            {m.cookieBanner.title}
-          </Typography>
-          <Box sx={{mt: .5, display: 'flex', alignItems: 'center', gap: 1}}>
+          <Typography variant="body2">{m.cookieBanner.title}</Typography>
+          <Box sx={{mt: 0.5, display: 'flex', alignItems: 'center', gap: 1}}>
             <Button
               size="small"
               startIcon={<Close fontSize="small" />}

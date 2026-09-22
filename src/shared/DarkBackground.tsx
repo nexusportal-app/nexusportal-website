@@ -3,11 +3,12 @@ import {Box, BoxProps} from '@mui/material'
 
 export const DarkBackground = ({sx, ...props}: BoxProps) => {
   return (
-    <Box sx={{
-      position: 'relative',
-      // py: sectionMargin,
-      color: 'white',
-      background: `
+    <Box
+      sx={{
+        position: 'relative',
+        // py: sectionMargin,
+        color: 'white',
+        background: `
         radial-gradient(circle at 12% 18%,
           rgba(5,18,42,0.45) 0%,
           rgba(3,12,30,0.4) 28%,
@@ -37,14 +38,14 @@ export const DarkBackground = ({sx, ...props}: BoxProps) => {
           rgba(1,6,14,0.6) 100%
         )
       `,
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        inset: 0,
-        pointerEvents: 'none',
-        // backgroundImage: 'repeating-linear-gradient(0deg, #0a1220, #0a1220 1px, #030509 1px, #030509)',
-        // backgroundSize: '3px 3px',
-        backgroundImage: `
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          // backgroundImage: 'repeating-linear-gradient(0deg, #0a1220, #0a1220 1px, #030509 1px, #030509)',
+          // backgroundSize: '3px 3px',
+          backgroundImage: `
           linear-gradient(
             rgba(255,255,255,0.04) 1px,
             transparent 1px
@@ -55,11 +56,12 @@ export const DarkBackground = ({sx, ...props}: BoxProps) => {
             transparent 1px
           )
         `,
-        backgroundSize: '20px 20px',
-        opacity: 0.4,
-
-      },
-      ...sx,
-    }} {...props} />
+          backgroundSize: '20px 20px',
+          opacity: 0.4,
+        },
+        ...sx,
+      }}
+      {...props}
+    />
   )
 }

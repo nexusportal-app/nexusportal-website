@@ -43,7 +43,7 @@ export const Footer = () => {
           alignItems: 'center',
           flexDirection: 'column',
           justifyContent: 'center',
-          gap: .5,
+          gap: 0.5,
           textAlign: 'center',
           // flexDirection: {md: 'column', lg: 'row'},
           // justifyContent: {md: 'center', lg: 'flex-start'},
@@ -80,11 +80,14 @@ export const Footer = () => {
           justifyContent: 'center',
         }}
       >
-        <Box sx={{opacity: .7}}>© 2026 {m.title}</Box>
-        <Box sx={{display: 'flex', gap: .5}}>
+        <Box sx={{opacity: 0.7}}>© 2026 {m.title}</Box>
+        <Box sx={{display: 'flex', gap: 0.5}}>
           <Link href="/status">
             <FooterBtn>
-              <FooterHealthCheck /><Box component="span" sx={{mx: .25}}>{m.status}</Box>
+              <FooterHealthCheck />
+              <Box component="span" sx={{mx: 0.25}}>
+                {m.status}
+              </Box>
               <OpenInNew fontSize="inherit" color="disabled" />
             </FooterBtn>
           </Link>
@@ -104,16 +107,18 @@ export const Footer = () => {
 }
 
 function Column({sx, ...props}: BoxProps) {
-  return <Box {...props} sx={{flex: 1, display: 'flex', flexDirection: 'row', gap: .5, ...sx}} />
+  return <Box {...props} sx={{flex: 1, display: 'flex', flexDirection: 'row', gap: 0.5, ...sx}} />
 }
 
 const Separator = (props: BoxProps) => {
   return (
     <Box
       {...props}
-      sx={{
-        // display: {xs: 'none', sm: 'inline'},
-      }}
+      sx={
+        {
+          // display: {xs: 'none', sm: 'inline'},
+        }
+      }
     >
       •
     </Box>

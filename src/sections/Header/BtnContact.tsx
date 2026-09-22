@@ -7,13 +7,11 @@ const scrollToContact = (selector: string) => () => {
   })
 }
 
-export const BtnScrollTo = ({scrollToElSelector, ...props}: ButtonProps & {
+export const BtnScrollTo = ({
+  scrollToElSelector,
+  ...props
+}: ButtonProps & {
   scrollToElSelector: string
 }) => {
-  return (
-    <Button
-      onClick={scrollToContact(scrollToElSelector)}
-      {...props}
-    />
-  )
+  return <Button onClick={scrollToContact(scrollToElSelector)} {...props} />
 }

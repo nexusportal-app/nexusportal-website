@@ -8,7 +8,6 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypeStringify from 'rehype-stringify'
 import remarkGithubAlerts from 'remark-github-blockquote-alert'
 
-
 const postsDirectory = path.join(process.cwd(), 'src/posts')
 
 export function getPostSlugs() {

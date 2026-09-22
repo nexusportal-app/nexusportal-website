@@ -11,35 +11,44 @@ export const shortTestimonialStyle = {
 const avatarSize = 36
 
 export const ShortTestimonial = ({
-  name, content, index, sx,
+  name,
+  content,
+  index,
+  sx,
   ...props
 }: BoxProps & {
-  index: number,
-  name: keyof typeof people,
-  content: string,
+  index: number
+  name: keyof typeof people
+  content: string
 }) => {
   return (
-    <Box sx={{
-      fontSize: '0.875rem',
-      flex: '0 0 auto',
-      textAlign: 'left',
-      color: 'rgba(0,0,0,.975)',
-      background: shortTestimonialStyle.backgroundColor,
-      // background: 'rgba(0, 0, 0, .1)',
-      // backdropFilter: 'blur(2px)',
-      // border: '1px solid #ffffff14',
-      borderRadius: .5,
-      p: 1,
-      display: 'flex',
-      position: 'relative',
-      flexDirection: 'column',
-      ...sx,
-    }} {...props}>
-      <Box sx={{
-        flex: 1, textAlign: 'justify',
-        fontWeight: 500,
-      }}>
-        <TestimonialQuote sx={{mr: .25}}>“</TestimonialQuote>
+    <Box
+      sx={{
+        fontSize: '0.875rem',
+        flex: '0 0 auto',
+        textAlign: 'left',
+        color: 'rgba(0,0,0,.975)',
+        background: shortTestimonialStyle.backgroundColor,
+        // background: 'rgba(0, 0, 0, .1)',
+        // backdropFilter: 'blur(2px)',
+        // border: '1px solid #ffffff14',
+        borderRadius: 0.5,
+        p: 1,
+        display: 'flex',
+        position: 'relative',
+        flexDirection: 'column',
+        ...sx,
+      }}
+      {...props}
+    >
+      <Box
+        sx={{
+          flex: 1,
+          textAlign: 'justify',
+          fontWeight: 500,
+        }}
+      >
+        <TestimonialQuote sx={{mr: 0.25}}>“</TestimonialQuote>
         <Box
           component="span"
           dangerouslySetInnerHTML={{__html: content}}
@@ -49,21 +58,38 @@ export const ShortTestimonial = ({
             '& b': {color: 'rgb(0, 0, 0)', fontWeight: 500},
           }}
         />
-        <TestimonialQuote sx={{ml: .25}}>”</TestimonialQuote>
+        <TestimonialQuote sx={{ml: 0.25}}>”</TestimonialQuote>
       </Box>
-      <Box sx={{display: 'flex', alignItems: 'center', mt: .5}}>
-        <Box sx={{mt: .5}}>
+      <Box sx={{display: 'flex', alignItems: 'center', mt: 0.5}}>
+        <Box sx={{mt: 0.5}}>
           {people[name].avatar ? (
-            <Image src={people[name].avatar} alt={name} height={avatarSize} width={avatarSize} style={{borderRadius: '50%'}} />
+            <Image
+              src={people[name].avatar}
+              alt={name}
+              height={avatarSize}
+              width={avatarSize}
+              style={{borderRadius: '50%'}}
+            />
           ) : (
             <Box
-              sx={{display: 'flex', alignItems: 'center', borderRadius: avatarSize, justifyContent: 'center', backgroundColor: 'grey.300', height: avatarSize, width: avatarSize}}>
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                borderRadius: avatarSize,
+                justifyContent: 'center',
+                backgroundColor: 'grey.300',
+                height: avatarSize,
+                width: avatarSize,
+              }}
+            >
               <PersonIcon color="disabled" />
             </Box>
           )}
         </Box>
-        <Box sx={{ml: .5, borderTop: '1px solid', pt: .5, borderColor: 'divider', flex: 1}}>
-          <Box component="span" sx={{fontWeight: 'bold'}}>{people[name].name}</Box>
+        <Box sx={{ml: 0.5, borderTop: '1px solid', pt: 0.5, borderColor: 'divider', flex: 1}}>
+          <Box component="span" sx={{fontWeight: 'bold'}}>
+            {people[name].name}
+          </Box>
           <Box sx={{opacity: '.7'}}>{people[name].job}</Box>
         </Box>
       </Box>
@@ -79,7 +105,7 @@ export const TestimonialQuote = ({sx, ...props}: BoxProps) => {
         verticalAlign: 'middle',
         top: {xs: 6, sm: 16},
         left: 16,
-        opacity: .3,
+        opacity: 0.3,
         lineHeight: '0rem',
         fontWeight: 'bold',
         fontSize: '1.6rem',

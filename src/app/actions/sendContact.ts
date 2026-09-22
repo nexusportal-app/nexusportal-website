@@ -8,8 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!)
 
 export type ContactState = {success: true} | {success: false; error: 'captcha' | 'send'}
 
-const esc = (s = '') =>
-  s.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+const esc = (s = '') => s.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 const verifyCaptcha = async (token: unknown): Promise<boolean> => {
   if (typeof token !== 'string' || !token) return false
@@ -31,7 +30,7 @@ const verifyCaptcha = async (token: unknown): Promise<boolean> => {
 }
 
 export async function sendContact(_: ContactState | null, formData: FormData): Promise<ContactState> {
-  if (!await verifyCaptcha(formData.get('cf-turnstile-response'))) {
+  if (!(await verifyCaptcha(formData.get('cf-turnstile-response')))) {
     return {success: false, error: 'captcha'}
   }
 
@@ -73,12 +72,13 @@ export async function sendContact(_: ContactState | null, formData: FormData): P
   }
 
   // Best-effort : une adresse invalide ne doit pas faire échouer la soumission
-  resend.emails.send({
-    from,
-    to: email,
-    replyTo: 'contact@nexusportal.app',
-    subject: 'We received your message ✔',
-    html: `
+  resend.emails
+    .send({
+      from,
+      to: email,
+      replyTo: 'contact@nexusportal.app',
+      subject: 'We received your message ✔',
+      html: `
       <h2>Thanks for contacting NexusPortal 🙌</h2>
       <p>We've received your request and will get back to you within ${appConf.replyDelayDelay}.</p>
 
@@ -98,7 +98,8 @@ export async function sendContact(_: ContactState | null, formData: FormData): P
       <hr/>
       <p><b>— NexusPortal Team</b></p>
     `,
-  }).catch(err => console.error('sendContact confirmation error:', err))
+    })
+    .catch(err => console.error('sendContact confirmation error:', err))
 
   return {success: true}
 }

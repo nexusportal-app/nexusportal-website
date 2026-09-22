@@ -40,38 +40,45 @@ export const liquidLineAnimation = {
 export const Testimonials = () => {
   const list = Obj.entries(m.testimonial.list)
   return (
-    <Section sx={{
-      display: 'flex',
-      py: 0,
-      alignItems: 'center',
-      flexDirection: {xs: 'column', md: 'row'},
-      ...liquidLineAnimation,
-    }}>
+    <Section
+      sx={{
+        display: 'flex',
+        py: 0,
+        alignItems: 'center',
+        flexDirection: {xs: 'column', md: 'row'},
+        ...liquidLineAnimation,
+      }}
+    >
       <Box sx={{flex: 1}}>
-        <SectionTitle id="testimonials" sx={{mb: 0, p: 0}}>{m.testimonial.title}</SectionTitle>
+        <SectionTitle id="testimonials" sx={{mb: 0, p: 0}}>
+          {m.testimonial.title}
+        </SectionTitle>
         <SectionSubTitle sx={{m: 0}}>{m.testimonial.desc}</SectionSubTitle>
       </Box>
-      <Box sx={{
-        borderRadius: .5,
-        borderTopRightRadius: {xs: undefined, sm: 0},
-        borderTopLeftRadius: {xs: undefined, sm: 0},
-        overflow: 'hidden', flex: 1, mx: {xs: 1, md: 2}, position: 'relative',
-      }}>
-        <Box sx={{
-          overflow: 'auto',
-          pt: 1,
-          height: 600,
-          gap: 1,
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
-          {list.map(([name, {content}], i) => <
-              ShortTestimonial
-              key={name + i} index={i}
-              content={content}
-              name={name}
-            />,
-          )}
+      <Box
+        sx={{
+          borderRadius: 0.5,
+          borderTopRightRadius: {xs: undefined, sm: 0},
+          borderTopLeftRadius: {xs: undefined, sm: 0},
+          overflow: 'hidden',
+          flex: 1,
+          mx: {xs: 1, md: 2},
+          position: 'relative',
+        }}
+      >
+        <Box
+          sx={{
+            overflow: 'auto',
+            pt: 1,
+            height: 600,
+            gap: 1,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          {list.map(([name, {content}], i) => (
+            <ShortTestimonial key={name + i} index={i} content={content} name={name} />
+          ))}
         </Box>
       </Box>
       {/*<CarouselContainer id="Testimonials-container" sx={{py: 1}}>*/}

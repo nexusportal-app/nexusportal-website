@@ -11,19 +11,15 @@ export const BtnExplore = (props: ButtonProps) => {
     })
   }
   return (
-    <Button
-      onClick={handleClick}
-      href={appConf.consoleUrl}
-      variant="contained"
-      size="large"
-      {...props}
-    >
+    <Button onClick={handleClick} href={appConf.consoleUrl} variant="contained" size="large" {...props}>
       {props.size === 'small' ? (
         <>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>{m.cta}</Box>
           <Box sx={{display: {xs: 'block', sm: 'none'}}}>{m.ctaShort}</Box>
         </>
-      ) : m.cta}
+      ) : (
+        m.cta
+      )}
     </Button>
   )
 }

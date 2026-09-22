@@ -4,9 +4,9 @@ import {ElementType} from 'react'
 
 export const revealKeyframes = {
   '@keyframes reveal': {
-    '0%': {opacity: .3},
+    '0%': {opacity: 0.3},
     '60%': {opacity: 1},
-    '100%': {opacity: .3},
+    '100%': {opacity: 0.3},
   },
 }
 
@@ -48,28 +48,38 @@ const magicBorder = {
   },
 } as const
 
-export const BannerKey = ({sx, icon: Icon, children, textAnimationDelay, ...props}: BoxProps & {textAnimationDelay?: number, icon: ElementType}) => {
+export const BannerKey = ({
+  sx,
+  icon: Icon,
+  children,
+  textAnimationDelay,
+  ...props
+}: BoxProps & {textAnimationDelay?: number; icon: ElementType}) => {
   return (
-    <Box sx={{
-      py: 1 / 2,
-      fontSize: '0.9rem',
-      px: 1,
-      color: 'rgba(255,255,255,.75)',
-      borderRadius: 10,
-      fontWeight: 500,
-      display: 'flex',
-      alignItems: 'center',
-      backdropFilter: 'blur(2px)',
-      // backgroundColor: 'rgba(255, 255, 255, 0.14)',
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      // backgroundColor: 'rgba(0, 0, 0, 0.1)',
-      position: 'relative',
-      ...magicBorder,
-      ...sx,
-    }} {...props} >
-      <Icon sx={{display: {xs: 'none', sm: 'block'}, mr: .5, opacity: .8}} />
-      <Box sx={{
-        background: `
+    <Box
+      sx={{
+        py: 1 / 2,
+        fontSize: '0.9rem',
+        px: 1,
+        color: 'rgba(255,255,255,.75)',
+        borderRadius: 10,
+        fontWeight: 500,
+        display: 'flex',
+        alignItems: 'center',
+        backdropFilter: 'blur(2px)',
+        // backgroundColor: 'rgba(255, 255, 255, 0.14)',
+        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+        // backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        position: 'relative',
+        ...magicBorder,
+        ...sx,
+      }}
+      {...props}
+    >
+      <Icon sx={{display: {xs: 'none', sm: 'block'}, mr: 0.5, opacity: 0.8}} />
+      <Box
+        sx={{
+          background: `
           linear-gradient(
             120deg,
             #b9b9b9 0%,
@@ -79,14 +89,15 @@ export const BannerKey = ({sx, icon: Icon, children, textAnimationDelay, ...prop
             #b9b9b9 100%
           )
         `,
-        backgroundSize: '300% auto',
-        backgroundPosition: '0% center',
-        color: 'transparent',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        animation: 'wave 8s linear infinite',
-        animationDelay: textAnimationDelay ? textAnimationDelay + 's' : '0s',
-      }}>
+          backgroundSize: '300% auto',
+          backgroundPosition: '0% center',
+          color: 'transparent',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          animation: 'wave 8s linear infinite',
+          animationDelay: textAnimationDelay ? textAnimationDelay + 's' : '0s',
+        }}
+      >
         {children}
       </Box>
     </Box>

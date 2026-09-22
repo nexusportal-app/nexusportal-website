@@ -13,20 +13,24 @@ export default async function PostPagePage({params}: {params: {slug: string}}) {
   // const t = useTheme()
   // t.palette.info.lightChannellight
   return (
-    <Page component="article" width="sm" sx={{
-      '.markdown-alert-note': {
-        backgroundColor: 'rgba(2, 136, 209, 0.1)',
-      },
-      '.markdown-alert-title svg': {
-        mr: .5,
-      },
-      img: {
-        boxShadow: 1,
-        width: '100%',
-        borderRadius: 1,
-        mb: 1,
-      },
-    }}>
+    <Page
+      component="article"
+      width="sm"
+      sx={{
+        '.markdown-alert-note': {
+          backgroundColor: 'rgba(2, 136, 209, 0.1)',
+        },
+        '.markdown-alert-title svg': {
+          mr: 0.5,
+        },
+        img: {
+          boxShadow: 1,
+          width: '100%',
+          borderRadius: 1,
+          mb: 1,
+        },
+      }}
+    >
       <BlogListItem post={post} />
       <br />
       <PostPage contentHtml={post.contentHtml} />

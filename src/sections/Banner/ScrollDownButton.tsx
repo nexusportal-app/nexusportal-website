@@ -26,6 +26,5 @@ export const ScrollDownButton = ({sx, ...props}: IconButtonProps) => {
     >
       <ArrowCircleDown />
     </IconButton>
-
   )
 }

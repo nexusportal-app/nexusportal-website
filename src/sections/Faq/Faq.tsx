@@ -8,15 +8,22 @@ import {Fragment} from 'react'
 export const Faq = () => {
   return (
     <Section>
-      <Box sx={{
-        maxWidth: 760,
-        margin: 'auto',
-      }}>
+      <Box
+        sx={{
+          maxWidth: 760,
+          margin: 'auto',
+        }}
+      >
         <SectionTitle>{m.faq.title}</SectionTitle>
         <div>
-          {m.faq.list.map((section) => (
+          {m.faq.list.map(section => (
             <Box key={section.title}>
-              <Box component="h4" sx={{ml: 1, color: 'text.disabled', textTransform: 'uppercase', fontSize: '.85rem', mt: 2}}>{section.title}</Box>
+              <Box
+                component="h4"
+                sx={{ml: 1, color: 'text.disabled', textTransform: 'uppercase', fontSize: '.85rem', mt: 2}}
+              >
+                {section.title}
+              </Box>
               {section.list.map((_, i) => (
                 <FaqCard key={i} {..._} />
               ))}

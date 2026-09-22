@@ -12,13 +12,13 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
         // transition: t => t.transitions.create('all'),
         backgroundColor: 'background.paper',
         borderRadius: 1 / 4,
-        py: {xs: .5, sm: .75},
-        px: {xs: .5, sm: 1},
+        py: {xs: 0.5, sm: 0.75},
+        px: {xs: 0.5, sm: 1},
         mb: 0.125,
         boxShadow: 0,
 
         '& p': {
-          my: .5,
+          my: 0.5,
         },
         '&:first-of-type': {
           borderTopLeftRadius: theme => theme.shape.borderRadius,
@@ -29,24 +29,28 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
           borderBottomLeftRadius: theme => theme.shape.borderRadius,
           borderBottomRightRadius: theme => theme.shape.borderRadius,
         },
-        ...open ? {
-          backgroundColor: 'background.default',
-          boxShadow: 3,
-          borderRadius: 1,
-          my: 1,
-        } : {},
+        ...(open
+          ? {
+              backgroundColor: 'background.default',
+              boxShadow: 3,
+              borderRadius: 1,
+              my: 1,
+            }
+          : {}),
       }}
     >
-      <Box sx={{
-        display: 'flex',
-        alignItems: 'center',
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
         <IconButton
           onClick={() => {
             setOpen(prev => {
               const next = !prev
               if (!prev && next && typeof window !== 'undefined' && (window as any).gtag) {
-                (window as any).gtag('event', 'faq_opened', {
+                ;(window as any).gtag('event', 'faq_opened', {
                   event_category: 'faq',
                   question,
                 })
@@ -55,7 +59,7 @@ export const FaqCard = ({question, answer}: {question: string; answer: string}) 
             })
           }}
           sx={{
-            ml: -.5,
+            ml: -0.5,
             // transition: t => t.transitions.create('all'),
             ...(open ? {transform: 'rotate(90deg)'} : {}),
           }}

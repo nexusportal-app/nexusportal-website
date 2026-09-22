@@ -15,11 +15,11 @@ const headerLayout: BoxProps['sx'] = {
   top: 0,
   right: 0,
   left: 0,
-  py: {xs: .5, sm: 1},
-  px: {xs: .5, sm: 1},
+  py: {xs: 0.5, sm: 1},
+  px: {xs: 0.5, sm: 1},
   position: 'fixed',
   margin: 'auto',
-  mt: .5,
+  mt: 0.5,
   borderRadius: '16px',
   height: {xs: 50, sm: 60},
   width: 'calc(100% - 16px)',
@@ -73,51 +73,51 @@ export const Header = () => {
 
   return (
     <>
-      <Box sx={{
-        ...headerLayout,
-        boxShadow: 6,
-        zIndex: 30,
-        transform: 'translateZ(0)',
-        background: headerGradiant,
-        // opacity: .6,
-        backdropFilter: 'blur(6px)',
-      }}>
-
-      </Box>
-      <Box component="header" sx={{
-        ...headerLayout,
-        zIndex: 30,
-        color: 'white',
-        overflow: 'hidden',
-        background: 'rgba(255,255,255, 0.1)',
-        border: '1px solid rgba(255,255,255, 0.02)',
-        borderTopColor: 'rgba(255,255,255, 0.06)',
-        borderBottomColor: 'rgba(255,255,255, 0.1)',
-        display: 'flex',
-        alignItems: 'center',
-      }}>
-        <Link href="/" style={{display: 'inline-flex', alignItems: 'center'}}>
-          <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
-          <Box sx={{ml: .5, fontSize: {xs: '1.2rem', sm: '1.3em'}}}> {m.title}</Box>
-        </Link>
-        <Box component="nav" sx={{
-          gap: {xs: .5, sm: 1},
-          width: '100%',
+      <Box
+        sx={{
+          ...headerLayout,
+          boxShadow: 6,
+          zIndex: 30,
+          transform: 'translateZ(0)',
+          background: headerGradiant,
+          // opacity: .6,
+          backdropFilter: 'blur(6px)',
+        }}
+      ></Box>
+      <Box
+        component="header"
+        sx={{
+          ...headerLayout,
+          zIndex: 30,
+          color: 'white',
+          overflow: 'hidden',
+          background: 'rgba(255,255,255, 0.1)',
+          border: '1px solid rgba(255,255,255, 0.02)',
+          borderTopColor: 'rgba(255,255,255, 0.06)',
+          borderBottomColor: 'rgba(255,255,255, 0.1)',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'flex-end',
-        }}>
+        }}
+      >
+        <Link href="/" style={{display: 'inline-flex', alignItems: 'center'}}>
+          <Image src="/app-logo.svg" alt={m.logoAlt} height={28} width={28} />
+          <Box sx={{ml: 0.5, fontSize: {xs: '1.2rem', sm: '1.3em'}}}> {m.title}</Box>
+        </Link>
+        <Box
+          component="nav"
+          sx={{
+            gap: {xs: 0.5, sm: 1},
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+          }}
+        >
           {/* Desktop Navigation */}
           <Box sx={{display: {xs: 'none', sm: 'contents'}}}>
-            <HeadLink href="/blog">
-              {m.blog}
-            </HeadLink>
-            <HeadLink href="/contact">
-              {m.contact}
-            </HeadLink>
-            <HeadLink href="/pricing">
-              {m.pricing}
-            </HeadLink>
+            <HeadLink href="/blog">{m.blog}</HeadLink>
+            <HeadLink href="/contact">{m.contact}</HeadLink>
+            <HeadLink href="/pricing">{m.pricing}</HeadLink>
             <BtnSignUp size="small" sx={{color: 'white'}} />
           </Box>
 
@@ -165,12 +165,8 @@ export const Header = () => {
                   {m.pricing}
                 </MenuItem>
               </Link>
-              <Box sx={{px: 1, py: .5}}>
-                <BtnSignUp
-                  size="small"
-                  sx={{color: 'white', width: '100%'}}
-                  onClick={handleMenuClose}
-                />
+              <Box sx={{px: 1, py: 0.5}}>
+                <BtnSignUp size="small" sx={{color: 'white', width: '100%'}} onClick={handleMenuClose} />
               </Box>
             </Menu>
           </Box>
@@ -186,12 +182,17 @@ export const Header = () => {
 function HeadLink({sx, href, ...props}: ButtonProps & {href: string}) {
   return (
     <Link href={href}>
-      <Button variant="text" sx={{
-        // fontSize: '1rem',
-        color: 'inherit', borderRadius: 10,
-        fontWeight: 600,
-        ...sx,
-      }} {...props} />
+      <Button
+        variant="text"
+        sx={{
+          // fontSize: '1rem',
+          color: 'inherit',
+          borderRadius: 10,
+          fontWeight: 600,
+          ...sx,
+        }}
+        {...props}
+      />
     </Link>
   )
 }

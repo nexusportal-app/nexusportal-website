@@ -55,9 +55,9 @@ export const BlogListItemAnimator = ({
       },
       ...(isRedirecting
         ? {
-          animation: `${pulse} ${animationDuration}ms ease-in-out`,
-          top: 0,
-        }
+            animation: `${pulse} ${animationDuration}ms ease-in-out`,
+            top: 0,
+          }
         : {}),
     },
     onClick: e => {

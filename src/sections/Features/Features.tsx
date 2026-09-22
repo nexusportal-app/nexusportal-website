@@ -16,11 +16,11 @@ import EditNoteIcon from '@mui/icons-material/EditNote'
 import RepeatIcon from '@mui/icons-material/Repeat'
 import {ReactNode} from 'react'
 
-const featuresNew: Partial<Record<keyof typeof m['features']['list'], boolean>> = {
+const featuresNew: Partial<Record<keyof (typeof m)['features']['list'], boolean>> = {
   email: true,
 }
 
-const featuresIcons: Record<keyof typeof m['features']['list'], ReactNode> = {
+const featuresIcons: Record<keyof (typeof m)['features']['list'], ReactNode> = {
   db: <TableViewIcon />,
   dashboard: <DashboardIcon />,
   email: <NotificationsIcon />,
@@ -30,14 +30,16 @@ const featuresIcons: Record<keyof typeof m['features']['list'], ReactNode> = {
   smart: <AccountTreeIcon />,
   xls: <EditNoteIcon />,
   repeat: <RepeatIcon />,
-
 }
 
 export const Features = () => {
   return (
-    <Box component="section" sx={{
-      position: 'relative',
-    }}>
+    <Box
+      component="section"
+      sx={{
+        position: 'relative',
+      }}
+    >
       <SectionTitle sx={{mb: 0, p: 0}}>{m.features.title}</SectionTitle>
       <CarouselContainer id="Features-container">
         {Obj.entries(m.features.list).map(([key, _], i) => (
@@ -59,37 +61,41 @@ export const Features = () => {
 export const CarouselContainer = ({id, children, sx, ...props}: BoxProps & {id: string}) => {
   return (
     <Box sx={{pr: 0, maxWidth: '100%', overflow: 'visible'}}>
-      <Box id={id} sx={{
-        pl: {xs: 1, sm: `calc((100vw - 1100px) / 2)`},
-        display: 'flex',
-        alignItems: 'center',
-        overflowX: 'auto',
-        gap: {xs: 1, sm: 2},
-        pt: 4,
-        pr: {xs: 0, sm: 2},
-        pb: 4,
-        /* Firefox */
-        scrollbarWidth: 'thin',
-        scrollbarColor: 'rgba(255,255,255,.2) transparent',
-        /* Chrome / Edge */
-        '&::-webkit-scrollbar': {
-          width: 4,
-          height: 4,
-        },
-        '&::-webkit-scrollbar-track': {
-          background: 'transparent',
-        },
-        '&::-webkit-scrollbar-thumb': {
-          background: 'rgba(255,255,255,.18)',
-          borderRadius: 10,
-          border: '2px solid transparent',
-          backgroundClip: 'content-box',
-        },
-        '&::-webkit-scrollbar-corner': {
-          background: 'transparent',
-        },
-        ...sx,
-      }} {...props} >
+      <Box
+        id={id}
+        sx={{
+          pl: {xs: 1, sm: `calc((100vw - 1100px) / 2)`},
+          display: 'flex',
+          alignItems: 'center',
+          overflowX: 'auto',
+          gap: {xs: 1, sm: 2},
+          pt: 4,
+          pr: {xs: 0, sm: 2},
+          pb: 4,
+          /* Firefox */
+          scrollbarWidth: 'thin',
+          scrollbarColor: 'rgba(255,255,255,.2) transparent',
+          /* Chrome / Edge */
+          '&::-webkit-scrollbar': {
+            width: 4,
+            height: 4,
+          },
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: 'rgba(255,255,255,.18)',
+            borderRadius: 10,
+            border: '2px solid transparent',
+            backgroundClip: 'content-box',
+          },
+          '&::-webkit-scrollbar-corner': {
+            background: 'transparent',
+          },
+          ...sx,
+        }}
+        {...props}
+      >
         {children}
       </Box>
       <Box sx={{display: 'flex', gap: 1, pb: 4, alignItems: 'center', justifyContent: 'center'}}>

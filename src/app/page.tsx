@@ -16,7 +16,7 @@ export default function Home() {
       <Problems />
       <Solution />
       <DarkBackground>
-        <Testimonials/>
+        <Testimonials />
         <Features />
       </DarkBackground>
       <Design />

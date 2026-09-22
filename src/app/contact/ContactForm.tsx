@@ -1,6 +1,20 @@
 'use client'
 import {sendContact} from '@/app/actions/sendContact'
-import {Alert, Box, Button, CardContent, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, MenuItem, Portal, Snackbar, TextField} from '@mui/material'
+import {
+  Alert,
+  Box,
+  Button,
+  CardContent,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  FormLabel,
+  MenuItem,
+  Portal,
+  Snackbar,
+  TextField,
+} from '@mui/material'
 import {m} from '@/core/i18n'
 import {useActionState, useCallback, useEffect, useRef, useState} from 'react'
 import {useFormStatus} from 'react-dom'
@@ -61,29 +75,27 @@ export const ContactForm = () => {
 
         <TextField name="role" fullWidth size="small" select label={m.contact_.roles} defaultValue="">
           {m.contact_.roles_.map(role => (
-            <MenuItem key={role} value={role}>{role}</MenuItem>
+            <MenuItem key={role} value={role}>
+              {role}
+            </MenuItem>
           ))}
         </TextField>
 
         <FormControl
           component="fieldset"
           variant="standard"
-          sx={{border: '1px solid', py: .75, px: 1, borderRadius: '12px', borderColor: 'divider'}}
+          sx={{border: '1px solid', py: 0.75, px: 1, borderRadius: '12px', borderColor: 'divider'}}
         >
           <FormLabel>{m.contact_.tools}</FormLabel>
           <FormGroup sx={{display: 'grid', gridTemplateColumns: {sm: '1fr 1fr 1fr', xs: '1fr 1fr'}, columnGap: 2}}>
             {m.contact_.tools_.map(tool => (
-              <FormControlLabel
-                key={tool}
-                control={<Checkbox size="small" name="tools" value={tool} />}
-                label={tool}
-              />
+              <FormControlLabel key={tool} control={<Checkbox size="small" name="tools" value={tool} />} label={tool} />
             ))}
           </FormGroup>
         </FormControl>
 
         <FormControlLabel
-          sx={{border: '1px solid', m: 0, pl: .25, py: 1 / 5, borderRadius: '12px', borderColor: 'divider'}}
+          sx={{border: '1px solid', m: 0, pl: 0.25, py: 1 / 5, borderRadius: '12px', borderColor: 'divider'}}
           control={<Checkbox size="small" name="demo" value="yes" />}
           label={m.contact_.wantADemo}
         />
@@ -95,7 +107,7 @@ export const ContactForm = () => {
         <SubmitButton disabled={!token} />
 
         <Box
-          sx={{'a': {fontWeight: 500, textDecoration: 'underline'}}}
+          sx={{a: {fontWeight: 500, textDecoration: 'underline'}}}
           dangerouslySetInnerHTML={{__html: m.contact_.preferDirect}}
         />
       </CardContent>

@@ -18,7 +18,8 @@ type Props = BoxProps & {
 const templates = {
   blue: {
     background: `radial-gradient(94.21% 78.40% at 50.00% 29.91%, rgba(43, 94, 180, 0.70), rgba(13, 16, 35, 0.42))`,
-    boxShadow: '0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 20px 3px rgba(7, 13, 79, 0.10) , 0px 0px 40px 20px rgba(85, 0, 98, 0.10) , 0 0 0 1px rgba(255, 255, 255, 0.06) inset',
+    boxShadow:
+      '0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 20px 3px rgba(7, 13, 79, 0.10) , 0px 0px 40px 20px rgba(85, 0, 98, 0.10) , 0 0 0 1px rgba(255, 255, 255, 0.06) inset',
   },
   purple: {
     background: `linear-gradient(138deg, rgba(32, 35, 91, 0.70) 22.00%, rgba(7, 9, 33, 0.70) 82.00%)`,
@@ -42,14 +43,7 @@ const templates = {
   },
 }
 
-export const FeaturesPanel = ({
-  imageSrc,
-  title,
-  icon,
-  desc,
-  index,
-  isNew,
-}: Props) => {
+export const FeaturesPanel = ({imageSrc, title, icon, desc, index, isNew}: Props) => {
   const template = {
     0: templates.purple,
     1: templates.blue,
@@ -62,7 +56,7 @@ export const FeaturesPanel = ({
     <Box
       component="article"
       sx={{
-        flex: {xs: '0 0 calc(100% - var(--main-spacing))' , md: '0 0 40%'},
+        flex: {xs: '0 0 calc(100% - var(--main-spacing))', md: '0 0 40%'},
         width: '100%',
         px: 1,
         pt: 1,
@@ -75,16 +69,19 @@ export const FeaturesPanel = ({
         border: '1px solid #ffffff14',
         overflow: 'hidden',
         ...template,
-      }}>
+      }}
+    >
       <Box sx={{position: 'relative', borderRadius: '10px', overflow: 'hidden', width: '100%'}}>
-        <Box sx={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-          left: 0,
-          top: '40%',
-          background: `linear-gradient(to top, #131d2e 0%, rgba(0,0,0,0) 100% )`,
-        }}></Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+            right: 0,
+            left: 0,
+            top: '40%',
+            background: `linear-gradient(to top, #131d2e 0%, rgba(0,0,0,0) 100% )`,
+          }}
+        ></Box>
         <Image
           className={style.img}
           alt={title}
@@ -95,16 +92,20 @@ export const FeaturesPanel = ({
         />
       </Box>
       <Box sx={{color: 'white'}}>
-        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, mt: 1, mb: .5}}>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            p: .5,
-            borderRadius: '8px',
-            opacity: .8,
-            ...template,
-          }}>{icon}</Box>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, mt: 1, mb: 0.5}}>
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              p: 0.5,
+              borderRadius: '8px',
+              opacity: 0.8,
+              ...template,
+            }}
+          >
+            {icon}
+          </Box>
           <SectionSubTitle sx={{textAlign: 'left', fontWeight: 700, mt: 0, mb: 0}}>{title}</SectionSubTitle>
           {/*{isNew && (*/}
           {/*  <Box*/}
@@ -126,7 +127,7 @@ export const FeaturesPanel = ({
             lineHeight: 1.5,
             minHeight: '6em',
             color: 'rgba(255,255,255,.6)',
-            'b': {
+            b: {
               fontWeight: 500,
               color: 'rgba(255,255,255,1)',
             },

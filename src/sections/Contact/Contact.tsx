@@ -7,11 +7,13 @@ import {SectionSubTitle} from '@/shared/SectionSubTitle'
 export const Contact = () => {
   return (
     <Section id="contact" sx={{scrollMarginTop: 80}}>
-      <Box sx={{
-        maxWidth: 760,
-        position: 'relative',
-        margin: 'auto',
-      }}>
+      <Box
+        sx={{
+          maxWidth: 760,
+          position: 'relative',
+          margin: 'auto',
+        }}
+      >
         {/*<Box sx={{*/}
         {/*  position: 'absolute', top: 50,*/}
         {/*  right: 0,*/}
@@ -23,15 +25,18 @@ export const Contact = () => {
         {/*  <Icon sx={{fontSize: 250, color: 'rgba(0, 0, 0, .06)'}} />*/}
         {/*</Box>*/}
         <SectionTitle>{m.contactSection_.title}</SectionTitle>
-        <SectionSubTitle sx={{
-          'a': {
-            fontWeight: 'bold',
-            background: 'linear-gradient(270deg, rgb(26,90,220), rgba(4,22,47))',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            color: 'transparent',
-          },
-        }} dangerouslySetInnerHTML={{__html: m.contactSection_.paragraph}} />
+        <SectionSubTitle
+          sx={{
+            a: {
+              fontWeight: 'bold',
+              background: 'linear-gradient(270deg, rgb(26,90,220), rgba(4,22,47))',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent',
+            },
+          }}
+          dangerouslySetInnerHTML={{__html: m.contactSection_.paragraph}}
+        />
       </Box>
     </Section>
   )

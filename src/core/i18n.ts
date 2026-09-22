@@ -22,8 +22,10 @@ export const m = {
   // heroTitleSub2: 'and with our Information Management app, they won't.',
   // heroTitleSub: 'With frequent survey updates and staff turnover, data quickly becomes inconsistent and unprotected.',
   // heroTitleSub2: 'NexusPortal structures your data - so reports stay clean and always ready.',
-  heroTitleSub: 'Information management platform helping humanitarian teams <b>organize and protect data</b> without messy, time-consuming work.',
-  heroTitleSubRaw: 'Information management platform helping humanitarian teams organize and protect data without messy, time-consuming work.',
+  heroTitleSub:
+    'Information management platform helping humanitarian teams <b>organize and protect data</b> without messy, time-consuming work.',
+  heroTitleSubRaw:
+    'Information management platform helping humanitarian teams organize and protect data without messy, time-consuming work.',
   key1: 'Collect & Import',
   key2: 'Transform & Report',
   key3: 'Visualize & Analyze',
@@ -332,23 +334,20 @@ export const m = {
         shortContent: `Highly adaptable and field-driven information management solution`,
         content: `The NexusPortal proved to be a <b>highly adaptable and field-driven information management solution</b>, offering full customization to our country needs, rapid iteration of new modules, and easy in-country maintenance by IM and ICT teams.<br/><br/>By integrating databases, activity tracking, targets, and geographic coverage into a <b>single real-time environment</b>, it effectively bridged the gap between IM/MEAL/CFM functions and field implementation, strengthened operational coherence and quick decision-making.<br/><br/><b>Automated reporting significantly reduced the burden of routine submissions</b>, while clear dashboards and feedback loops improved oversight, responsiveness, and accountability.<br/><br/>Overall, it delivered for us a very context-responsive, sustainable system that <b>streamlined workflows, reduced bureaucracy, and enabled teams to focus more on analysis and implementation</b> rather than administrative tasks.`,
       },
-    } satisfies Record<string, {shortContent: string, content: string}>,
+    } satisfies Record<string, {shortContent: string; content: string}>,
   },
   contactSection_: {
     title: 'Contact Us',
-    paragraph: `<p>Curious how teams operating in Ukraine reduced days of manual reporting to just a few clicks, while keeping data reliable?</p>`
-      + `Request a live demo by emailing <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>.`,
+    paragraph:
+      `<p>Curious how teams operating in Ukraine reduced days of manual reporting to just a few clicks, while keeping data reliable?</p>` +
+      `Request a live demo by emailing <a href="mailto:contact@nexusportal.app">contact@nexusportal.app</a>.`,
   },
   contact: 'Contact',
   contact_: {
     submitErrorCaptcha: `Verification failed. Please try again.`,
     arguments: {
       title: 'Start for free',
-      list: [
-        'Start for free',
-        `If you're using Kobo, no migration needed`,
-        `Built in field operation`,
-      ],
+      list: ['Start for free', `If you're using Kobo, no migration needed`, `Built in field operation`],
     },
     targets: {
       title: 'NexusPortal is perfect for teams who',
@@ -370,25 +369,9 @@ export const m = {
     email: 'Work email',
     orgName: 'Organization name',
     roles: `What best describes you?`,
-    roles_: [
-      'Information Management',
-      'MEAL / M&E',
-      'Programme / Operations',
-      'HQ / Global team',
-      'Other',
-    ],
+    roles_: ['Information Management', 'MEAL / M&E', 'Programme / Operations', 'HQ / Global team', 'Other'],
     tools: 'What tools do you currently use?',
-    tools_: [
-      'KoboToolbox',
-      'Excel',
-      'PowerBI',
-      'PowerApps',
-      'Ona',
-      'ActivityInfo',
-      'ArcGis',
-      'Custom tools',
-      'Other',
-    ],
+    tools_: ['KoboToolbox', 'Excel', 'PowerBI', 'PowerApps', 'Ona', 'ActivityInfo', 'ArcGis', 'Custom tools', 'Other'],
     submit: 'Submit',
     message: `Message`,
     footer: `No spam. We reply within ${appConf.replyDelayDelay}.`,
@@ -592,7 +575,8 @@ export const m = {
     enterprise: 'Enterprise',
     formBuilder: 'Form builder',
     koboImports: 'Import from KoboToolbox',
-    koboImportsTooltip: 'You can import all your existing forms, regardless of the number of submissions. From then on, each new Kobo submission imported into NexusPortal will count toward your submissions limit.',
+    koboImportsTooltip:
+      'You can import all your existing forms, regardless of the number of submissions. From then on, each new Kobo submission imported into NexusPortal will count toward your submissions limit.',
     maxSubmissions: 'Submissions/month',
     maxForms: 'Number of forms',
     maxAutomaticDatabases: 'Auto-generated databases',
@@ -620,4 +604,3 @@ export const m = {
     deny: 'Deny',
   },
 }
-

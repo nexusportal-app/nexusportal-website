@@ -21,7 +21,7 @@ type PlanId = 'starter' | 'mission' | 'impact' | 'enterprise'
 
 type FeatureValue =
   | {type: 'boolean'; value: boolean}
-  | {type: 'limit'; value: number, unit?: string}
+  | {type: 'limit'; value: number; unit?: string}
   | {type: 'unlimited'}
   | {type: 'text'; value: string}
 
@@ -35,7 +35,7 @@ type Feature = {
   values: Record<PlanId, FeatureValue>
 }
 
-type Plan = {price?: number, freeTrial?: boolean}
+type Plan = {price?: number; freeTrial?: boolean}
 
 const plans: Record<PlanId, Plan> = {
   starter: {price: 0},
@@ -203,13 +203,24 @@ const featuresByCategory = Object.groupBy(features, f => f.category)
 export default function Pricing() {
   return (
     <Page width="lg" title={m.pricing_.title} subTitle={m.pricing_.subTitle}>
-      <Grid container spacing={.75} component="section">
+      <Grid container spacing={0.75} component="section">
         {(Object.keys(plans) as PlanId[]).map((planId, index) => (
           <Grid key={planId} size={{xs: 12, sm: 6, lg: 3}}>
             <PlanCard planId={planId} index={index} />
           </Grid>
         ))}
-        <Box sx={{display: 'flex', mt: 1, gap: .5, alignItems: 'center', justifyContent: 'center', width: '100%', fontWeight: 500, color: 'info.main'}}>
+        <Box
+          sx={{
+            display: 'flex',
+            mt: 1,
+            gap: 0.5,
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            fontWeight: 500,
+            color: 'info.main',
+          }}
+        >
           <Info color="info" fontSize="small" />
           {m.pricing_.perWorkspace}
         </Box>
@@ -234,7 +245,18 @@ function PlanCard({planId, index}: {planId: PlanId; index: number}) {
           // const Icon = (categoryIcons as any)[category]
           return (
             <Box key={category} sx={{'&:not(:last-of-type)': {mb: 2}}}>
-              <Box sx={{color: 'text.disabled', display: 'flex', alignItems: 'center', gap: .5, textTransform: 'uppercase', mb: 1, fontWeight: 600, fontSize: '.8rem'}}>
+              <Box
+                sx={{
+                  color: 'text.disabled',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 0.5,
+                  textTransform: 'uppercase',
+                  mb: 1,
+                  fontWeight: 600,
+                  fontSize: '.8rem',
+                }}
+              >
                 {/*<Icon fontSize="small" />*/}
                 {category}
               </Box>
@@ -245,7 +267,9 @@ function PlanCard({planId, index}: {planId: PlanId; index: number}) {
                     <Box sx={{flex: 1}}>
                       {feature.label}
                       {feature.tooltip && (
-                        <Tooltip placement="right" title={feature.tooltip}><Help fontSize="inherit" color="disabled" sx={{ml: .25}} /></Tooltip>
+                        <Tooltip placement="right" title={feature.tooltip}>
+                          <Help fontSize="inherit" color="disabled" sx={{ml: 0.25}} />
+                        </Tooltip>
                       )}
                     </Box>
                   )}
@@ -262,26 +286,46 @@ function PlanCard({planId, index}: {planId: PlanId; index: number}) {
 
 function Header({planId, plan, index}: {planId: PlanId; plan: Plan; index: number}) {
   return (
-    <Box sx={{
-      p: 1,
-      minHeight: 150,
-      borderBottom: '1px solid',
-      borderColor: 'divider',
-      background: `linear-gradient(to top, #fff 1%, rgba(0,165,255,${index / 12}) 100%)`,
-    }}>
+    <Box
+      sx={{
+        p: 1,
+        minHeight: 150,
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+        background: `linear-gradient(to top, #fff 1%, rgba(0,165,255,${index / 12}) 100%)`,
+      }}
+    >
       <Box sx={{mb: 2}}>
         <Box component="h3">{m.pricing_[planId]}</Box>
         <Price price={plan.price} />
       </Box>
-      {{
-        starter: <Button href={appConf.consoleUrl} fullWidth variant="contained">{m.pricing_.getStarted}</Button>,
-        mission: <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">{m.bookDemo}</BtnScrollTo>,
-        impact: <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">{m.bookDemo}</BtnScrollTo>,
-        enterprise: <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">{m.bookDemo}</BtnScrollTo>,
-      }[planId]}
+      {
+        {
+          starter: (
+            <Button href={appConf.consoleUrl} fullWidth variant="contained">
+              {m.pricing_.getStarted}
+            </Button>
+          ),
+          mission: (
+            <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">
+              {m.bookDemo}
+            </BtnScrollTo>
+          ),
+          impact: (
+            <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">
+              {m.bookDemo}
+            </BtnScrollTo>
+          ),
+          enterprise: (
+            <BtnScrollTo scrollToElSelector="#book-a-demo" fullWidth variant="outlined">
+              {m.bookDemo}
+            </BtnScrollTo>
+          ),
+        }[planId]
+      }
       <Box
         dangerouslySetInnerHTML={{__html: plan.freeTrial ? m.pricing_.freeTrial : '&nbsp;'}}
-        sx={{mt: .5, textAlign: 'center', fontSize: '.8rem', b: {color: 'primary.main', fontWeight: 500}}}
+        sx={{mt: 0.5, textAlign: 'center', fontSize: '.8rem', b: {color: 'primary.main', fontWeight: 500}}}
       />
     </Box>
   )
@@ -293,7 +337,11 @@ function FeatureValueCell({value}: {value: FeatureValue}) {
       return value.value ? <CheckIcon color="success" /> : <DoNotDisturb color="disabled" />
 
     case 'limit':
-      return <Box sx={{color: 'warning.main'}}>{formatLargeNumber(value.value)} {value.unit}</Box>
+      return (
+        <Box sx={{color: 'warning.main'}}>
+          {formatLargeNumber(value.value)} {value.unit}
+        </Box>
+      )
 
     case 'unlimited':
       return <AllInclusive sx={{fontSize: 18}} color="success" />
@@ -304,11 +352,7 @@ function FeatureValueCell({value}: {value: FeatureValue}) {
 }
 
 function Row({children}: {children: React.ReactNode}) {
-  return (
-    <Box sx={{display: 'flex', fontWeight: 500, '&:not(:last-of-type)': {mb: 1}}}>
-      {children}
-    </Box>
-  )
+  return <Box sx={{display: 'flex', fontWeight: 500, '&:not(:last-of-type)': {mb: 1}}}>{children}</Box>
 }
 
 function CheckIcon(props: SvgIconProps) {
@@ -322,7 +366,10 @@ function Price({price, sx}: {price?: number; sx?: any}) {
   return (
     <Box sx={{fontSize: '2rem', fontWeight: 700, ...sx}}>
       {formatPrice(price)}
-      <Box component="span" sx={{fontSize: '1rem', fontWeight: 300}}> {m.perMonth}</Box>
+      <Box component="span" sx={{fontSize: '1rem', fontWeight: 300}}>
+        {' '}
+        {m.perMonth}
+      </Box>
     </Box>
   )
 }

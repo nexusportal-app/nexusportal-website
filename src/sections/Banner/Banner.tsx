@@ -16,38 +16,43 @@ import {AutoScroll} from '@/sections/Testimonials/AutoScroll'
 export const Banner = () => {
   const testimonials = Obj.entries(m.testimonial.list)
   return (
-    <Box component="section" sx={{
-      position: 'relative',
-      height: '100vh',
-      color: 'white',
-      overflow: 'hidden',
-      backgroundImage: 'url(/ss1.png)',
-      backgroundPosition: '72% 66%',
-      backgroundSize: '160% 160%',
-      display: 'flex',
-      // px: {xs: .5, sm: 2},
-      // alignItems: 'center',
-      ...revealKeyframes,
-    }}>
-      <Backdrop />
-      <Box sx={{
-        overflow: 'hidden',
-        flex: '1',
-        display: 'flex',
-        flexDirection: 'column',
-        // justifyContent: 'space-between',
-        justifyContent: 'center',
-        gap: {xs: 2, sm: 3},
-        height: '100vh',
-        // alignItems: 'space-between',
+    <Box
+      component="section"
+      sx={{
         position: 'relative',
-        textAlign: 'center',
-      }}>
+        height: '100vh',
+        color: 'white',
+        overflow: 'hidden',
+        backgroundImage: 'url(/ss1.png)',
+        backgroundPosition: '72% 66%',
+        backgroundSize: '160% 160%',
+        display: 'flex',
+        // px: {xs: .5, sm: 2},
+        // alignItems: 'center',
+        ...revealKeyframes,
+      }}
+    >
+      <Backdrop />
+      <Box
+        sx={{
+          overflow: 'hidden',
+          flex: '1',
+          display: 'flex',
+          flexDirection: 'column',
+          // justifyContent: 'space-between',
+          justifyContent: 'center',
+          gap: {xs: 2, sm: 3},
+          height: '100vh',
+          // alignItems: 'space-between',
+          position: 'relative',
+          textAlign: 'center',
+        }}
+      >
         <Box
           component="h1"
           dangerouslySetInnerHTML={{__html: m.heroTitle1}}
           sx={{
-            'b': {
+            b: {
               color: '#90e6ff',
             },
             m: 0,
@@ -68,12 +73,16 @@ export const Banner = () => {
           dangerouslySetInnerHTML={{__html: m.heroTitleSub}}
         />
 
-        <Box
-        >
-          <AutoScroll direction="X" sx={{
-            width: 'max-content',
-          }}>
-            {[...testimonials, ...testimonials].map(([name, {shortContent}], i) => <ShortTestimonial sx={{width: 340}} index={i} key={i} name={name} content={`<b>${shortContent}</b>`} />)}
+        <Box>
+          <AutoScroll
+            direction="X"
+            sx={{
+              width: 'max-content',
+            }}
+          >
+            {[...testimonials, ...testimonials].map(([name, {shortContent}], i) => (
+              <ShortTestimonial sx={{width: 340}} index={i} key={i} name={name} content={`<b>${shortContent}</b>`} />
+            ))}
           </AutoScroll>
         </Box>
 
@@ -88,12 +97,16 @@ export const Banner = () => {
           </Pulse>
         </Box>
 
-        <Box sx={{
-          position: 'absolute',
-          bottom: 32, right: 0, left: 0,
-          display: 'flex',
-          justifyContent: 'center',
-        }}>
+        <Box
+          sx={{
+            position: 'absolute',
+            bottom: 32,
+            right: 0,
+            left: 0,
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <ScrollDownButton sx={{mb: {xs: 1, sm: 2}}} />
         </Box>
       </Box>
@@ -103,29 +116,31 @@ export const Banner = () => {
 
 export const Backdrop = () => {
   return (
-    <Box sx={{
-      position: 'absolute',
-      inset: 0,
-      flex: 1,
-      textAlign: 'center',
-      backdropFilter: 'blur(3.5px)',
-      background: 'radial-gradient(80% 60% at 50% 20%, rgba(8,32,80,0.7) 0%, rgba(1,7,17,0.96) 70%)',
-    }} />
+    <Box
+      sx={{
+        position: 'absolute',
+        inset: 0,
+        flex: 1,
+        textAlign: 'center',
+        backdropFilter: 'blur(3.5px)',
+        background: 'radial-gradient(80% 60% at 50% 20%, rgba(8,32,80,0.7) 0%, rgba(1,7,17,0.96) 70%)',
+      }}
+    />
   )
 }
 
 const Chip = () => {
   return (
-    <Box sx={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      // flexDirection: {xs: 'column', sm: 'row'},
-      // gap: {xs: .5, sm: .5, md: 1},
-    }}>
-      <BannerKey icon={Upload}>
-        {m.key1}
-      </BannerKey>
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // flexDirection: {xs: 'column', sm: 'row'},
+        // gap: {xs: .5, sm: .5, md: 1},
+      }}
+    >
+      <BannerKey icon={Upload}>{m.key1}</BannerKey>
       <BannerKeyLink2 />
       <BannerKey icon={Settings} textAnimationDelay={10}>
         {m.key2}

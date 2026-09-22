@@ -15,12 +15,12 @@ function calculatePageWidth(width?: string | number) {
   if (!width) return '100%'
   return typeof width === 'string'
     ? {
-      xs: 520,
-      sm: 700,
-      md: 1000,
-      lg: 1290,
-      full: 3000,
-    }[width]
+        xs: 520,
+        sm: 700,
+        md: 1000,
+        lg: 1290,
+        full: 3000,
+      }[width]
     : width
 }
 
@@ -44,20 +44,24 @@ const pageEnter = {
 export const Page = ({title, noAnimation, subTitle, width, sx, children, ...props}: PageProps) => {
   return (
     <>
-      <Box component="main" sx={{
-        margin: 'auto',
-        pt: 5,
-        px: {xs: .5, sm: 1},
-        width: '100%',
-        flex: 1,
-        position: 'relative',
-        transition: 'all 0.3s',
-        maxWidth: calculatePageWidth(width),
-        animation: noAnimation ? undefined : 'pageEnter 220ms ease-out',
-        animationFillMode: 'both',
-        ...pageEnter,
-        ...sx,
-      }} {...props}>
+      <Box
+        component="main"
+        sx={{
+          margin: 'auto',
+          pt: 5,
+          px: {xs: 0.5, sm: 1},
+          width: '100%',
+          flex: 1,
+          position: 'relative',
+          transition: 'all 0.3s',
+          maxWidth: calculatePageWidth(width),
+          animation: noAnimation ? undefined : 'pageEnter 220ms ease-out',
+          animationFillMode: 'both',
+          ...pageEnter,
+          ...sx,
+        }}
+        {...props}
+      >
         {title && <SectionTitle>{title}</SectionTitle>}
         {subTitle && <SectionSubTitle sx={{mt: -2}}>{subTitle}</SectionSubTitle>}
 
