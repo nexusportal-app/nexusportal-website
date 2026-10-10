@@ -2,7 +2,7 @@ import {SectionTitle} from '@/shared/SectionTitle'
 import {m} from '@/core/i18n'
 import {Box} from '@mui/material'
 import {SectionSubTitle} from '@/shared/SectionSubTitle'
-import {Section} from '@/shared/Section'
+import {Section, sectionMargin} from '@/shared/Section'
 import {Obj} from '@axanc/ts-utils'
 import {ShortTestimonial} from '@/sections/Banner/ShortTestimonial'
 
@@ -44,6 +44,7 @@ export const Testimonials = () => {
       sx={{
         display: 'flex',
         py: 0,
+        pb: sectionMargin,
         alignItems: 'center',
         flexDirection: {xs: 'column', md: 'row'},
         ...liquidLineAnimation,

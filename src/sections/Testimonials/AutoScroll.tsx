@@ -36,7 +36,10 @@ export function AutoScroll({
         display: 'flex',
         flexDirection: isX ? 'row' : 'column',
         gap: 1,
-        animation: `${isX ? scrollX : scrollY} 125s linear infinite`,
+        animation: `${isX ? scrollX : scrollY} 90s linear infinite`,
+        '&:hover': {
+          animationPlayState: 'paused',
+        },
         ...sx,
       }}
       {...props}

@@ -8,7 +8,7 @@ export const shortTestimonialStyle = {
   backgroundColor: `#fff`,
 }
 
-const avatarSize = 36
+const avatarSize = 38
 
 export const ShortTestimonial = ({
   name,
