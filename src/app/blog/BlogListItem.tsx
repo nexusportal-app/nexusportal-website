@@ -68,7 +68,7 @@ export const BlogListItem = ({
               <Typography color="textSecondary" sx={{display: 'flex', gap: .5}}>
                 <span>{post.frontmatter.date}</span>
                 <span>•</span>
-                <span>By {post.frontmatter.author.split('--')[0]}</span>
+                <span>Author: {post.frontmatter.author.split('--')[0]}</span>
               </Typography>
               <Box sx={{mt: 1}}>
                 {post.frontmatter.tags.split(',').map(_ => (
