@@ -2,8 +2,8 @@
 import {Post} from '@/app/blog/postsParser'
 import {Box, SxProps, Typography, useTheme} from '@mui/material'
 import Link from 'next/link'
-import {blogListItemHeight} from '@/app/blog/blog.settings'
 import {BoxProps} from '@mui/material/Box'
+import {useMemo} from 'react'
 
 export const BlogListItem = ({
   post,
@@ -17,6 +17,7 @@ export const BlogListItem = ({
   post: Post
 }) => {
   const t = useTheme()
+
   return (
     <Box
       component="li"
@@ -60,17 +61,21 @@ export const BlogListItem = ({
               alignItems: 'flex-end',
             }}
           >
-            <div>
+            <Box sx={{flex: 1}}>
               <Typography component="h3" fontSize="1.4em" fontWeight="700">
                 {post.frontmatter.title}
               </Typography>
-              <Typography color="textSecondary">By {post.frontmatter.author.split('--')[0]}</Typography>
+              <Typography color="textSecondary" sx={{display: 'flex', gap: .5}}>
+                <span>{post.frontmatter.date}</span>
+                <span>•</span>
+                <span>By {post.frontmatter.author.split('--')[0]}</span>
+              </Typography>
               <Box sx={{mt: 1}}>
                 {post.frontmatter.tags.split(',').map(_ => (
                   <Tag key={_}>{_}</Tag>
                 ))}
               </Box>
-            </div>
+            </Box>
           </Box>
         </Box>
       </Link>
