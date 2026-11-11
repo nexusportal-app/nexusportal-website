@@ -23,7 +23,6 @@ export type Post = {
     coverPath: string
     tags: string[]
     author: string
-    metaTags: string[]
     hidden?: boolean
   }
   contentHtml: string

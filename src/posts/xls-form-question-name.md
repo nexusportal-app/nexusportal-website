@@ -1,23 +1,17 @@
 ---  
-title: "XLSForm question's name matters"  
+title: "XLSForm question name matter"  
 description: "Learn why meaningful XLSForm question and choice names matter for data exports, Excel formulas, Power BI dashboards, and scripts."
 date: "2026-11-11"  
 coverPath: "/blog/xls-form-question-name/cover.png"  
 tags:
     - Blog
-metaTags:
-    - XLSForm
-    - KoboToolbox
-    - PowerBi
-    - Excel
-    - Information Management 
 author: Alexandre Annic -- Software Engineer
 ---  
 
-In an XLSForm, the `name` column represents the **technical identifier** of a question or a choice.  
-It should be unique, although this is not always strictly required in apps.
+In an XLSForm, the `name` column represents the **technical identifier** of a question or a choice. It should be unique, although this is not always strictly required in apps.
 
-Here is a minimal example of a XLSForm for a household survey.  
+If you are new to XLSForms, you can [see the ODK guide](https://docs.getodk.org/xlsform) for an overview of its structure, 
+but here is a minimal example of a XLSForm for a household survey as an illustration.  
 
 | type | name | label | repeat_count |
 |---|---|---|---|
@@ -27,7 +21,7 @@ Here is a minimal example of a XLSForm for a household survey.
 | integer | `age` | How old is this person? | |
 | **end_repeat** | | | |
 
-In the missions I have worked on, I have seen forms where `name` **values were just strings of random letters because the authors didn't see much value in them**,  assuming the labels were enough.
+In the missions I have worked on, I have seen forms where `name` **values were just strings of random letters** because the authors didn't see much value in them,  assuming the labels were enough.
 
 And it caused us a lot of problems.
 
@@ -39,7 +33,7 @@ Keep in mind that your form will also become a database.
 
 Question labels can be verbose, especially for forms shared publicly, and they may change as you improve the wording. But you don't want unstable and verbose cell contents when visualizing your database.
 
-KoboToolbox lets you export data in 2 ways:
+[KoboToolbox lets you export data in 2 ways](https://support.kobotoolbox.org/export_download.html):
 - using labels,
 - using XML values which use `name` of questions and choices.
 
@@ -78,7 +72,7 @@ To write Excel formulas, you can rely on either:
 1. Cell references (e.g. `=COUNTIF(B:B, "female")`)
 2. Table names and column headers (e.g. `=COUNTIF(Survey[gender], "female")`)
 
-Option 2 is more robust and easier to maintain because:
+Option 2 is called [structured references in Excel](https://support.microsoft.com/en-us/excel/using-structured-references-with-excel-tables) and is more robust and easier to maintain because:
 
 - Adding new questions or reordering them can shift columns and break cell references.
 - It makes formulas easier to read, write and maintain.
@@ -132,7 +126,7 @@ The second example works too, but it is harder to write, read and reason about. 
 
 The same principle applies to scripts, even more strongly.
 
-When you retrieve submissions through an API, such as the KoboToolbox API, the response uses question and choice `name`, not labels.
+When you retrieve submissions through an API, such as the [KoboToolbox API](https://support.kobotoolbox.org/api), the response uses question and choice `name`, not labels.
 
 For example
 

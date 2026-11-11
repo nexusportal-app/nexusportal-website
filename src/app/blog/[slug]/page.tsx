@@ -13,6 +13,16 @@ export async function generateMetadata({params}: {params: Post}): Promise<Metada
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
+    alternates: {
+      canonical: `https://www.nexusportal.app/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      url: `https://www.nexusportal.app/blog/${post.slug}`,
+      images: [post.frontmatter.coverPath],
+    },
   }
 }
 
