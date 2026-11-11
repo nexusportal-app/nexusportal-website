@@ -19,6 +19,7 @@ export type Post = {
   frontmatter: {
     date: string
     title: string
+    description?: string
     coverPath: string
     tags: string[]
     author: string
