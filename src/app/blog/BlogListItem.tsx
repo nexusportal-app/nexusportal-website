@@ -70,9 +70,9 @@ export const BlogListItem = ({
                 <span>•</span>
                 <span>Author: {post.frontmatter.author.split('--')[0]}</span>
               </Typography>
-              <Box sx={{mt: 1}}>
-                {post.frontmatter.tags.split(',').map(_ => (
-                  <Tag key={_}>{_}</Tag>
+              <Box sx={{mt: 1, display: 'flex', gap: .5, flexWrap: 'wrap'}}>
+                {post.frontmatter.tags.map(tag => (
+                  <Tag key={tag}>{tag}</Tag>
                 ))}
               </Box>
             </Box>

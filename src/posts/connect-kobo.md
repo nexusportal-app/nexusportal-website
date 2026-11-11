@@ -2,7 +2,8 @@
 title: "How to connect KoboToolbox forms to NexusPortal?"
 date: "2026-03-20"
 coverPath: "/blog/connect-kobo/cover.png"
-tags: Documentation
+tags: 
+  - Documentation
 author: Alexandre Annic -- Software Engineer
 ---
 

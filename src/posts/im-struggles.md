@@ -2,7 +2,8 @@
 title: "Why is Information Management such a headache in the humanitarian sector?"
 date: "2026-02-25"
 coverPath: "/blog/im-struggles/cover.jpg"
-tags: Blog
+tags: 
+   - Blog
 author: Alexandre Annic -- Software Engineer
 ---
 

@@ -20,8 +20,9 @@ export type Post = {
     date: string
     title: string
     coverPath: string
-    tags: string
+    tags: string[]
     author: string
+    metaTags: string[]
     hidden?: boolean
   }
   contentHtml: string
@@ -33,6 +34,12 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const {data, content} = matter(fileContents)
+
+  const tags = Array.isArray(data.tags)
+    ? data.tags
+    : typeof data.tags === 'string' && data.tags.trim()
+      ? data.tags.split(',')
+      : []
 
   const processedContent = await remark()
     .use(remarkGfm)
@@ -46,7 +53,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 
   return {
     slug: realSlug,
-    frontmatter: data as any,
+    frontmatter: {...data, tags: tags.map((tag: unknown) => String(tag).trim()).filter(Boolean)} as any,
     contentHtml,
   }
 }

@@ -2,7 +2,8 @@
 title: "When does Excel stop being enough?"
 date: "2026-03-01"
 coverPath: "/blog/excel-is-not-a-db/cover.jpg"
-tags: Blog
+tags: 
+  - Blog
 author: Alexandre Annic -- Software Engineer
 ---
 

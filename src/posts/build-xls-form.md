@@ -2,7 +2,8 @@
 title: "How to create an XLSForm: A quick guide with examples"
 date: "2026-09-30"
 coverPath: "/blog/excel-is-not-a-db/cover.jpg"
-tags: Blog
+tags:
+  - Blog
 author: Alexandre Annic -- Software Engineer
 hidden: true
 ---
